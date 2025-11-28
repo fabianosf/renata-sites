@@ -1,4 +1,4 @@
-import renataAvatar from "@/assets/renata-avatar.jpg";
+import renataAvatar from "@/assets/renata-avatar1.jpg";
 
 export interface BlogArticle {
   id: string;
