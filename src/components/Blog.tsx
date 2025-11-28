@@ -93,9 +93,11 @@ const Blog = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button size="lg" variant="outline">
-            Ver Todos os Artigos
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button asChild size="lg" variant="outline">
+            <Link to="/blog">
+              Ver Todos os Artigos
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </div>

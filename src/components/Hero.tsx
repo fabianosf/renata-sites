@@ -68,14 +68,14 @@ const Hero = () => {
               />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-32 left-2 bg-background p-6 rounded-2xl shadow-elevated animate-pulse-glow">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary-foreground">✓</span>
+            <div className="absolute -bottom-20 sm:-bottom-24 md:-bottom-32 left-2 sm:left-4 bg-background p-4 sm:p-6 rounded-2xl shadow-elevated animate-pulse-glow max-w-[calc(100%-1rem)] sm:max-w-none">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-xl sm:text-2xl font-bold text-primary-foreground">✓</span>
                 </div>
-                <div>
-                  <p className="font-bold text-foreground">Resultados Comprovados</p>
-                  <p className="text-sm text-muted-foreground">Baseado em evidências</p>
+                <div className="min-w-0">
+                  <p className="font-bold text-foreground text-sm sm:text-base">Resultados Comprovados</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Baseado em evidências</p>
                 </div>
               </div>
             </div>
