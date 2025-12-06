@@ -105,9 +105,9 @@ export const recommendedCSP = `
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   font-src 'self' https://fonts.gstatic.com;
   img-src 'self' data: https: blob:;
-  connect-src 'self' https://www.google-analytics.com https://wa.me;
+  connect-src 'self' https://www.google-analytics.com https://wa.me https://formsubmit.co;
   frame-src 'self' https://www.google.com;
   base-uri 'self';
-  form-action 'self' https://wa.me;
+  form-action 'self' https://wa.me https://formsubmit.co;
 `.replace(/\s+/g, " ").trim();
 
