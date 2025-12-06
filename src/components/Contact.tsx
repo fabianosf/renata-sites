@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,7 +15,10 @@ import { toast } from "sonner";
 import { siteConfig } from "@/config/site";
 import { validateContactForm, sanitizeFormData } from "@/utils/validation";
 
-const Contact = () => {
+const FORM_ACTION = "https://formsubmit.co/ajax/fabiano.freitas@gmail.com";
+const FORM_CC = "renatabastosnutri@gmail.com";
+
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,20 +27,19 @@ const Contact = () => {
     message: "",
   });
 
-  const [errors, setErrors] = useState([]);
+  const [errors, setErrors] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setErrors([]);
     setIsSubmitting(true);
 
     // 1. Validação
     const validation = validateContactForm(formData);
-    
     if (!validation.isValid) {
       setErrors(validation.errors);
-      validation.errors.forEach((error) => toast.error(error));
+      validation.errors.forEach((error: string) => toast.error(error));
       setIsSubmitting(false);
       return;
     }
@@ -45,151 +47,87 @@ const Contact = () => {
     // 2. Sanitização
     const sanitized = sanitizeFormData(formData);
 
-    // 3. Preparação dos dados para FormSubmit
-    // Email principal: fabiano.freitas@gmail.com (tem acesso)
-    // Email cópia: renatabastosnutri@gmail.com
-    const formAction = "https://formsubmit.co/ajax/fabiano.freitas@gmail.com";
-    
-    // Mapear assunto para texto legível
-    const subjectMap = {
+    // 3. Assunto legível
+    const subjectMap: Record<string, string> = {
       consulta: "Agendar Consulta",
       orcamento: "Solicitar Orçamento",
       duvidas: "Tirar Dúvidas",
-      outros: "Outros"
+      outros: "Outros",
     };
-    
     const subjectText = subjectMap[sanitized.subject] || sanitized.subject;
 
-    // Preparar dados do formulário com formato profissional
-    const formDataForSubmit = new FormData();
-    
-    // Criar corpo do email formatado de forma profissional
-    const emailBody = `
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    📧 NOVO CONTATO - CLÍNICA RENATA BASTOS
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    // 4. Dados para FormSubmit
+    const body = new FormData();
+    body.append("name", sanitized.name);
+    body.append("email", sanitized.email);
+    body.append("phone", sanitized.phone);
+    body.append("subject", subjectText);
+    body.append("message", sanitized.message);
 
-👤 NOME COMPLETO:
-   ${sanitized.name}
-
-📧 EMAIL DE CONTATO:
-   ${sanitized.email}
-
-📱 TELEFONE/WHATSAPP:
-   ${sanitized.phone}
-
-📋 ASSUNTO:
-   ${subjectText}
-
-💬 MENSAGEM:
-   ${sanitized.message}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-`;
-    
-    // Usar apenas o campo "message" com o corpo formatado
-    formDataForSubmit.append("message", emailBody.trim());
-    
-    // Configurações do FormSubmit
-    formDataForSubmit.append("_subject", `📧 Novo Contato: ${subjectText} | Clínica Renata Bastos`);
-    formDataForSubmit.append("_cc", "renatabastosnutri@gmail.com");
-    formDataForSubmit.append("_template", "box");
-    formDataForSubmit.append("_captcha", "false");
-    formDataForSubmit.append("_autoresponse", `Olá ${sanitized.name},\n\nRecebemos sua mensagem e entraremos em contato em breve!\n\nAtenciosamente,\nEquipe Clínica Renata Bastos`);
-    formDataForSubmit.append("_honey", "");
+    // Campos especiais do FormSubmit[web:18]
+    body.append(
+      "_subject",
+      `Novo Contato: ${subjectText} | Clínica Renata Bastos`
+    );
+    body.append("_cc", FORM_CC);          // cópia para e-mail secundário[web:18]
+    body.append("_template", "table");    // e-mail em formato de tabela[web:18]
+    body.append("_captcha", "false");     // desativa captcha nesse formulário[web:18]
 
     try {
-      // Envio via FormSubmit
-      const response = await fetch(formAction, {
+      console.log("📤 Enviando para:", FORM_ACTION);
+      const response = await fetch(FORM_ACTION, {
         method: "POST",
-        body: formDataForSubmit,
+        body,
       });
 
-      // FormSubmit pode retornar JSON ou texto
-      let result;
-      const contentType = response.headers.get("content-type");
-      
-      if (contentType && contentType.includes("application/json")) {
-        result = await response.json();
-      } else {
-        const text = await response.text();
-        // Tentar parsear como JSON, se falhar usar texto
-        try {
-          result = JSON.parse(text);
-        } catch {
-          result = { success: response.ok, message: text || "Email enviado com sucesso" };
-        }
+      console.log("📥 Status:", response.status, response.statusText);
+
+      if (!response.ok) {
+        const text = await response.text().catch(() => "");
+        console.error("❌ Erro HTTP FormSubmit:", text);
+        throw new Error("Erro ao enviar mensagem. Tente novamente.");
       }
 
-      // Log da resposta completa (sempre visível para debug)
-      console.log("📧 FormSubmit - Resposta da API:", result);
+      let responseText = "";
+      try {
+        responseText = await response.text();
+        console.log("📧 Resposta FormSubmit:", responseText.substring(0, 200));
+      } catch (err) {
+        console.warn("⚠️ Não foi possível ler a resposta:", err);
+      }
 
-      // Verificação detalhada
-      // FormSubmit retorna 200 OK quando sucesso, mesmo sem JSON
-      // IMPORTANTE: Na primeira vez, FormSubmit pode retornar mensagem pedindo verificação do email
-      const responseText = typeof result === 'string' ? result : JSON.stringify(result);
-      const needsVerification = responseText.includes("verify") || 
-                                responseText.includes("confirmation") || 
-                                responseText.includes("confirm your email");
-      
-      if (response.ok && !needsVerification) {
-        console.log("✅ FormSubmit - Email enviado com sucesso!");
-        console.log("📬 Dados enviados:", {
-          nome: sanitized.name,
-          email: sanitized.email,
-          telefone: sanitized.phone,
-          assunto: subjectText
-        });
-        
+      const lower = responseText.toLowerCase();
+      if (
+        lower.includes("verify") ||
+        lower.includes("confirmation") ||
+        lower.includes("check your email")
+      ) {
+        toast.warning(
+          "Verifique o e-mail fabiano.freitas@gmail.com para confirmar o FormSubmit (inclusive SPAM)."
+        );
+      } else {
         toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-        // Limpa o formulário
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
         setErrors([]);
-      } else if (needsVerification) {
-        // Primeira vez usando o email - precisa verificar
-        console.warn("⚠️ FormSubmit - Email precisa ser verificado!");
-        console.warn("📧 Verifique a caixa de entrada de fabiano.freitas@gmail.com");
-        console.warn("📧 Procure por um email do FormSubmit e clique no link de confirmação");
-        
-        toast.warning("Verifique seu email! Você receberá um link de confirmação do FormSubmit. Após confirmar, os emails começarão a chegar normalmente.");
-        
-        // Não limpa o formulário para o usuário poder tentar novamente depois
-      } else {
-        // Log de erro detalhado
-        console.error("❌ FormSubmit - Erro no envio:", result);
-        console.error("Status HTTP:", response.status);
-        console.error("Detalhes do erro:", result?.message || result || "Erro desconhecido");
-        
-        // Mensagens de erro mais específicas
-        let errorMessage = "Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.";
-        const errorMsg = result?.message || result || "";
-        const errorStr = typeof errorMsg === "string" ? errorMsg : JSON.stringify(errorMsg);
-        
-        if (errorStr.includes("rate limit") || errorStr.includes("too many")) {
-          errorMessage = "Muitas tentativas. Aguarde alguns minutos e tente novamente.";
-        } else if (errorStr.includes("spam") || errorStr.includes("blocked")) {
-          errorMessage = "Mensagem detectada como spam. Verifique o conteúdo.";
-        } else if (errorStr.includes("invalid")) {
-          errorMessage = "Dados inválidos. Verifique os campos preenchidos.";
-        }
-        
-        throw new Error(errorMessage);
       }
-
     } catch (error) {
       console.error("❌ Erro ao enviar formulário:", error);
-      console.error("Detalhes:", {
-        message: error instanceof Error ? error.message : "Erro desconhecido",
-        stack: error instanceof Error ? error.stack : undefined
-      });
-      
-      // Mensagem de erro mais amigável
-      const errorMessage = error instanceof Error && error.message !== "Falha no envio"
-        ? error.message
-        : "Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.";
-      
-      toast.error(errorMessage);
+      let message =
+        "Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.";
+
+      if (error instanceof Error && error.message) {
+        message = error.message;
+      }
+
+      toast.error(message);
     } finally {
+      console.log("🔄 Resetando estado do formulário");
       setIsSubmitting(false);
     }
   };
@@ -230,12 +168,13 @@ const Contact = () => {
             Entre em Contato - Clínica Renata Bastos
           </h1>
           <p className="text-lg text-muted-foreground">
-            Pronto para transformar sua saúde? Agende sua consulta na Tijuca, Rio de Janeiro ou tire suas dúvidas
+            Pronto para transformar sua saúde? Agende sua consulta na Tijuca,
+            Rio de Janeiro ou tire suas dúvidas
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+          {/* Formulário */}
           <div className="animate-fade-in">
             <form onSubmit={handleSubmit} className="space-y-6">
               {errors.length > 0 && (
@@ -243,7 +182,9 @@ const Contact = () => {
                   <div className="flex items-start gap-2">
                     <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
                     <div className="flex-1">
-                      <p className="font-semibold text-destructive mb-2">Erros no formulário:</p>
+                      <p className="font-semibold text-destructive mb-2">
+                        Erros no formulário:
+                      </p>
                       <ul className="list-disc list-inside space-y-1 text-sm text-destructive">
                         {errors.map((error, index) => (
                           <li key={index}>{error}</li>
@@ -308,14 +249,18 @@ const Contact = () => {
                 <Label htmlFor="subject">Assunto *</Label>
                 <Select
                   value={formData.subject}
-                  onValueChange={(value) => setFormData({ ...formData, subject: value })}
+                  onValueChange={(value) =>
+                    setFormData({ ...formData, subject: value })
+                  }
                 >
                   <SelectTrigger className="mt-2">
                     <SelectValue placeholder="Selecione o assunto" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="consulta">Agendar Consulta</SelectItem>
-                    <SelectItem value="orcamento">Solicitar Orçamento</SelectItem>
+                    <SelectItem value="orcamento">
+                      Solicitar Orçamento
+                    </SelectItem>
                     <SelectItem value="duvidas">Tirar Dúvidas</SelectItem>
                     <SelectItem value="outros">Outros</SelectItem>
                   </SelectContent>
@@ -342,14 +287,19 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={isSubmitting}
+              >
                 <Send className="mr-2 h-5 w-5" />
                 {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
               </Button>
             </form>
           </div>
 
-          {/* Contact Info */}
+          {/* Informações de contato */}
           <div className="space-y-6 animate-slide-up">
             {contactInfo.map((item) => (
               <div
@@ -361,13 +311,21 @@ const Contact = () => {
                     <item.icon className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
+                    <h3 className="font-semibold text-lg mb-2">
+                      {item.title}
+                    </h3>
                     {item.link ? (
                       <a
                         href={item.link}
                         className="text-muted-foreground hover:text-primary transition-smooth"
-                        target={item.link.startsWith("http") ? "_blank" : undefined}
-                        rel={item.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                        target={
+                          item.link.startsWith("http") ? "_blank" : undefined
+                        }
+                        rel={
+                          item.link.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
                       >
                         {item.info}
                       </a>
@@ -379,7 +337,7 @@ const Contact = () => {
               </div>
             ))}
 
-            {/* Map */}
+            {/* Mapa */}
             <div className="rounded-2xl overflow-hidden shadow-elevated h-64">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1234567890!2d-43.2345678!3d-22.9123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5bfcef45a7%3A0x1234567890abcdef!2sShopping%20Tijuca%2C%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1234567890"
