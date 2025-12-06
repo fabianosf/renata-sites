@@ -16,6 +16,7 @@ import { siteConfig } from "@/config/site";
 import { validateContactForm, sanitizeFormData } from "@/utils/validation";
 
 const FORM_ACTION = "https://formsubmit.co/ajax/fabiano.freitas@gmail.com";
+const FORM_ACTION_FALLBACK = "https://formsubmit.co/fabiano.freitas@gmail.com";
 const FORM_CC = "renatabastosnutri@gmail.com";
 
 const Contact: React.FC = () => {
@@ -29,6 +30,45 @@ const Contact: React.FC = () => {
 
   const [errors, setErrors] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Função helper para criar inputs hidden
+  const createHiddenInput = (name: string, value: string): HTMLInputElement => {
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = name;
+    input.value = value;
+    return input;
+  };
+
+  // Função para submeter formulário HTML tradicional como fallback
+  const submitFallbackForm = (formData: FormData, subjectText: string) => {
+    const fallbackForm = document.createElement("form");
+    fallbackForm.method = "POST";
+    fallbackForm.action = FORM_ACTION_FALLBACK;
+    fallbackForm.target = "_blank";
+    
+    // Adicionar todos os campos do FormData
+    formData.forEach((value, key) => {
+      if (value instanceof File) {
+        return;
+      }
+      fallbackForm.appendChild(createHiddenInput(key, value.toString()));
+    });
+    
+    // Campos do FormSubmit
+    fallbackForm.appendChild(createHiddenInput("_cc", FORM_CC));
+    fallbackForm.appendChild(createHiddenInput("_template", "table"));
+    fallbackForm.appendChild(createHiddenInput("_captcha", "false"));
+    fallbackForm.appendChild(createHiddenInput("_subject", `Novo Contato: ${subjectText} | Clínica Renata Bastos`));
+    
+    document.body.appendChild(fallbackForm);
+    fallbackForm.submit();
+    setTimeout(() => {
+      if (document.body.contains(fallbackForm)) {
+        document.body.removeChild(fallbackForm);
+      }
+    }, 100);
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -75,17 +115,78 @@ const Contact: React.FC = () => {
 
     try {
       console.log("📤 Enviando para:", FORM_ACTION);
-      const response = await fetch(FORM_ACTION, {
-        method: "POST",
-        body,
-      });
+      
+      // Criar AbortController para timeout (aumentado para 40 segundos)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 40000); // 40 segundos
+
+      let response: Response;
+      try {
+        response = await fetch(FORM_ACTION, {
+          method: "POST",
+          body,
+          signal: controller.signal,
+          mode: "cors",
+        });
+        clearTimeout(timeoutId);
+      } catch (fetchError: any) {
+        clearTimeout(timeoutId);
+        
+        // Verificar se foi abortado por timeout
+        if (fetchError.name === "AbortError") {
+          // Em caso de timeout, usar formulário HTML tradicional como fallback
+          console.warn("⚠️ Timeout no AJAX, usando formulário HTML tradicional como fallback");
+          submitFallbackForm(body, subjectText);
+          toast.success(
+            "Formulário enviado! Uma nova aba foi aberta para confirmar o envio. Verifique também sua caixa de entrada."
+          );
+          // Limpar formulário
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            message: "",
+          });
+          setErrors([]);
+          setIsSubmitting(false);
+          return;
+        }
+        
+        // Verificar se foi erro de CORS
+        if (fetchError.message?.includes("CORS") || fetchError.message?.includes("Failed to fetch")) {
+          throw new Error(
+            "Erro de conexão. O serviço pode estar temporariamente indisponível. Por favor, tente novamente ou use o WhatsApp."
+          );
+        }
+        
+        throw fetchError;
+      }
 
       console.log("📥 Status:", response.status, response.statusText);
 
       if (!response.ok) {
         const text = await response.text().catch(() => "");
         console.error("❌ Erro HTTP FormSubmit:", text);
-        throw new Error("Erro ao enviar mensagem. Tente novamente.");
+        
+        // Mensagens específicas para erros comuns
+        if (response.status === 524 || response.status === 504) {
+          throw new Error(
+            "Timeout: O servidor demorou muito para responder. Por favor, tente novamente ou use o WhatsApp."
+          );
+        }
+        if (response.status === 503 || response.status === 502) {
+          throw new Error(
+            "Serviço temporariamente indisponível. Por favor, tente novamente em alguns minutos ou use o WhatsApp."
+          );
+        }
+        if (response.status >= 500) {
+          throw new Error(
+            "Erro no servidor. Por favor, tente novamente mais tarde ou use o WhatsApp."
+          );
+        }
+        
+        throw new Error("Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.");
       }
 
       let responseText = "";
@@ -100,13 +201,40 @@ const Contact: React.FC = () => {
       if (
         lower.includes("verify") ||
         lower.includes("confirmation") ||
-        lower.includes("check your email")
+        lower.includes("check your email") ||
+        lower.includes("please verify")
       ) {
         toast.warning(
           "Verifique o e-mail fabiano.freitas@gmail.com para confirmar o FormSubmit (inclusive SPAM)."
         );
-      } else {
+        // Limpar formulário mesmo quando precisa verificar
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setErrors([]);
+      } else if (
+        lower.includes("success") ||
+        lower.includes("obrigado") ||
+        lower.includes("thank you") ||
+        response.status === 200 ||
+        response.status === 302
+      ) {
         toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+        setErrors([]);
+      } else {
+        // Se não identificou claramente, mas não deu erro, considerar sucesso
+        toast.success("Mensagem enviada! Entraremos em contato em breve.");
         setFormData({
           name: "",
           email: "",
@@ -126,6 +254,7 @@ const Contact: React.FC = () => {
       }
 
       toast.error(message);
+      setErrors([message]);
     } finally {
       console.log("🔄 Resetando estado do formulário");
       setIsSubmitting(false);
