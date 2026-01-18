@@ -15,7 +15,7 @@ export const siteConfig = {
     title: "Nutricionista Ortomolecular & Biomédica Esteta",
     crn: "CRN 4 15100141",
     experience: "14+", // Formada em 2010
-    patients: "500+",
+    patients: "2000+",
     satisfaction: "98%",
     formation: {
       nutrition: "Nutricionista formada pela UVA em 2010",
@@ -35,17 +35,18 @@ export const siteConfig = {
     whatsapp: "5521967273291", // Formato: código do país + DDD + número (sem +, parênteses, espaços ou hífens)
     email: "renatabastosnutri@gmail.com",
     emailLink: "mailto:renatabastosnutri@gmail.com",
-    address: "Tijuca, Rio de Janeiro - RJ (Frente ao Shopping Tijuca)",
+    address: "Ed Corporate - Eng Ednaldo Cravo Peixoto, 105/1020 - Tijuca, Rio de Janeiro - RJ (na rua do estacionamento do Shopping Tijuca)",
     addressSecondary: "Barra da Tijuca, Rio de Janeiro - RJ",
-    addressLink: "https://maps.google.com/?q=Shopping+Tijuca,+Rio+de+Janeiro",
-    hours: "Manhã: 7h às 14h | Tarde: 14h às 20h",
+    addressNote: "Estacionamento rotativo no local",
+    addressLink: "https://maps.google.com/?q=Eng+Ednaldo+Cravo+Peixoto+105,+Tijuca,+Rio+de+Janeiro",
+    hours: "10h às 20h",
     hoursNote: "Horários flexíveis, podendo ser remanejados",
   },
 
   // Redes sociais
   social: {
     instagram: {
-      url: "https://www.instagram.com/renatinhabastos/",
+      url: "https://www.instagram.com/drarenatabastos_/",
       label: "Instagram",
     },
     facebook: {
@@ -72,7 +73,7 @@ export const siteConfig = {
   // SEO
   seo: {
     title: "Nutricionista Ortomolecular & Biomédica Esteta - Renata Bastos | Tijuca, Rio de Janeiro",
-    description: "Nutricionista Ortomolecular e Biomédica Esteta na Tijuca, Rio de Janeiro. Consultas presenciais (Tijuca e Barra) e online. Emagrecimento saudável, nutrição clínica, estética avançada, intradermoterapia, harmonização glútea. Mais de 500 pacientes transformados.",
+    description: "Nutricionista Ortomolecular e Biomédica Esteta na Tijuca, Rio de Janeiro. Consultas presenciais (Tijuca e Barra) e online. Emagrecimento saudável, nutrição clínica, estética avançada, intradermoterapia, harmonização glútea. Mais de 2000 pacientes transformados.",
     keywords: "nutricionista ortomolecular, biomédica esteta, nutrição clínica, emagrecimento saudável, consulta nutricional online, estética avançada, tijuca rio de janeiro, intradermoterapia, harmonização glútea, skin booster, toxina botulínica, bioestimulador de colágeno",
   },
 };

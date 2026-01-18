@@ -31,10 +31,11 @@ const StructuredData = ({ type = "home", serviceId, article }: StructuredDataPro
     email: siteConfig.contact.email,
     address: {
       "@type": "PostalAddress",
-      streetAddress: siteConfig.contact.address,
+      streetAddress: "Eng Ednaldo Cravo Peixoto, 105/1020",
       addressLocality: "Tijuca",
       addressRegion: "RJ",
       addressCountry: "BR",
+      postalCode: "20520-050",
     },
     geo: {
       "@type": "GeoCoordinates",

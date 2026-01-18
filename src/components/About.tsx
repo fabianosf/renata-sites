@@ -1,6 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Award, Heart, Target, Brain, Users } from "lucide-react";
-import profileImage from "@/assets/nutritionist-profile.jpg";
+import fruitsImage from "@/assets/frutas.jpg";
 import { siteConfig } from "@/config/site";
 
 const About = () => {
@@ -40,18 +40,32 @@ const About = () => {
   return (
     <section id="sobre" className="py-20 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Image */}
-          <div className="animate-fade-in">
-            <div className="relative rounded-3xl overflow-hidden shadow-elevated">
-              <img
-                src={profileImage}
-                alt={`${siteConfig.professional.name} - ${siteConfig.professional.title} na Tijuca, Rio de Janeiro`}
-                className="w-full h-auto object-contain"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
+          <div className="animate-fade-in -mt-8 lg:-mt-12">
+            <div className="relative rounded-3xl overflow-hidden shadow-elevated group border-2 border-primary/10">
+              <div className="relative aspect-[4/5] lg:aspect-[3/4]">
+                <img
+                  src={fruitsImage}
+                  alt="Alimentação saudável e nutritiva - Frutas frescas e variadas para uma nutrição equilibrada"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none"></div>
+              </div>
             </div>
+            
+            {/* Card de Nutrição Natural - Abaixo da imagem */}
+            <div className="mt-6 bg-background rounded-2xl p-5 border border-primary/20 shadow-subtle">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-2 h-2 rounded-full bg-primary"></div>
+                <p className="text-sm font-bold text-primary">Nutrição Natural</p>
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Alimentação equilibrada com alimentos frescos e naturais
+              </p>
+            </div>
+            
             {/* Stats Badge */}
             <div className="mt-8 bg-background p-6 rounded-2xl shadow-elevated">
               <div className="grid grid-cols-3 gap-4 text-center">
@@ -81,8 +95,7 @@ const About = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Olá, é um grande prazer ter você por aqui! Sou nutricionista pós graduada em 
-              nutrição esportiva funcional, ortomolecular e clínica funcional. Com muito amor 
+              Olá, é um grande prazer ter você por aqui! Sou Nutricionista Ortomolecular & Biomédica Esteta na Tijuca, Rio de Janeiro. Com muito amor 
               e dedicação pela área da saúde, resolvi expandir meu conhecimento e me tornar 
               uma biomédica com especialização em estética.
             </p>
@@ -113,7 +126,8 @@ const About = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Atendimento</h4>
                   <p className="text-sm text-muted-foreground">
-                    <strong>Presencial:</strong> Tijuca (frente ao Shopping Tijuca) e Barra da Tijuca, Rio de Janeiro<br />
+                    <strong>Presencial:</strong> Ed Corporate - Eng Ednaldo Cravo Peixoto, 105/1020 - Tijuca, RJ (na rua do estacionamento do Shopping Tijuca). Estacionamento rotativo no local.<br />
+                    <strong>Também atendemos:</strong> Barra da Tijuca, Rio de Janeiro<br />
                     <strong>Online:</strong> Para todo o Brasil e exterior
                   </p>
                 </div>

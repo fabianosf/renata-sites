@@ -65,7 +65,7 @@ const BlogPost = () => {
       <Header />
       
       {/* Hero Image Section */}
-      <section className="relative h-[50vh] lg:h-[60vh] overflow-hidden">
+      <section className="relative h-[60vh] lg:h-[70vh] overflow-hidden">
         <img
           src={article.image}
           alt={`${article.title} - Artigo sobre ${article.category} por ${article.author.name}`}

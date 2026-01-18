@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Differentiators from "@/components/Differentiators";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Blog from "@/components/Blog";
 import Contact from "@/components/Contact";
@@ -47,6 +48,7 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
         <Differentiators />
         <About />
         <Services />
+        <Pricing />
         <Testimonials />
         <Blog />
         <Contact />

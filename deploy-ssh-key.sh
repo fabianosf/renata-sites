@@ -182,9 +182,9 @@ server {
     access_log /var/log/nginx/${DOMAIN}_access.log;
     error_log /var/log/nginx/${DOMAIN}_error.log;
 
-    # SSL Configuration (será preenchido pelo certbot)
-    # ssl_certificate /etc/letsencrypt/live/$DOMAIN/fullchain.pem;
-    # ssl_certificate_key /etc/letsencrypt/live/$DOMAIN/privkey.pem;
+    # SSL Configuration
+    ssl_certificate /etc/letsencrypt/live/$DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/$DOMAIN/privkey.pem;
     ssl_protocols TLSv1.2 TLSv1.3;
     ssl_ciphers HIGH:!aNULL:!MD5;
     ssl_prefer_server_ciphers on;
@@ -279,12 +279,12 @@ ssh_exec "$SERVER_USER" "
         
         # Verificar se o certificado já existe
         if [ -f \"/etc/letsencrypt/live/$DOMAIN/fullchain.pem\" ]; then
-            echo \"Certificado SSL já existe, renovando...\"
-            certbot renew --nginx --quiet --non-interactive || echo \"Renovação automática tentada\"
+            echo \"Certificado SSL já existe e está configurado.\"
+            echo \"Pulando renovação (certificados Let'\''s Encrypt são renovados automaticamente pelo cron).\"
         else
             echo \"Obtendo novo certificado SSL...\"
-            # Obter certificado (não-interativo, usando email do sistema)
-            certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos --register-unsafely-without-email --redirect || {
+            # Obter certificado com timeout de 2 minutos
+            timeout 120 certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos --register-unsafely-without-email --redirect 2>&1 || {
                 echo \"Atenção: Certificado não pôde ser obtido automaticamente.\"
                 echo \"Isso pode acontecer se o domínio não estiver apontando para este servidor.\"
                 echo \"Você pode executar manualmente depois:\"

@@ -277,7 +277,7 @@ const Contact: React.FC = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      info: `${siteConfig.contact.address} | ${siteConfig.contact.addressSecondary}`,
+      info: `${siteConfig.contact.address}${siteConfig.contact.addressNote ? ` - ${siteConfig.contact.addressNote}` : ''} | ${siteConfig.contact.addressSecondary}`,
       link: siteConfig.contact.addressLink,
     },
     {
@@ -469,14 +469,14 @@ const Contact: React.FC = () => {
             {/* Mapa */}
             <div className="rounded-2xl overflow-hidden shadow-elevated h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1234567890!2d-43.2345678!3d-22.9123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5bfcef45a7%3A0x1234567890abcdef!2sShopping%20Tijuca%2C%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1234567890!2d-43.2345678!3d-22.9123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5bfcef45a7%3A0x1234567890abcdef!2sEd%20Corporate%20-%20Eng%20Ednaldo%20Cravo%20Peixoto%2C%20105%2C%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Clínica Renata Bastos - Shopping Tijuca"
+                title="Localização da Clínica Renata Bastos - Ed Corporate, Tijuca"
               ></iframe>
             </div>
           </div>

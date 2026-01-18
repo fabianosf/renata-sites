@@ -21,6 +21,7 @@ const Header = () => {
     { label: "Início", to: "/inicio" },
     { label: "Sobre", to: "/sobre" },
     { label: "Serviços", to: "/servicos" },
+    { label: "Preços", to: "/precos" },
     { label: "Depoimentos", to: "/depoimentos" },
     { label: "Blog", to: "/blog" },
     { label: "Contato", to: "/contato" },

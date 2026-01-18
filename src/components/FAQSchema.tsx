@@ -13,7 +13,7 @@ const FAQSchema = () => {
         name: "Onde fica localizada a Clínica Renata Bastos?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `A Clínica Renata Bastos está localizada na Tijuca, Rio de Janeiro, em frente ao Shopping Tijuca. Também oferecemos atendimento na Barra da Tijuca e consultas online para todo o Brasil.`,
+          text: `A Clínica Renata Bastos está localizada no Ed Corporate - Eng Ednaldo Cravo Peixoto, 105/1020, na Tijuca, Rio de Janeiro (na rua do estacionamento do Shopping Tijuca). Temos estacionamento rotativo no local. Também oferecemos atendimento na Barra da Tijuca e consultas online para todo o Brasil.`,
         },
       },
       {

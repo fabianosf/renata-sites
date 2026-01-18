@@ -40,6 +40,7 @@ const App = () => (
             <Route path="/inicio" element={<Index scrollTo="inicio" />} />
             <Route path="/sobre" element={<AboutPage />} />
             <Route path="/servicos" element={<Index scrollTo="servicos" />} />
+            <Route path="/precos" element={<Index scrollTo="precos" />} />
             <Route path="/depoimentos" element={<TestimonialsPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/contato" element={<Index scrollTo="contato" />} />

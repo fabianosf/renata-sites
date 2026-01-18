@@ -21,7 +21,7 @@ const TestimonialsPage = () => {
     {
       name: "Ana Paula Santos",
       age: 32,
-      location: "Vila Mariana, SP",
+      location: "Barra da Tijuca, RJ",
       result: "Perdeu 18kg em 6 meses",
       rating: 5,
       text: "A Dra. Renata mudou completamente minha relação com a comida. Não foi apenas uma dieta, foi uma transformação de vida. Aprendi a comer de forma saudável sem passar fome e os resultados apareceram naturalmente. A abordagem ortomolecular fez toda a diferença!",
@@ -30,7 +30,7 @@ const TestimonialsPage = () => {
     {
       name: "Carlos Eduardo Lima",
       age: 45,
-      location: "Centro, SP",
+      location: "Ipanema, RJ",
       result: "Controlou diabetes (glicemia de 180 para 95) e colesterol",
       rating: 5,
       text: "Depois de anos tentando controlar minha diabetes, finalmente encontrei uma profissional que me ajudou de verdade. Meus exames melhoraram significativamente - glicemia normalizada e colesterol controlado. Me sinto muito mais disposto no dia a dia.",
@@ -39,7 +39,7 @@ const TestimonialsPage = () => {
     {
       name: "Juliana Martins",
       age: 28,
-      location: "Pinheiros, SP",
+      location: "Leblon, RJ",
       result: "Ganhou 5kg de massa magra e melhorou performance",
       rating: 5,
       text: "Como atleta, precisava de uma nutricionista que entendesse minhas necessidades. O acompanhamento da Dra. Renata foi essencial para melhorar minha performance e recuperação. Ganhei massa magra e meus treinos renderam muito mais. Recomendo muito!",
@@ -48,7 +48,7 @@ const TestimonialsPage = () => {
     {
       name: "Roberto Silva",
       age: 38,
-      location: "Moema, SP",
+      location: "Botafogo, RJ",
       result: "Eliminou problemas digestivos e melhorou energia",
       rating: 5,
       text: "Sofria com problemas intestinais há anos. A abordagem personalizada da Dra. Renata foi fundamental. Com a nutrição ortomolecular, consegui identificar e tratar as causas. Hoje tenho uma qualidade de vida que não imaginava ser possível.",
@@ -57,7 +57,7 @@ const TestimonialsPage = () => {
     {
       name: "Mariana Costa",
       age: 35,
-      location: "Tijuca, RJ",
+      location: "Barra da Tijuca, RJ",
       result: "Melhorou saúde da pele e autoestima",
       rating: 5,
       text: "Procurei a Dra. Renata para melhorar minha pele e acabei transformando minha saúde por completo. A combinação de nutrição ortomolecular e estética avançada trouxe resultados incríveis. Minha autoestima melhorou muito!",
@@ -66,7 +66,7 @@ const TestimonialsPage = () => {
     {
       name: "Pedro Alves",
       age: 42,
-      location: "Barra da Tijuca, RJ",
+      location: "Ipanema, RJ",
       result: "Reduziu gordura visceral e melhorou exames",
       rating: 5,
       text: "Excelente profissional! A Dra. Renata conseguiu me ajudar a reduzir gordura visceral e melhorar todos os meus exames. A abordagem é muito completa e personalizada. Super recomendo!",
