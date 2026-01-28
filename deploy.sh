@@ -19,7 +19,7 @@ ROOT_USER="root"
 SERVER_PASSWORD="123"
 ROOT_PASSWORD="123"
 DOMAIN="clinicarenatabastos.com.br"
-WEB_DIR="/home/fabianosf/public_html"
+WEB_DIR="/var/www/clinicarenatabastos.com.br"
 NGINX_CONFIG_DIR="/etc/nginx/sites-available"
 NGINX_ENABLED_DIR="/etc/nginx/sites-enabled"
 
