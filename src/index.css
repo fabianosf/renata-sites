@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Premium Palette: Gold (Estética) + Green (Nutrição) + Sophisticated Neutrals */
+    --background: 0 0% 100%;
+    --foreground: 35 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 35 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 35 30% 15%;
+
+    /* Gold primary - Elegância estética */
+    --primary: 43 74% 49%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Darker gold for hover states */
+    --primary-dark: 38 92% 35%;
+
+    /* Light gold for backgrounds */
+    --primary-light: 48 90% 85%;
+
+    --secondary: 45 20% 96%;
+    --secondary-foreground: 35 30% 15%;
+
+    --muted: 45 20% 96%;
+    --muted-foreground: 35 15% 45%;
+
+    /* Green accent - Nutrição natural */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 142 76% 95%;
+
+    /* Nature gradient */
+    --nature: 142 71% 45%;
+    --nature-foreground: 0 0% 100%;
+    --nature-light: 142 76% 95%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 43 74% 49%;
+
+    --radius: 0.75rem;
+
+    /* Premium design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(38 92% 35%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 76% 36%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(142 71% 45%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(43 74% 49% / 0.05) 0%, hsl(142 71% 45% / 0.05) 100%);
+
+    --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-elevated: 0 10px 40px rgba(0, 0, 0, 0.12);
+    --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.15);
+    --shadow-glow: 0 0 40px rgba(218, 165, 32, 0.25);
+    --shadow-glow-green: 0 0 40px rgba(76, 175, 80, 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 35 30% 15%;
+    --sidebar-primary: 43 74% 49%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 45 20% 96%;
+    --sidebar-accent-foreground: 35 30% 15%;
+    --sidebar-border: 45 20% 88%;
+    --sidebar-ring: 43 74% 49%;
+  }
+
+  .dark {
+    --background: 217 33% 11%;
+    --foreground: 0 0% 100%;
+
+    --card: 217 33% 11%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 217 33% 11%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 158 82% 39%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-dark: 158 94% 30%;
+    --primary-light: 156 73% 91%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 32% 17%;
+    --accent-foreground: 158 82% 39%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 158 82% 39%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 158 82% 39%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 158 82% 39%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-feature-settings: 'ss01', 'cv02';
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-feature-settings: 'ss01';
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(38 92% 35%) 100%);
+  }
+
+  .gradient-nature {
+    background: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 76% 36%) 100%);
+  }
+
+  .gradient-sunset {
+    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(142 71% 45%) 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(43 74% 49% / 0.05) 0%, hsl(142 71% 45% / 0.05) 100%);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .shadow-premium {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.25);
+  }
+
+  .shadow-glow-green {
+    box-shadow: 0 0 40px rgba(76, 175, 80, 0.25);
+  }
+
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .transition-bounce {
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Shimmer effect for premium elements */
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Organic shapes */
+  .organic-blob {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: blob-morph 8s ease-in-out infinite;
+  }
+
+  @keyframes blob-morph {
+    0%, 100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+  }
+}
