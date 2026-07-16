@@ -1,25 +1,21 @@
+import { Trans, useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, MessageCircle, CheckCircle2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const VideoSection = () => {
+  const { t } = useTranslation();
+
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Vi seu vídeo de apresentação e quero agendar uma consulta!"
-    );
+    const message = encodeURIComponent(t("home.video.whatsappMessage"));
     window.open(
       `https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`,
       "_blank"
     );
   };
 
-  const benefits = [
-    "Conheça minha abordagem integrativa",
-    "Entenda como funciona o processo",
-    "Veja depoimentos de pacientes reais",
-    "Descubra se o método é para você"
-  ];
+  const benefits = t("home.video.benefits", { returnObjects: true }) as string[];
 
   return (
     <section className="py-16 lg:py-24 bg-gradient-to-b from-background to-muted/20 relative overflow-hidden">
@@ -41,7 +37,7 @@ const VideoSection = () => {
                     controls
                     preload="metadata"
                   >
-                    <source src="/video2.mp4" type="video/mp4" />
+                    <source src="/video1.mp4" type="video/mp4" />
                     Seu navegador não suporta o elemento de vídeo.
                   </video>
                 </div>
@@ -51,18 +47,17 @@ const VideoSection = () => {
             {/* Legenda do vídeo */}
             <div className="bg-background rounded-2xl p-6 border border-primary/15 shadow-subtle space-y-3">
               <p className="text-base text-foreground font-medium leading-relaxed">
-                Seja Bem-vinda à Clínica Renata Bastos! 🤍
+                {t("home.video.caption1")}
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Aqui você encontra cuidado personalizado para transformar sua saúde — de dentro para fora.
+                {t("home.video.caption2")}
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Nutrição Ortomolecular e Estética Avançada integradas em um só lugar,<br />
-                pensadas para a sua realidade e para o seu resultado.
+                {t("home.video.caption3")}
               </p>
               <div className="pt-1 border-t border-border/50">
                 <p className="text-sm font-semibold text-primary">
-                  Dê o primeiro passo — agende sua consulta e comece sua transformação. ✨
+                  {t("home.video.caption4")}
                 </p>
               </div>
             </div>
@@ -73,24 +68,20 @@ const VideoSection = () => {
             <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
               <Play className="h-4 w-4 text-primary" />
               <span className="text-sm font-medium text-primary">
-                Assista ao Vídeo
+                {t("home.video.badge")}
               </span>
             </div>
 
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Por Que Escolher a{" "}
-              <span className="text-primary">Clínica Renata Bastos?</span>
+              <Trans i18nKey="home.video.title" components={{ 1: <span className="text-primary" /> }} />
             </h2>
 
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Em poucos minutos, você vai entender como a integração de
-              <strong className="text-foreground"> Nutrição Ortomolecular + Estética Avançada</strong> pode
-              transformar não apenas seu corpo, mas sua relação com saúde e bem-estar.
+              <Trans i18nKey="home.video.p1" components={{ strong: <strong className="text-foreground" /> }} />
             </p>
 
             <p className="text-base text-muted-foreground mb-8 leading-relaxed">
-              Não é sobre dietas milagrosas ou procedimentos estéticos isolados.
-              É sobre um cuidado completo, estratégico e humanizado — pensado para você.
+              {t("home.video.p2")}
             </p>
 
             {/* Benefits */}
@@ -111,11 +102,11 @@ const VideoSection = () => {
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
-                Quero Agendar Minha Consulta
+                {t("home.video.cta")}
               </Button>
 
               <p className="text-sm text-muted-foreground">
-                ⚡ <strong>Agenda limitada</strong> — Atendimento personalizado com vagas mensais
+                <Trans i18nKey="home.video.limitedAgenda" components={{ strong: <strong /> }} />
               </p>
             </div>
           </div>

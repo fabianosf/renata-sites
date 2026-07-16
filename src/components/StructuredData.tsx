@@ -3,19 +3,11 @@ import { siteConfig } from "@/config/site";
 import { servicesData } from "@/data/servicesData";
 
 interface StructuredDataProps {
-  type?: "home" | "service" | "article" | "about";
+  type?: "home" | "service" | "about";
   serviceId?: string;
-  article?: {
-    title: string;
-    description: string;
-    image: string;
-    datePublished: string;
-    dateModified: string;
-    author: string;
-  };
 }
 
-const StructuredData = ({ type = "home", serviceId, article }: StructuredDataProps) => {
+const StructuredData = ({ type = "home", serviceId }: StructuredDataProps) => {
   // LocalBusiness Schema (sempre presente)
   const localBusinessSchema = useMemo(() => ({
     "@context": "https://schema.org",
@@ -138,43 +130,6 @@ const StructuredData = ({ type = "home", serviceId, article }: StructuredDataPro
     return null;
   }, [type, serviceId]);
 
-  // Article Schema (se for post do blog)
-  const articleSchema = useMemo(() => {
-    if (type === "article" && article) {
-      return {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        headline: article.title,
-        description: article.description,
-        image: article.image,
-        datePublished: article.datePublished,
-        dateModified: article.dateModified,
-        author: {
-          "@type": "Person",
-          "@id": "https://clinicarenatabastos.com.br/#person",
-          name: article.author,
-        },
-        publisher: {
-          "@type": "Organization",
-          "@id": "https://clinicarenatabastos.com.br/#organization",
-          name: siteConfig.brand.name,
-          logo: {
-            "@type": "ImageObject",
-            url: "https://clinicarenatabastos.com.br/logo.png",
-          },
-        },
-        mainEntityOfPage: {
-          "@type": "WebPage",
-          "@id": `https://clinicarenatabastos.com.br/blog/${article.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`,
-        },
-        articleSection: article.title.split(" ")[0] || "Nutrição",
-        keywords: article.title,
-        inLanguage: "pt-BR",
-      };
-    }
-    return null;
-  }, [type, article]);
-
   // BreadcrumbList Schema
   const breadcrumbSchema = useMemo(() => ({
     "@context": "https://schema.org",
@@ -202,24 +157,8 @@ const StructuredData = ({ type = "home", serviceId, article }: StructuredDataPro
             },
           ]
         : []),
-      ...(type === "article" && article
-        ? [
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Blog",
-              item: "https://clinicarenatabastos.com.br/blog",
-            },
-            {
-              "@type": "ListItem",
-              position: 3,
-              name: article.title,
-              item: `https://clinicarenatabastos.com.br/blog/${article.title.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")}`,
-            },
-          ]
-        : []),
     ],
-  }), [type, serviceId, article]);
+  }), [type, serviceId]);
 
   useEffect(() => {
     try {
@@ -252,7 +191,6 @@ const StructuredData = ({ type = "home", serviceId, article }: StructuredDataPro
       addScript(localBusinessSchema, "schema-localbusiness");
       addScript(personSchema, "schema-person");
       addScript(serviceSchema, "schema-service");
-      addScript(articleSchema, "schema-article");
       addScript(breadcrumbSchema, "schema-breadcrumb");
 
       // Cleanup
@@ -270,7 +208,7 @@ const StructuredData = ({ type = "home", serviceId, article }: StructuredDataPro
     } catch (error) {
       console.error("Error in StructuredData:", error);
     }
-  }, [localBusinessSchema, personSchema, serviceSchema, articleSchema, breadcrumbSchema]);
+  }, [localBusinessSchema, personSchema, serviceSchema, breadcrumbSchema]);
 
   return null;
 };

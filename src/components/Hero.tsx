@@ -1,9 +1,12 @@
+import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight, Users } from "lucide-react";
 import heroImage from "@/assets/hero-nutrition.jpg";
 import { siteConfig } from "@/config/site";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="inicio" className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden gradient-hero">
       {/* Background decorative elements - Organic shapes */}
@@ -20,21 +23,19 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-accent px-4 py-2 rounded-full mb-6">
               <Users className="h-4 w-4 text-accent-foreground" />
               <span className="text-sm font-medium text-accent-foreground">
-                Mais de {siteConfig.professional.patients} pacientes transformados
+                {t("home.hero.badge", { count: siteConfig.professional.patients })}
               </span>
             </div>
 
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-              Transforme sua saúde e{" "}
+              {t("home.hero.titleLine1")}{" "}
               <span className="font-display text-primary bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-fade-in">
-                conquiste a melhor versão de você
+                {t("home.hero.titleLine2")}
               </span>
             </h1>
 
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed mb-8">
-              <strong>Nutrição estratégica + Estética integrativa</strong> em um só lugar.
-              Cuidado completo para quem busca resultados reais, sustentáveis e naturais —
-              de dentro para fora.
+              <Trans i18nKey="home.hero.description" components={{ strong: <strong className="text-foreground" /> }} />
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -42,13 +43,13 @@ const Hero = () => {
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 shadow-glow hover:shadow-premium hover:scale-105 transition-all duration-300 whitespace-normal h-auto py-4 bg-gradient-to-r from-accent to-accent/90 hover:from-accent hover:to-accent/80"
                 onClick={() => {
-                  const message = encodeURIComponent("Olá! Quero transformar minha saúde e alimentação com acompanhamento personalizado.");
+                  const message = encodeURIComponent(t("home.hero.whatsappMessageNutrition"));
                   window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
                 }}
               >
                 <span className="flex items-center gap-2">
                   <Calendar className="h-5 w-5 flex-shrink-0" />
-                  Agendar Consulta de Nutrição
+                  {t("home.hero.ctaNutrition")}
                 </span>
               </Button>
               <Button
@@ -56,12 +57,12 @@ const Hero = () => {
                 variant="outline"
                 className="text-base sm:text-lg px-6 sm:px-8 whitespace-normal h-auto py-4 border-2 border-primary hover:bg-primary/5 hover:scale-105 transition-all duration-300"
                 onClick={() => {
-                  const message = encodeURIComponent("Olá! Quero conhecer os tratamentos estéticos da Clínica Renata Bastos.");
+                  const message = encodeURIComponent(t("home.hero.whatsappMessageAesthetics"));
                   window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
                 }}
               >
                 <span className="flex items-center gap-2">
-                  Conhecer Tratamentos Estéticos
+                  {t("home.hero.ctaAesthetics")}
                   <ArrowRight className="h-5 w-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
                 </span>
               </Button>
@@ -73,7 +74,7 @@ const Hero = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-elevated">
               <img
                 src={heroImage}
-                alt="Nutrição Ortomolecular e Estética Avançada na Tijuca, Rio de Janeiro - Consultas com Renata Bastos"
+                alt={t("home.hero.imageAlt")}
                 className="w-full h-auto object-cover"
                 loading="eager"
               />
@@ -85,8 +86,8 @@ const Hero = () => {
                   <span className="text-xl sm:text-2xl font-bold text-primary-foreground">✓</span>
                 </div>
                 <div className="min-w-0">
-                  <p className="font-bold text-foreground text-sm sm:text-base">Resultados Comprovados</p>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Baseado em evidências</p>
+                  <p className="font-bold text-foreground text-sm sm:text-base">{t("home.hero.badgeResults")}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{t("home.hero.badgeResultsSub")}</p>
                 </div>
               </div>
             </div>

@@ -1,0 +1,570 @@
+{
+  "common": {
+    "nav": {
+      "home": "Home",
+      "clinica": "The Clinic",
+      "draRenata": "Dr. Renata",
+      "metodoRB": "RB Method",
+      "facial": "Facial Rejuvenation",
+      "corporal": "Body Aesthetics",
+      "nutrition": "Strategic Nutrition",
+      "beforeAfter": "Before & After",
+      "stories": "Transformation Stories",
+      "contact": "Contact"
+    },
+    "cta": {
+      "scheduleConsultation": "Schedule Consultation",
+      "scheduleEvaluation": "Schedule My Evaluation",
+      "talkWhatsapp": "Chat on WhatsApp",
+      "learnMore": "Learn more",
+      "iWantToKnowMore": "I Want to Know More"
+    },
+    "footer": {
+      "tagline": "Transforming lives through Orthomolecular Nutrition and Advanced Aesthetics. Located in the heart of Tijuca, with personalized protocols to turn your dreams into reality.",
+      "quickLinksTitle": "Quick Links",
+      "contactTitle": "Contact",
+      "developedByTitle": "Developed by: Fabiano Freitas",
+      "call": "Call",
+      "talkWhatsapp": "Chat on WhatsApp",
+      "portfolio": "See my Portfolio/LinkedIn",
+      "visitSite": "Visit my Website",
+      "sendEmail": "Send an Email",
+      "rights": "Fabiano Sousa de Freitas. Development and maintenance by Fabiano."
+    },
+    "whatsapp": {
+      "ariaLabel": "Talk to us on WhatsApp"
+    },
+    "breadcrumbs": {
+      "home": "Home"
+    },
+    "notFound": {
+      "title": "Page Not Found",
+      "description": "The page you are looking for doesn't exist or has been moved.",
+      "attemptedUrl": "Attempted URL:",
+      "backHome": "Back to Home",
+      "seeServices": "See Services",
+      "goBack": "Go Back",
+      "draRenataTitle": "Dr. Renata",
+      "draRenataDesc": "Meet Dr. Renata Bastos",
+      "servicesTitle": "Services",
+      "servicesDesc": "See our treatments",
+      "contactTitle": "Contact",
+      "contactDesc": "Get in touch",
+      "seo": {
+        "title": "Page Not Found - 404",
+        "description": "The page you are looking for was not found. Return to the homepage or explore our services."
+      }
+    },
+    "theme": {
+      "toLight": "Switch to light theme",
+      "toDark": "Switch to dark theme"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Orthomolecular Nutritionist & Aesthetic Biomedicine | Tijuca, Rio de Janeiro",
+      "description": "Orthomolecular Nutritionist and Aesthetic Biomedicine specialist in Tijuca, Rio de Janeiro. In-person consultations (Tijuca and Barra) and online. Healthy weight loss, clinical nutrition, advanced aesthetics, intradermotherapy, gluteal harmonization. Over 2000 patients transformed."
+    },
+    "hero": {
+      "badge": "Over {{count}} patients transformed",
+      "titleLine1": "Transform your health and",
+      "titleLine2": "become the best version of yourself",
+      "description": "<strong>Strategic nutrition + integrative aesthetics</strong> in one place. Complete care for those seeking real, sustainable and natural results — from the inside out.",
+      "ctaNutrition": "Schedule a Nutrition Consultation",
+      "ctaAesthetics": "Discover Aesthetic Treatments",
+      "badgeResults": "Proven Results",
+      "badgeResultsSub": "Evidence-based",
+      "imageAlt": "Orthomolecular Nutrition and Advanced Aesthetics in Tijuca, Rio de Janeiro - Consultations with Renata Bastos",
+      "whatsappMessageNutrition": "Hello! I want to transform my health and diet with personalized guidance.",
+      "whatsappMessageAesthetics": "Hello! I want to learn about Clínica Renata Bastos' aesthetic treatments."
+    },
+    "differentiators": {
+      "title": "Clínica Renata Bastos",
+      "p1": "Clínica Renata Bastos integrates <strong>clinical nutrition, metabolic health and facial and body harmonization</strong> in a strategic, personalized approach — designed for those seeking real results in health, aesthetics and self-esteem.",
+      "p2": "Recognized for individualized nutritional guidance and sustainable results in weight loss, muscle gain and improved energy, the clinic works with continuous planning, respecting each patient's metabolism, routine and eating behavior.",
+      "p3": "Here, aesthetics isn't superficial — it's an extension of caring for the body, health and confidence of each person. Everything is done in a humanized and personalized way — because every story, goal and moment calls for a unique plan.",
+      "items": [
+        { "title": "In-Person and Online Care", "description": "Total flexibility for consultations at the office or from the comfort of your home" },
+        { "title": "Orthomolecular Approach", "description": "Nutrition based on scientific evidence with a focus on cellular optimization" },
+        { "title": "Nutrition + Aesthetics Integration", "description": "Complete care: internal and external health in one place" },
+        { "title": "{{count}} Patients Treated", "description": "Proven experience with real results and lasting transformations" }
+      ]
+    },
+    "video": {
+      "badge": "Watch the Video",
+      "title": "Why Choose <1>Clínica Renata Bastos?</1>",
+      "p1": "In just a few minutes, you'll understand how integrating <strong>Orthomolecular Nutrition + Advanced Aesthetics</strong> can transform not just your body, but your relationship with health and well-being.",
+      "p2": "It's not about miracle diets or isolated aesthetic procedures. It's about complete, strategic and humanized care — designed for you.",
+      "benefits": [
+        "Get to know my integrative approach",
+        "Understand how the process works",
+        "See real patient testimonials",
+        "Find out if the method is right for you"
+      ],
+      "cta": "I Want to Schedule My Consultation",
+      "limitedAgenda": "⚡ <strong>Limited availability</strong> — Personalized care with monthly openings",
+      "caption1": "Welcome to Clínica Renata Bastos! 🤍",
+      "caption2": "Here you'll find personalized care to transform your health — from the inside out.",
+      "caption3": "Orthomolecular Nutrition and Advanced Aesthetics integrated in one place, designed for your reality and your results.",
+      "caption4": "Take the first step — schedule your consultation and start your transformation. ✨",
+      "whatsappMessage": "Hello! I saw your introduction video and I'd like to schedule a consultation!"
+    },
+    "nutritionAesthetics": {
+      "badge": "Unique Differential",
+      "titleLine1": "Nutrition + Aesthetics",
+      "titleLine2": "Complete Transformation",
+      "description": "The integration of strategic nutrition and advanced aesthetics that cares for you from the inside out — health, balance and beauty in one place.",
+      "nutritionBadge": "Health from Within",
+      "nutritionTitle": "Strategic Nutrition",
+      "nutritionDescription": "Orthomolecular, clinical and sports nutrition to balance your metabolism, optimize energy and build sustainable results.",
+      "nutritionItems": [
+        "Healthy, lasting weight loss",
+        "Muscle mass gain and definition",
+        "Improved energy and disposition",
+        "Hormonal and metabolic balance",
+        "Disease prevention and control"
+      ],
+      "nutritionLink": "Learn more about Strategic Nutrition",
+      "aestheticsBadge": "Beauty from Without",
+      "aestheticsTitle": "Integrative Aesthetics",
+      "aestheticsDescription": "Facial and body harmonization with advanced techniques for natural, safe results aligned with your health.",
+      "aestheticsItems": [
+        "Intradermotherapy (localized fat)",
+        "Gluteal and body harmonization",
+        "Collagen biostimulators",
+        "Botulinum toxin and skin booster",
+        "Advanced hair treatment"
+      ],
+      "aestheticsLink": "Learn more about Body Aesthetics",
+      "integrationTitle": "The Result of Integration",
+      "integrationText": "When nutrition and aesthetics work together, results are <strong>faster, deeper and longer-lasting</strong>. You take care of your internal health while enhancing your external beauty — with safety, science and humanized care.",
+      "integrationCards": [
+        { "title": "Real Results", "description": "Visible and sustainable transformations" },
+        { "title": "Follow-up Care", "description": "Continuous, personalized support" },
+        { "title": "Humanized Care", "description": "Individualized and empathetic attention" }
+      ],
+      "integrationCta": "Discover Integrated Care",
+      "whatsappMessage": "Hello! I want to learn about the integrated Nutrition + Aesthetics care. I'd like more information."
+    },
+    "consultationTypes": {
+      "badge": "Over 2000 lives transformed",
+      "title": "How Would You Prefer to Start Your Transformation?",
+      "description": "Choose the format that best fits your routine. Both modalities offer the same quality, dedication and proven results.",
+      "limitedAgenda": "⚡ Limited availability — Book your slot in advance",
+      "presential": {
+        "badge": "Ideal to Get Started",
+        "title": "In-Person Consultation",
+        "subtitle": "Complete connection and humanized presence",
+        "description": "The in-person meeting allows for a deeper assessment, with close attention to detail and building a relationship of trust from the very first moment.",
+        "items": ["Body assessment with bioimpedance", "Personalized in-person analysis", "Human connection and care"],
+        "cta": "Schedule In-Person Consultation",
+        "whatsappMessage": "Hello! I'd like to schedule an In-Person Nutrition Consultation. I'd like to know prices and availability."
+      },
+      "online": {
+        "badge": "Most Popular",
+        "title": "Online Consultation",
+        "subtitle": "Same quality, wherever you are",
+        "description": "Video call consultations with the same dedication and care as an in-person visit. Ideal for those with a busy schedule or who live far away.",
+        "items": ["Flexible and accessible scheduling", "Save on travel time", "Care from anywhere"],
+        "cta": "Schedule Online Consultation",
+        "whatsappMessage": "Hello! I'd like to schedule an Online Nutrition Consultation. I'd like to know prices and availability."
+      },
+      "footerTitle": "✨ Equal quality and dedication in both modalities",
+      "footerText": "Whether in-person or online, you receive the same personalized care, complete assessment and close follow-up to reach your goals."
+    },
+    "pricing": {
+      "badge": "Transformation Programs",
+      "titlePrefix": "Choose Your",
+      "titleHighlight": "Transformation Journey",
+      "description": "Each program is designed to follow your progress with personalized strategies. From the first step to complete transformation — choose the path that makes sense for you right now.",
+      "plans": [
+        {
+          "id": "avulsa",
+          "name": "Initial Consultation",
+          "subtitle": "Your First Step",
+          "description": "Ideal for getting to know the work and starting your transformation journey with a complete assessment.",
+          "features": ["60-minute consultation", "Complete body assessment", "Detailed personalized anamnesis", "Individualized meal plan", "Digital support material"],
+          "impact": "Start your transformation"
+        },
+        {
+          "id": "retorno",
+          "name": "Consultation + Follow-up",
+          "subtitle": "For Those Who Want Results",
+          "description": "Strategic follow-up with adjustments to make sure you're on the right track.",
+          "features": ["Initial consultation + 1 follow-up", "Progress assessment", "Smart plan adjustments", "Close follow-up", "Support between consultations"],
+          "badge": "Popular",
+          "impact": "Secure your results"
+        },
+        {
+          "id": "trimestral",
+          "name": "Quarterly Program",
+          "subtitle": "Sustainable Transformation",
+          "description": "Monthly follow-up to observe your response, adjust strategies and take care of you with ease and consistency.",
+          "features": ["3 months of follow-up", "Strategic monthly consultations", "Continuous personalized adjustments", "Direct support from Renata", "Progressive results", "Changes that last"],
+          "badge": "Most Chosen",
+          "impact": "Real, lasting transformation"
+        },
+        {
+          "id": "semestral",
+          "name": "Semiannual Program",
+          "subtitle": "Definitive Results",
+          "description": "The complete path to deep transformation: 6 months of strategic follow-up for results that stay.",
+          "features": ["6 months of transformation", "Strategic monthly follow-up", "Frequent, precise adjustments", "Continuous personalized support", "Building solid habits", "Deep, lasting results", "Best long-term investment"],
+          "badge": "Best Investment",
+          "impact": "Your best self, forever"
+        }
+      ],
+      "planCta": "Ask About Prices & Schedule",
+      "paymentTitle": "Payment Methods",
+      "paymentMethods": ["Pix", "Credit card in installments"],
+      "limitedSlots": "💡 Limited monthly slots for personalized care",
+      "footerText": "Reach out and let's choose the best plan for you together ✨",
+      "whatsappMessagePlan": "Hello! I'd like to know more about the {{planName}} and schedule a consultation."
+    },
+    "faq": {
+      "badge": "Frequently Asked Questions",
+      "titlePrefix": "Questions?",
+      "titleHighlight": "I'm Here to Help",
+      "description": "I've gathered the most common questions I receive. If your question isn't here, message me on WhatsApp and I'll be happy to answer!",
+      "items": [
+        { "question": "Why combine nutrition and aesthetics?", "answer": "Real transformation happens from the inside out. When you balance your metabolic health through nutrition and enhance results with aesthetic procedures, the gains are faster, deeper and much longer-lasting. It's science working fully in your favor." },
+        { "question": "How long does it take to see results?", "answer": "This varies according to your goal and commitment. In general, changes in energy and disposition appear within the first 2-3 weeks. Visible weight-loss results begin in 4-6 weeks. For deep, lasting transformations, we recommend 3-6 month programs, where we closely monitor your progress and adjust strategies as needed." },
+        { "question": "Do I need to follow a very restrictive diet?", "answer": "No! My approach is exactly the opposite of fad diets. I work on dietary re-education and autonomy — you learn to make smart choices without suffering or going hungry. The goal is a healthy relationship with food, not extreme restriction. Done is better than perfect." },
+        { "question": "Do you see patients online or only in person?", "answer": "I offer both! In-person in Tijuca and Barra da Tijuca (Rio de Janeiro), and online anywhere in Brazil and abroad. Both have the same quality, dedication and results. The online consultation is via video call and you receive all material digitally." },
+        { "question": "What's the difference between regular and orthomolecular nutrition?", "answer": "Orthomolecular nutrition goes beyond basic diet — it works at the cellular level, identifying nutrient deficiencies and correcting them through food and/or compounded supplements. The focus is balancing your metabolism, optimizing energy, improving digestion and treating the root cause of symptoms — not just masking problems." },
+        { "question": "Are the aesthetic procedures safe?", "answer": "Absolutely. As an aesthetic biomedical professional, I have specific training in aesthetic procedures and use only high-quality products approved by ANVISA (Brazil's health regulatory agency). All protocols are personalized and performed with refined technique, always prioritizing your safety and natural results." },
+        { "question": "Can I do aesthetic procedures while dieting?", "answer": "Yes, and that's exactly the advantage of integration! When you're in a nutritionally guided weight-loss or muscle-gain process, aesthetic procedures enhance the results. For example: localized fat reduction + strategic nutrition = a faster, more complete transformation." },
+        { "question": "How does follow-up work? Do I have support between consultations?", "answer": "In the follow-up programs (quarterly and semiannual), you have monthly consultations for assessment and adjustments, plus support between consultations via WhatsApp for specific questions. The goal is for you to feel supported throughout the whole journey, not just during in-person visits." },
+        { "question": "Do you accept insurance or only private payment?", "answer": "Care is private-pay only. But I accept several payment methods: Pix (with a discount) and credit card in installments. Get in touch to learn about prices and personalized conditions for your case." },
+        { "question": "What age groups do you work with?", "answer": "I see teenagers (from age 16 with parental authorization), adults and seniors. Every stage of life has specific needs, and care is always personalized considering age, goals, routine and health history." },
+        { "question": "Can I book a consultation just to get to know the work?", "answer": "Of course! The initial consultation is already a complete assessment where we discuss your goals, history, routine and put together a personalized plan. It's the perfect opportunity for you to get to know me, ask questions and understand how I can help you. Many patients start this way and decide to continue with follow-up afterward." },
+        { "question": "What if I can't follow everything perfectly?", "answer": "That's completely normal and expected! Real life isn't Instagram. My job isn't to pressure you, but to understand you and adjust the plan to your reality. It won't be possible to follow it 100% every day, and that's okay. What matters is consistency, not perfection. The more you follow it, the better the results — but done is always better than perfect." }
+      ],
+      "ctaTitle": "Didn't Find Your Question?",
+      "ctaDescription": "Every case is unique and deserves personalized attention. Message me on WhatsApp so we can talk about your specific goal!",
+      "ctaButton": "Ask My Questions on WhatsApp",
+      "trustBadge": "⚡ I reply personally • No commitment",
+      "whatsappMessage": "Hello! I have a few questions and would like to talk about your services."
+    },
+    "protocols": {
+      "badge": "Integrated Protocols",
+      "title": "Combined <1>Protocols</1>",
+      "description": "Integrated, strategic treatments that combine clinical nutrition, metabolic support and aesthetic procedures for complete, lasting results",
+      "items": [
+        {
+          "id": "reset-metabolico",
+          "name": "Metabolic Reset & Strategic Body Composition",
+          "icon": "🔥",
+          "description": "For those who want to reduce body fat, increase muscle mass and improve definition with integrated clinical follow-up and individualized planning.",
+          "fullDescription": "The idea is to reorganize the metabolism and optimize body composition through a strategic approach combining nutrition, metabolic support and resources aimed at contour and performance.",
+          "includes": [
+            "Individualized clinical and sports nutrition",
+            "Systemic injectable resources for metabolic support and performance",
+            "Enzymes for localized fat and body contour",
+            "Metabolic strategies focused on strength, recovery and muscle quality"
+          ],
+          "popular": true
+        },
+        {
+          "id": "reestruturacao-pos-emagrecimento",
+          "name": "Tissue Restructuring After Weight Loss",
+          "icon": "✨",
+          "description": "After significant weight loss, it's common for signs of sagging, loss of support and changes in skin quality and facial and body contours to appear.",
+          "fullDescription": "This phase aims to regain firmness, structure and body proportion through a strategic, individualized approach.",
+          "includes": [
+            "Facial and body collagen biostimulators",
+            "Strategic hyaluronic acid points for support and proportion",
+            "Support threads when indicated",
+            "Nutritional and metabolic planning for tissue support"
+          ],
+          "popular": false
+        },
+        {
+          "id": "reestruturacao-facial",
+          "name": "Facial Restructuring & Tissue Support",
+          "icon": "💎",
+          "description": "Recommended for patients with volume loss, sagging and changes in facial contours — whether from natural aging or after significant weight loss.",
+          "fullDescription": "The goal is to restore support, improve skin quality and redefine facial proportions in a natural, strategic way.",
+          "includes": [
+            "Collagen biostimulators",
+            "Support threads",
+            "Hyaluronic acid filler at strategic points",
+            "Botulinum toxin for muscle balance and line prevention"
+          ],
+          "popular": false
+        }
+      ],
+      "includesLabel": "The plan may include:",
+      "investmentTitle": "Personalized Investment",
+      "investmentText": "Every protocol is tailored to your needs. Get in touch to learn about prices and special conditions.",
+      "cardCta": "I Want to Know More",
+      "closingTitle": "Every protocol is personalized to your needs",
+      "closingText": "Message me so we can talk about which protocol is the best fit for you ✨",
+      "whatsappMessageProtocolo": "Hello! I'd like to know more about the protocol: {{name}}",
+      "whatsappMessageGeneric": "Hello! I'd like to know more about the Combined Protocols."
+    }
+  },
+  "clinica": {
+    "seo": {
+      "title": "The Clinic - Facial Harmonization and Integrative Aesthetics",
+      "description": "Discover Clínica Renata Bastos: a reference in facial harmonization and integrative aesthetics in Tijuca, Rio de Janeiro, with personalized protocols and specialized nutritional follow-up."
+    },
+    "breadcrumb": "The Clinic",
+    "title": "Clínica Renata Bastos",
+    "p1": "Clínica Renata Bastos is a reference in facial harmonization and integrative aesthetics, offering personalized protocols that address aging in a strategic, natural and individualized way. Each plan is developed to restore tissue support, stimulate collagen production and enhance each patient's beauty, respecting their anatomy and identity.",
+    "p2": "With a global vision of aesthetics, the clinic combines advanced facial and body rejuvenation techniques with specialized nutritional follow-up, enhancing results from the inside out. This integration benefits not only appearance, but also skin health, body composition, metabolism and quality of life.",
+    "p3": "More than performing procedures, we believe in continuous, personalized care. Each patient is individually assessed so treatment can be planned according to their goals, lifestyle and needs, delivering natural, lasting results and an experience built on safety, warmth and excellence.",
+    "p4": "At Clínica Renata Bastos, aesthetics is understood as part of well-being: a process that unites science, health and self-esteem to bring out the best version of each person.",
+    "ctaEvaluation": "Schedule My Evaluation",
+    "videoTitle": "Get to Know Our Space",
+    "videoCaption1": "Get to know our space! 🌿",
+    "videoCaption2": "An environment designed down to every detail so you feel welcomed, safe and comfortable from the moment you arrive.",
+    "galleryTitle": "Our Space in Photos",
+    "galleryNote": "Gallery being updated — new photos of the physical space coming soon.",
+    "galleryPlaceholder": "Photo coming soon",
+    "whatsappMessage": "Hello! I want to learn about Clínica Renata Bastos and schedule an evaluation."
+  },
+  "draRenata": {
+    "seo": {
+      "title": "Dr. Renata Bastos - Aesthetic Biomedical Professional and Nutritionist",
+      "description": "Meet Renata Bastos, an aesthetic biomedical professional and nutritionist specializing in facial rejuvenation and integrative aesthetics, seeing patients in Tijuca, Rio de Janeiro."
+    },
+    "breadcrumb": "Dr. Renata",
+    "badge": "Aesthetic Biomedical Professional & Nutritionist",
+    "credentials": "CRN 4 15100141 | CRBM 60773",
+    "p1": "Dr. Renata Bastos is an aesthetic biomedical professional and nutritionist, specializing in facial rejuvenation and integrative aesthetics, seeing patients in Tijuca, Rio de Janeiro.",
+    "p2": "Her approach goes beyond isolated procedures. Every treatment is personally planned to restore tissue support, stimulate collagen production and enhance natural beauty, always respecting each patient's anatomy and individuality.",
+    "p3": "Among the main procedures performed are collagen biostimulators, botulinum toxin, hyaluronic acid filler, threads, skin booster, protocols for facial and body sagging, body remodeling and personalized rejuvenation treatments.",
+    "p4": "As a differentiator, she combines advanced aesthetics expertise with functional, sports and orthomolecular nutrition, providing complete care from the inside out. Nutritional follow-up helps improve body composition, metabolic health, performance, skin quality and enhances aesthetic results.",
+    "p5": "She performs in-person consultations and procedures in Tijuca, as well as online nutritional follow-up, offering an individualized treatment plan for those seeking natural, lasting results and an overall improvement in self-esteem and quality of life.",
+    "yearsLabel": "Years",
+    "patientsLabel": "Patients",
+    "satisfactionLabel": "Satisfaction",
+    "proceduresTitle": "Main Procedures",
+    "procedures": ["Collagen biostimulators", "Botulinum toxin", "Hyaluronic acid filler", "Support threads", "Skin booster", "Protocols for facial and body sagging", "Body remodeling"],
+    "locationTitle": "Care",
+    "locationPresential": "In-person:",
+    "locationPresentialValue": "Tijuca, Rio de Janeiro",
+    "locationOnline": "Online:",
+    "locationOnlineValue": "Nutritional follow-up available throughout Brazil",
+    "diferenciais": [
+      { "title": "Advanced Aesthetics", "description": "Biostimulators, botulinum toxin, filler, threads, skin booster and personalized rejuvenation protocols." },
+      { "title": "Nutrition from the Inside Out", "description": "Functional, sports and orthomolecular nutrition to enhance body composition, metabolic health and aesthetic results." },
+      { "title": "Individualized Planning", "description": "Every treatment is designed to restore support, stimulate collagen and enhance natural beauty, respecting your anatomy." }
+    ],
+    "cta": "Schedule a Consultation with Dr. Renata"
+  },
+  "metodoRB": {
+    "seo": {
+      "title": "Exclusive RB Methods - Facial Rejuvenation Methodology",
+      "description": "Discover Dr. Renata Bastos' Exclusive RB Methods: a proprietary facial rejuvenation methodology that combines science, technique and individualized planning."
+    },
+    "breadcrumb": "RB Method",
+    "badge": "Exclusive Methodology",
+    "title": "Exclusive RB Methods",
+    "subtitle": "Dr. Renata Bastos' facial rejuvenation methodology.",
+    "intro1": "At Clínica Renata Bastos, we believe rejuvenation goes far beyond isolated procedures. Every face ages in a unique way, so we developed a proprietary methodology that combines science, technique and planning to address the different causes of facial aging.",
+    "intro2": "The Exclusive RB Methods combine advanced facial harmonization techniques to restore tissue support, stimulate natural collagen production, improve skin quality and preserve each patient's natural beauty.",
+    "intro3": "More than harmonizing, our goal is to provide elegant, natural and long-lasting rejuvenation, always respecting your anatomy, your features and your identity.",
+    "metodos": [
+      {
+        "name": "RB Prime",
+        "tagline": "The start of smart rejuvenation.",
+        "description": "Ideal for those who want to prevent signs of aging or soften the first expression lines, preserving the lightness and naturalness of the face.",
+        "listLabel": "Recommended for",
+        "items": ["First expression lines", "Aging prevention", "A more rested, radiant look"]
+      },
+      {
+        "name": "RB Balance",
+        "tagline": "Facial harmony and balance.",
+        "description": "Developed to restore proportions, reposition strategic volumes and enhance the face's natural contours, delivering a sophisticated, discreet result.",
+        "listLabel": "Recommended for",
+        "items": ["Facial volume loss", "Mild asymmetries", "Natural facial harmonization"]
+      },
+      {
+        "name": "RB Contour",
+        "tagline": "Structure, definition and elegance.",
+        "description": "A method created to restore support and redefine facial contour, enhancing anatomy without exaggeration.",
+        "listLabel": "Recommended for",
+        "items": ["Jawline definition", "Facial contour", "Volume restructuring"]
+      },
+      {
+        "name": "RB Glow",
+        "tagline": "Beautiful skin is healthy skin.",
+        "description": "A method dedicated exclusively to skin quality, promoting deep hydration, radiance, glow and improved texture for a naturally luminous look.",
+        "listLabel": "Benefits",
+        "items": ["Intense hydration", "Natural radiance", "More even skin", "Refined texture"]
+      },
+      {
+        "name": "RB Collagen",
+        "tagline": "Firmness built from the inside out.",
+        "description": "Focused on collagen biostimulation, this method progressively strengthens the skin, improves firmness and helps prevent sagging from progressing.",
+        "listLabel": "Recommended for",
+        "items": ["Early sagging", "Loss of firmness", "Aging prevention"]
+      },
+      {
+        "name": "RB Harmony",
+        "tagline": "The perfect balance of structure, skin quality and naturalness.",
+        "description": "Our premium method combines different rejuvenation strategies to address expression lines, volume loss, skin quality and facial support in a single plan. Ideal for those seeking global, elegant and personalized rejuvenation.",
+        "listLabel": "",
+        "items": []
+      },
+      {
+        "name": "RB Lift Sculpt",
+        "tagline": "The most complete method for treating facial sagging.",
+        "description": "Developed to restore tissue support, intensely stimulate natural collagen production and redefine facial contour, promoting a progressive, natural lifting effect.",
+        "listLabel": "",
+        "items": [],
+        "submethods": [
+          { "name": "RB Lift Sculpt Essence", "description": "Recommended for patients with mild to moderate sagging who want to regain firmness and soften the main expression lines." },
+          { "name": "RB Lift Sculpt Premium", "description": "A more complete plan for those seeking to treat sagging, regain facial support, improve skin quality and promote overall rejuvenation." }
+        ]
+      }
+    ],
+    "closingTitle": "An exclusive method for every patient",
+    "closingP1": "No RB Method is performed in a standardized way. Every treatment begins with a detailed assessment, analyzing facial structure, skin quality, degree of aging and each patient's goals.",
+    "closingP2": "Based on this diagnosis, we develop an individualized plan, combining the most suitable techniques to achieve natural, elegant and lasting results.",
+    "closingP3": "Because true rejuvenation isn't about transforming your face. It's about restoring support, balance, and helping you recognize yourself in the mirror with even more confidence.",
+    "crossCta": "Your treatment can go beyond aesthetics. In some cases, nutritional follow-up is a great ally in boosting collagen production, improving skin quality and supporting longer-lasting results.",
+    "crossCtaLink": "Discover Strategic Nutrition",
+    "whatsappMessageGeneric": "Hello! I'd like to know which RB Method is ideal for me.",
+    "whatsappMessageMetodo": "Hello! I'd like to know more about the {{name}} Method."
+  },
+  "facial": {
+    "seo": {
+      "title": "Facial Rejuvenation - Harmonization and Collagen Biostimulation",
+      "description": "Discover Clínica Renata Bastos' facial rejuvenation treatments: collagen biostimulators, botulinum toxin, filler, threads and skin booster."
+    },
+    "breadcrumb": "Facial Rejuvenation",
+    "badge": "Facial Harmonization",
+    "title": "Facial Rejuvenation",
+    "description": "Personalized treatments to restore tissue support, stimulate collagen production and enhance the natural beauty of your face — always respecting your anatomy and identity.",
+    "outros": [
+      { "title": "Hyaluronic Acid Filler", "description": "Strategic volume replacement to restore proportions and enhance the face's natural contours." },
+      { "title": "Support Threads", "description": "Recommended to reinforce tissue support and progressively redefine facial contour." }
+    ],
+    "ctaEvaluation": "Schedule My Evaluation",
+    "crossCta": "Want to know which rejuvenation strategy is ideal for your face? Discover the exclusive methodology that plans every treatment individually.",
+    "crossCtaLink": "Discover the Exclusive RB Methods",
+    "whatsappMessage": "Hello! I want to learn about Clínica Renata Bastos' Facial Rejuvenation treatments."
+  },
+  "corporal": {
+    "seo": {
+      "title": "Body Aesthetics - Harmonization and Body Remodeling",
+      "description": "Discover Clínica Renata Bastos' body aesthetics treatments: intradermotherapy, gluteal harmonization, biostimulators and body remodeling, integrated with nutritional follow-up."
+    },
+    "breadcrumb": "Body Aesthetics",
+    "badge": "Body Aesthetics",
+    "title": "Beauty begins long before the mirror",
+    "description": "Just as with the face, skin quality, body composition and tissue firmness are influenced by metabolism, inflammation and lifestyle. That's why our body protocols are planned strategically and individually, integrated with nutritional follow-up whenever possible.",
+    "ctaEvaluation": "Schedule My Evaluation",
+    "crossCta": "Lasting body results also depend on the inside out. Discover the nutritional follow-up that enhances body composition and skin quality.",
+    "crossCtaLink": "Discover Strategic Nutrition",
+    "whatsappMessage": "Hello! I want to learn about Clínica Renata Bastos' Body Aesthetics treatments."
+  },
+  "nutrition": {
+    "seo": {
+      "title": "Strategic Nutrition - Integrative Aesthetics",
+      "description": "Beauty begins long before the mirror. Discover Clínica Renata Bastos' personalized nutritional strategies that enhance facial and body results."
+    },
+    "breadcrumb": "Strategic Nutrition",
+    "badge": "Integrative Aesthetics",
+    "title": "Beauty begins long before the mirror",
+    "p1": "At Clínica Renata Bastos, we believe lasting results depend on a complete view of the patient.",
+    "p2": "Skin quality, collagen production, body composition, energy and even the pace of aging are influenced by factors such as diet, metabolism, inflammation, muscle mass and lifestyle.",
+    "p3": "That's why, in addition to aesthetic treatments, we develop personalized nutritional strategies that enhance facial and body results.",
+    "benefitsTitle": "How can nutrition enhance your results?",
+    "benefits": [
+      "Supports natural collagen production",
+      "Improves skin quality",
+      "Aids tissue recovery",
+      "Helps control inflammation",
+      "Improves body composition",
+      "Increases energy and disposition",
+      "Preserves muscle mass",
+      "Enhances the results of aesthetic treatments"
+    ],
+    "trackingTitle": "Our follow-up programs include",
+    "tracking": ["Strategic weight loss", "Hypertrophy", "Performance", "Metabolic health", "Functional nutrition", "Orthomolecular nutrition"],
+    "ctaConsultation": "Schedule My Consultation",
+    "crossCta": "Aesthetics begins with health. In addition to nutritional follow-up, many patients enhance their results with the Exclusive RB Methods for facial rejuvenation and body treatments.",
+    "crossCtaLink": "Discover the RB Methods",
+    "whatsappMessage": "Hello! I want to learn about Clínica Renata Bastos' Strategic Nutrition follow-up."
+  },
+  "beforeAfter": {
+    "seo": {
+      "title": "Before & After - Real Results",
+      "description": "See Clínica Renata Bastos' real facial rejuvenation and body aesthetics results: natural, lasting transformations."
+    },
+    "breadcrumb": "Before & After",
+    "title": "Natural results are our signature",
+    "description": "Every transformation shown here reflects an individualized plan. More than changing features, our goal is to restore support, balance and enhance each patient's natural beauty.",
+    "galleryNote": "Gallery being updated — new before-and-after photos coming soon.",
+    "galleryPlaceholder": "Before & After — coming soon",
+    "cta": "I Want My Transformation",
+    "whatsappMessage": "Hello! I saw the transformations on the website and want to schedule my evaluation."
+  },
+  "stories": {
+    "seo": {
+      "title": "Transformation Stories - Testimonials",
+      "description": "See the transformation stories of those who have already experienced this with Dr. Renata Bastos. Real results and individualized care."
+    },
+    "breadcrumb": "Transformation Stories",
+    "title": "Transformation Stories",
+    "intro": "Every patient has a story, a goal and a reason for seeking our care. More than aesthetic procedures, we provide individualized follow-up, based on science, planning and respect for each person's natural beauty. Nothing conveys this experience better than the words of those who have already lived this transformation.",
+    "videoCaption": "Real transformation video of a Clínica Renata Bastos patient.",
+    "testimonialsTitle": "🤍 What our patients say",
+    "testimonials": [
+      "Excellent experience from the very first moment. I was frustrated with other professionals and arrived feeling scared, but the attention, care and sensitivity made me feel completely safe. The result exceeded all my expectations. I'm in love with the result and recommend it with full confidence.",
+      "I've been a patient for a few years and I love the results. Besides being an excellent professional, Dr. Renata is extremely attentive. My self-esteem changed completely. I recommend her to anyone looking for serious, safe care with natural results.",
+      "I always had reservations about getting facial harmonization, but I found exactly what I was looking for: naturalness. The care is impeccable, the planning is personalized, and the result was much better than I imagined.",
+      "Beyond aesthetics, I found a professional who genuinely cares about my health. Combining aesthetic treatments with nutritional guidance made all the difference in my results."
+    ],
+    "closingTitle": "Your experience could be next.",
+    "closingP1": "Every result shown here represents a carefully planned treatment, respecting each patient's individuality and goals.",
+    "closingP2": "It will be a pleasure to be part of your transformation too. Schedule your evaluation and discover which RB Method was designed for you.",
+    "cta": "Schedule My Evaluation",
+    "whatsappMessage": "Hello! I saw the transformation stories on the website and want to schedule my evaluation."
+  },
+  "contact": {
+    "title": "Get in Touch - Clínica Renata Bastos",
+    "subtitle": "Ready to transform your health? Schedule your consultation in Tijuca, Rio de Janeiro, or ask your questions",
+    "form": {
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "your@email.com",
+      "phoneLabel": "Phone *",
+      "phonePlaceholder": "(00) 00000-0000",
+      "subjectLabel": "Subject *",
+      "subjectPlaceholder": "Select a subject",
+      "subjectSchedule": "Schedule Consultation",
+      "subjectQuote": "Request a Quote",
+      "subjectQuestions": "Ask Questions",
+      "subjectOther": "Other",
+      "messageLabel": "Message *",
+      "messagePlaceholder": "How can I help you today?",
+      "charactersCount": "{{count}}/2000 characters",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "errorsTitle": "Form errors:"
+    },
+    "messages": {
+      "fallbackSuccess": "Form submitted! A new tab was opened to confirm the submission. Please also check your inbox.",
+      "corsError": "Connection error. The service may be temporarily unavailable. Please try again or use WhatsApp.",
+      "timeoutError": "Timeout: The server took too long to respond. Please try again or use WhatsApp.",
+      "unavailableError": "Service temporarily unavailable. Please try again in a few minutes or use WhatsApp.",
+      "serverError": "Server error. Please try again later or use WhatsApp.",
+      "genericError": "Error sending message. Please try again or use WhatsApp.",
+      "verifyWarning": "Please check renatabastosnutri@gmail.com to confirm FormSubmit (including your SPAM folder).",
+      "success": "Message sent successfully! We'll get back to you shortly."
+    },
+    "info": {
+      "phoneTitle": "Phone",
+      "emailTitle": "Email",
+      "addressTitle": "Address",
+      "hoursTitle": "Hours"
+    },
+    "mapTitle": "Clínica Renata Bastos Location - Ed Corporate, Tijuca"
+  }
+}

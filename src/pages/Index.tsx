@@ -1,15 +1,13 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Differentiators from "@/components/Differentiators";
 import VideoSection from "@/components/VideoSection";
-import About from "@/components/About";
 import NutritionPlusAesthetics from "@/components/NutritionPlusAesthetics";
 import ConsultationTypes from "@/components/ConsultationTypes";
 import Pricing from "@/components/Pricing";
 import ProtocolosCombinados from "@/components/ProtocolosCombinados";
-import Testimonials from "@/components/Testimonials";
-import Blog from "@/components/Blog";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -23,6 +21,8 @@ interface IndexProps {
 }
 
 const Index = ({ scrollTo }: IndexProps = {}) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (scrollTo) {
       setTimeout(() => {
@@ -43,7 +43,7 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
 
   return (
     <div className="min-h-screen">
-      <SEO />
+      <SEO title={t("home.seo.title")} description={t("home.seo.description")} path="/" />
       <StructuredData type="home" />
       <FAQSchema />
       <Header />
@@ -51,13 +51,10 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
         <Hero />
         <Differentiators />
         <VideoSection />
-        <About />
         <NutritionPlusAesthetics />
         <ConsultationTypes />
         <Pricing />
         <ProtocolosCombinados />
-        <Testimonials />
-        <Blog />
         <FAQ />
         <Contact />
       </main>

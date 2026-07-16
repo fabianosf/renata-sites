@@ -1,27 +1,33 @@
 import { Facebook, Instagram, Linkedin, Phone, MapPin, ExternalLink, MessageCircle, Mail } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Link } from "@/components/LocalizedLink";
 import Logo from "@/components/Logo";
 import { siteConfig } from "@/config/site";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: "Sobre", to: "/sobre" },
-    { label: "Serviços", to: "/servicos" },
-    { label: "Depoimentos", to: "/depoimentos" },
-    { label: "Blog", to: "/blog" },
-    { label: "Contato", to: "/contato" },
+    { label: t("common.nav.clinica"), to: "/a-clinica" },
+    { label: t("common.nav.draRenata"), to: "/dra-renata" },
+    { label: t("common.nav.metodoRB"), to: "/metodo-rb" },
+    { label: t("common.nav.facial"), to: "/rejuvenescimento-facial" },
+    { label: t("common.nav.corporal"), to: "/estetica-corporal" },
+    { label: t("common.nav.nutrition"), to: "/nutricao-estrategica" },
+    { label: t("common.nav.beforeAfter"), to: "/antes-e-depois" },
+    { label: t("common.nav.stories"), to: "/historias-de-transformacao" },
+    { label: t("common.nav.contact"), to: "/contato" },
   ];
 
   const socialLinks = [
     { icon: Instagram, href: siteConfig.social.instagram.url, label: siteConfig.social.instagram.label },
     { icon: Facebook, href: siteConfig.social.facebook.url, label: siteConfig.social.facebook.label },
     { icon: Mail, href: "mailto:renatabastosnutri@gmail.com", label: "Email" },
-    { 
-      icon: MessageCircle, 
-      href: `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessages.default)}`, 
-      label: "WhatsApp" 
+    {
+      icon: MessageCircle,
+      href: `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessages.default)}`,
+      label: "WhatsApp"
     },
   ];
 
@@ -33,10 +39,10 @@ const Footer = () => {
           <div>
             <Logo className="mb-4" height="h-40 md:h-44" />
             <p className="text-background/80 mb-6 leading-relaxed">
-              {siteConfig.brand.tagline}
+              {t("common.footer.tagline")}
             </p>
             <p className="text-background/60 text-sm mb-4">
-              {siteConfig.professional.name} - {siteConfig.professional.crn}<br />
+              {siteConfig.professional.name} - {siteConfig.professional.crn} | {siteConfig.professional.crbm}<br />
               {siteConfig.professional.title}
             </p>
             <div className="flex gap-4">
@@ -57,7 +63,7 @@ const Footer = () => {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Links Rápidos</h4>
+            <h4 className="font-semibold text-lg mb-4">{t("common.footer.quickLinksTitle")}</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.label}>
@@ -74,7 +80,7 @@ const Footer = () => {
 
           {/* Column 3: Contact */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Contato</h4>
+            <h4 className="font-semibold text-lg mb-4">{t("common.footer.contactTitle")}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
@@ -125,7 +131,7 @@ const Footer = () => {
 
           {/* Column 4: Developer */}
           <div>
-            <h4 className="font-semibold text-lg mb-4">Desenvolvido por: Fabiano Freitas</h4>
+            <h4 className="font-semibold text-lg mb-4">{t("common.footer.developedByTitle")}</h4>
             <ul className="space-y-3">
               <li>
                 <a
@@ -133,7 +139,7 @@ const Footer = () => {
                   className="text-background/80 hover:text-primary transition-smooth flex items-center gap-2"
                 >
                   <Phone className="h-4 w-4" />
-                  (21) 99407-8286 (Ligação)
+                  (21) 99407-8286 ({t("common.footer.call")})
                 </a>
               </li>
               <li>
@@ -144,7 +150,7 @@ const Footer = () => {
                   className="text-background/80 hover:text-primary transition-smooth flex items-center gap-2"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  Converse no WhatsApp
+                  {t("common.footer.talkWhatsapp")}
                 </a>
               </li>
               <li>
@@ -155,7 +161,7 @@ const Footer = () => {
                   className="text-background/80 hover:text-primary transition-smooth flex items-center gap-2"
                 >
                   <Linkedin className="h-4 w-4" />
-                  Veja meu Portfólio/LinkedIn
+                  {t("common.footer.portfolio")}
                 </a>
               </li>
               <li>
@@ -166,7 +172,7 @@ const Footer = () => {
                   className="text-background/80 hover:text-primary transition-smooth flex items-center gap-2"
                 >
                   <ExternalLink className="h-4 w-4" />
-                  Visite meu Site
+                  {t("common.footer.visitSite")}
                 </a>
               </li>
               <li>
@@ -175,7 +181,7 @@ const Footer = () => {
                   className="text-background/80 hover:text-primary transition-smooth flex items-center gap-2"
                 >
                   <Mail className="h-4 w-4" />
-                  Envie um Email
+                  {t("common.footer.sendEmail")}
                 </a>
               </li>
             </ul>
@@ -185,7 +191,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-background/10">
           <p className="text-background/60 text-sm text-center">
-            © {currentYear} Fabiano Sousa de Freitas. Desenvolvimento e manutenção por Fabiano.
+            © {currentYear} {t("common.footer.rights")}
           </p>
         </div>
       </div>

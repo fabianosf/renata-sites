@@ -1,26 +1,29 @@
+import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import About from "@/components/About";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
-import { siteConfig } from "@/config/site";
 
 const AboutPage = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       <SEO
-        title="Sobre Renata Bastos - Nutricionista Ortomolecular"
-        description={`Conheça ${siteConfig.professional.name}, ${siteConfig.professional.title} com ${siteConfig.professional.experience} anos de experiência. Especializada em Nutrição Ortomolecular e Estética Avançada na Tijuca, Rio de Janeiro.`}
-        keywords={`${siteConfig.professional.name}, sobre, nutricionista ortomolecular, biomédica esteta, tijuca rio de janeiro, ${siteConfig.seo.keywords}`}
-        url="https://clinicarenatabastos.com.br/sobre"
+        title={t("draRenata.seo.title")}
+        description={t("draRenata.seo.description")}
+        path="/dra-renata"
       />
       <StructuredData type="about" />
       <Header />
       <main>
-        <div className="pt-20">
-          <About />
+        <div className="pt-24 container mx-auto px-4 lg:px-8">
+          <Breadcrumbs items={[{ label: t("draRenata.breadcrumb") }]} />
         </div>
+        <About />
       </main>
       <Footer />
       <WhatsAppButton />
@@ -29,4 +32,3 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocalizedLink";
 import { siteConfig } from "@/config/site";
 
 interface LogoProps {
@@ -12,7 +12,7 @@ const Logo = ({ className = "", height = "h-28 md:h-32" }: LogoProps) => {
 
   return (
     <Link
-      to="/inicio"
+      to="/"
       className={`flex items-center hover:opacity-90 transition-opacity drop-shadow-lg cursor-pointer ${className}`}
     >
       {logoError ? (

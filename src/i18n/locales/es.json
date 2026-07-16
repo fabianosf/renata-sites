@@ -1,0 +1,570 @@
+{
+  "common": {
+    "nav": {
+      "home": "Inicio",
+      "clinica": "La Clínica",
+      "draRenata": "Dra. Renata",
+      "metodoRB": "Método RB",
+      "facial": "Rejuvenecimiento Facial",
+      "corporal": "Estética Corporal",
+      "nutrition": "Nutrición Estratégica",
+      "beforeAfter": "Antes y Después",
+      "stories": "Historias de Transformación",
+      "contact": "Contacto"
+    },
+    "cta": {
+      "scheduleConsultation": "Agendar Consulta",
+      "scheduleEvaluation": "Agendar Mi Evaluación",
+      "talkWhatsapp": "Hablar por WhatsApp",
+      "learnMore": "Saber más",
+      "iWantToKnowMore": "Quiero Saber Más"
+    },
+    "footer": {
+      "tagline": "Transformando vidas a través de la Nutrición Ortomolecular y la Estética Avanzada. Ubicada en el corazón de Tijuca, con protocolos personalizados para convertir tus sueños en realidad.",
+      "quickLinksTitle": "Enlaces Rápidos",
+      "contactTitle": "Contacto",
+      "developedByTitle": "Desarrollado por: Fabiano Freitas",
+      "call": "Llamada",
+      "talkWhatsapp": "Conversa por WhatsApp",
+      "portfolio": "Ve mi Portafolio/LinkedIn",
+      "visitSite": "Visita mi Sitio Web",
+      "sendEmail": "Envía un Correo",
+      "rights": "Fabiano Sousa de Freitas. Desarrollo y mantenimiento por Fabiano."
+    },
+    "whatsapp": {
+      "ariaLabel": "Habla con nosotros por WhatsApp"
+    },
+    "breadcrumbs": {
+      "home": "Inicio"
+    },
+    "notFound": {
+      "title": "Página No Encontrada",
+      "description": "La página que buscas no existe o fue movida.",
+      "attemptedUrl": "URL intentada:",
+      "backHome": "Volver al Inicio",
+      "seeServices": "Ver Servicios",
+      "goBack": "Volver",
+      "draRenataTitle": "Dra. Renata",
+      "draRenataDesc": "Conoce a la Dra. Renata Bastos",
+      "servicesTitle": "Servicios",
+      "servicesDesc": "Mira nuestros tratamientos",
+      "contactTitle": "Contacto",
+      "contactDesc": "Ponte en contacto",
+      "seo": {
+        "title": "Página No Encontrada - 404",
+        "description": "La página que buscas no fue encontrada. Vuelve a la página de inicio o explora nuestros servicios."
+      }
+    },
+    "theme": {
+      "toLight": "Activar tema claro",
+      "toDark": "Activar tema oscuro"
+    }
+  },
+  "home": {
+    "seo": {
+      "title": "Nutricionista Ortomolecular y Biomédica Estética | Tijuca, Río de Janeiro",
+      "description": "Nutricionista Ortomolecular y Biomédica Estética en Tijuca, Río de Janeiro. Consultas presenciales (Tijuca y Barra) y en línea. Adelgazamiento saludable, nutrición clínica, estética avanzada, intradermoterapia, armonización glútea. Más de 2000 pacientes transformados."
+    },
+    "hero": {
+      "badge": "Más de {{count}} pacientes transformados",
+      "titleLine1": "Transforma tu salud y",
+      "titleLine2": "conquista la mejor versión de ti",
+      "description": "<strong>Nutrición estratégica + estética integrativa</strong> en un solo lugar. Cuidado completo para quienes buscan resultados reales, sostenibles y naturales — de adentro hacia afuera.",
+      "ctaNutrition": "Agendar Consulta de Nutrición",
+      "ctaAesthetics": "Conocer Tratamientos Estéticos",
+      "badgeResults": "Resultados Comprobados",
+      "badgeResultsSub": "Basado en evidencia",
+      "imageAlt": "Nutrición Ortomolecular y Estética Avanzada en Tijuca, Río de Janeiro - Consultas con Renata Bastos",
+      "whatsappMessageNutrition": "¡Hola! Quiero transformar mi salud y alimentación con acompañamiento personalizado.",
+      "whatsappMessageAesthetics": "¡Hola! Quiero conocer los tratamientos estéticos de la Clínica Renata Bastos."
+    },
+    "differentiators": {
+      "title": "Clínica Renata Bastos",
+      "p1": "La Clínica Renata Bastos integra <strong>nutrición clínica, salud metabólica y armonización facial y corporal</strong> en un enfoque estratégico y personalizado — pensado para quienes buscan resultados reales en salud, estética y autoestima.",
+      "p2": "Reconocida por el acompañamiento nutricional individualizado y por los resultados sostenibles en adelgazamiento, hipertrofia y mejora de la energía, la clínica trabaja con planificación continua, respetando el metabolismo, la rutina y el comportamiento alimentario de cada paciente.",
+      "p3": "Aquí, la estética no es superficial — es una extensión del cuidado del cuerpo, la salud y la confianza de cada persona. Todo se realiza de forma humanizada y personalizada, porque cada historia, objetivo y momento requiere un plan único.",
+      "items": [
+        { "title": "Atención Presencial y en Línea", "description": "Flexibilidad total para consultas en el consultorio o desde la comodidad de tu casa" },
+        { "title": "Enfoque Ortomolecular", "description": "Nutrición basada en evidencia científica con enfoque en la optimización celular" },
+        { "title": "Integración Nutrición + Estética", "description": "Cuidado completo: salud interna y externa en un solo lugar" },
+        { "title": "{{count}} Pacientes Atendidos", "description": "Experiencia comprobada con resultados reales y transformaciones duraderas" }
+      ]
+    },
+    "video": {
+      "badge": "Mira el Video",
+      "title": "¿Por Qué Elegir la <1>Clínica Renata Bastos?</1>",
+      "p1": "En pocos minutos entenderás cómo la integración de <strong>Nutrición Ortomolecular + Estética Avanzada</strong> puede transformar no solo tu cuerpo, sino tu relación con la salud y el bienestar.",
+      "p2": "No se trata de dietas milagrosas ni de procedimientos estéticos aislados. Se trata de un cuidado completo, estratégico y humanizado — pensado para ti.",
+      "benefits": [
+        "Conoce mi enfoque integrativo",
+        "Entiende cómo funciona el proceso",
+        "Mira testimonios de pacientes reales",
+        "Descubre si el método es para ti"
+      ],
+      "cta": "Quiero Agendar Mi Consulta",
+      "limitedAgenda": "⚡ <strong>Agenda limitada</strong> — Atención personalizada con cupos mensuales",
+      "caption1": "¡Bienvenida a la Clínica Renata Bastos! 🤍",
+      "caption2": "Aquí encuentras cuidado personalizado para transformar tu salud — de adentro hacia afuera.",
+      "caption3": "Nutrición Ortomolecular y Estética Avanzada integradas en un solo lugar, pensadas para tu realidad y tu resultado.",
+      "caption4": "Da el primer paso — agenda tu consulta y comienza tu transformación. ✨",
+      "whatsappMessage": "¡Hola! Vi tu video de presentación y quiero agendar una consulta!"
+    },
+    "nutritionAesthetics": {
+      "badge": "Diferencial Único",
+      "titleLine1": "Nutrición + Estética",
+      "titleLine2": "Transformación Completa",
+      "description": "La integración de nutrición estratégica y estética avanzada que te cuida de adentro hacia afuera — salud, equilibrio y belleza en un solo lugar.",
+      "nutritionBadge": "Salud desde Adentro",
+      "nutritionTitle": "Nutrición Estratégica",
+      "nutritionDescription": "Nutrición ortomolecular, clínica y deportiva para equilibrar tu metabolismo, optimizar la energía y construir resultados sostenibles.",
+      "nutritionItems": [
+        "Adelgazamiento saludable y duradero",
+        "Aumento de masa muscular y definición",
+        "Mejora de la energía y disposición",
+        "Equilibrio hormonal y metabólico",
+        "Prevención y control de enfermedades"
+      ],
+      "nutritionLink": "Saber más sobre Nutrición Estratégica",
+      "aestheticsBadge": "Belleza desde Afuera",
+      "aestheticsTitle": "Estética Integrativa",
+      "aestheticsDescription": "Armonización facial y corporal con técnicas avanzadas para resultados naturales, seguros y alineados con tu salud.",
+      "aestheticsItems": [
+        "Intradermoterapia (grasa localizada)",
+        "Armonización glútea y corporal",
+        "Bioestimuladores de colágeno",
+        "Toxina botulínica y skin booster",
+        "Tratamiento capilar avanzado"
+      ],
+      "aestheticsLink": "Saber más sobre Estética Corporal",
+      "integrationTitle": "El Resultado de la Integración",
+      "integrationText": "Cuando la nutrición y la estética trabajan juntas, los resultados son <strong>más rápidos, más profundos y más duraderos</strong>. Cuidas tu salud interna mientras potencias tu belleza externa — con seguridad, ciencia y humanización.",
+      "integrationCards": [
+        { "title": "Resultados Reales", "description": "Transformaciones visibles y sostenibles" },
+        { "title": "Acompañamiento", "description": "Apoyo continuo y personalizado" },
+        { "title": "Humanización", "description": "Cuidado individualizado y empático" }
+      ],
+      "integrationCta": "Conocer Atención Integrada",
+      "whatsappMessage": "¡Hola! Quiero conocer la atención integrada de Nutrición + Estética. Me gustaría más información."
+    },
+    "consultationTypes": {
+      "badge": "Más de 2000 vidas transformadas",
+      "title": "¿Cómo Prefieres Comenzar Tu Transformación?",
+      "description": "Elige el formato que mejor se adapte a tu rutina. Ambas modalidades ofrecen la misma calidad, dedicación y resultados comprobados.",
+      "limitedAgenda": "⚡ Agenda limitada — Reserva tu horario con anticipación",
+      "presential": {
+        "badge": "Ideal para Comenzar",
+        "title": "Consulta Presencial",
+        "subtitle": "Conexión completa y presencia humanizada",
+        "description": "El encuentro presencial permite una evaluación más profunda, con atención cuidadosa a los detalles y la construcción de una relación de confianza desde el primer momento.",
+        "items": ["Evaluación corporal con bioimpedancia", "Análisis personalizado presencial", "Conexión humana y acogida"],
+        "cta": "Agendar Consulta Presencial",
+        "whatsappMessage": "¡Hola! Quiero agendar una Consulta Presencial de Nutrición. Me gustaría conocer valores y disponibilidad."
+      },
+      "online": {
+        "badge": "Más Solicitado",
+        "title": "Consulta en Línea",
+        "subtitle": "La misma calidad, desde donde estés",
+        "description": "Atención por videollamada con la misma dedicación y cuidado que la consulta presencial. Ideal para quienes tienen una agenda intensa o viven lejos.",
+        "items": ["Horarios flexibles y accesibles", "Ahorra tiempo de traslado", "Atención desde cualquier lugar"],
+        "cta": "Agendar Consulta en Línea",
+        "whatsappMessage": "¡Hola! Quiero agendar una Consulta en Línea de Nutrición. Me gustaría conocer valores y disponibilidad."
+      },
+      "footerTitle": "✨ Igual calidad y dedicación en ambas modalidades",
+      "footerText": "Ya sea presencial o en línea, recibes el mismo cuidado personalizado, evaluación completa y acompañamiento cercano para alcanzar tus objetivos."
+    },
+    "pricing": {
+      "badge": "Programas de Transformación",
+      "titlePrefix": "Elige Tu Camino de",
+      "titleHighlight": "Transformación",
+      "description": "Cada programa está pensado para acompañar tu evolución con estrategias personalizadas. Del primer paso a la transformación completa — elige el camino que tiene sentido para ti ahora.",
+      "plans": [
+        {
+          "id": "avulsa",
+          "name": "Consulta Inicial",
+          "subtitle": "Tu Primer Paso",
+          "description": "Ideal para conocer el trabajo e iniciar tu camino de transformación con una evaluación completa.",
+          "features": ["Consulta de 60 minutos", "Evaluación corporal completa", "Anamnesis detallada personalizada", "Plan alimentario individualizado", "Material de apoyo digital"],
+          "impact": "Comienza tu transformación"
+        },
+        {
+          "id": "retorno",
+          "name": "Consulta + Retorno",
+          "subtitle": "Para Quien Quiere Resultados",
+          "description": "Acompañamiento estratégico con ajustes para garantizar que vas por el camino correcto.",
+          "features": ["Consulta inicial + 1 retorno", "Evaluación de evolución", "Ajustes inteligentes del plan", "Acompañamiento cercano", "Apoyo entre consultas"],
+          "badge": "Popular",
+          "impact": "Asegura tus resultados"
+        },
+        {
+          "id": "trimestral",
+          "name": "Programa Trimestral",
+          "subtitle": "Transformación Sostenible",
+          "description": "Acompañamiento mensual para observar tu respuesta, ajustar estrategias y cuidarte con ligereza y constancia.",
+          "features": ["3 meses de acompañamiento", "Consultas mensuales estratégicas", "Ajustes continuos personalizados", "Apoyo directo con Renata", "Resultados progresivos", "Cambios que duran"],
+          "badge": "Más Elegido",
+          "impact": "Transformación real y duradera"
+        },
+        {
+          "id": "semestral",
+          "name": "Programa Semestral",
+          "subtitle": "Resultado Definitivo",
+          "description": "El camino completo hacia una transformación profunda: 6 meses de acompañamiento estratégico para resultados que perduran.",
+          "features": ["6 meses de transformación", "Acompañamiento mensual estratégico", "Ajustes frecuentes y precisos", "Apoyo continuo personalizado", "Construcción de hábitos sólidos", "Resultados profundos y duraderos", "Mejor inversión a largo plazo"],
+          "badge": "Mejor Inversión",
+          "impact": "Tu mejor versión para siempre"
+        }
+      ],
+      "planCta": "Consultar Valores y Agendar",
+      "paymentTitle": "Formas de Pago",
+      "paymentMethods": ["Pix", "Tarjeta de crédito en cuotas"],
+      "limitedSlots": "💡 Cupos limitados por mes para atención personalizada",
+      "footerText": "Escríbeme y elijamos juntas(o) el mejor plan para ti ✨",
+      "whatsappMessagePlan": "¡Hola! Me gustaría saber más sobre el {{planName}} y agendar una consulta."
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "titlePrefix": "¿Dudas?",
+      "titleHighlight": "Estoy Aquí Para Ayudar",
+      "description": "Reuní las preguntas más comunes que recibo. Si tu duda no está aquí, ¡escríbeme por WhatsApp y responderé con gusto!",
+      "items": [
+        { "question": "¿Por qué integrar nutrición y estética?", "answer": "La transformación real ocurre de adentro hacia afuera. Cuando equilibras tu salud metabólica a través de la nutrición y potencias los resultados con procedimientos estéticos, las ganancias son más rápidas, más profundas y mucho más duraderas. Es la ciencia trabajando a tu favor de forma completa." },
+        { "question": "¿Cuánto tiempo lleva ver resultados?", "answer": "Esto varía según tu objetivo y compromiso. En general, los cambios de energía y disposición aparecen en las primeras 2-3 semanas. Los resultados visuales de adelgazamiento comienzan en 4-6 semanas. Para transformaciones profundas y duraderas, recomendamos programas de 3 a 6 meses, donde acompañamos tu evolución de cerca y ajustamos estrategias según sea necesario." },
+        { "question": "¿Necesito seguir una dieta muy restrictiva?", "answer": "¡No! Mi enfoque es justamente lo opuesto a las dietas de moda. Trabajo con reeducación alimentaria y autonomía — aprendes a tomar decisiones inteligentes sin sufrir ni pasar hambre. El objetivo es que tengas una relación saludable con la comida, no una restricción extrema. Lo hecho es mejor que lo perfecto." },
+        { "question": "¿Atiendes en línea o solo presencialmente?", "answer": "¡Atiendo en ambas modalidades! Presencial en Tijuca y Barra da Tijuca (Río de Janeiro), y en línea para cualquier lugar de Brasil y del exterior. Ambas tienen la misma calidad, dedicación y resultados. La consulta en línea es por videollamada y recibes todo el material digitalizado." },
+        { "question": "¿Cuál es la diferencia entre la nutrición común y la ortomolecular?", "answer": "La nutrición ortomolecular va más allá de la alimentación básica — trabaja a nivel celular, identificando deficiencias de nutrientes y corrigiéndolas mediante alimentos y/o activos formulados. El enfoque es equilibrar tu metabolismo, optimizar la energía, mejorar la digestión y tratar la causa raíz de los síntomas, no solo enmascarar los problemas." },
+        { "question": "¿Los procedimientos estéticos son seguros?", "answer": "Absolutamente. Como biomédica estética, tengo formación específica en procedimientos estéticos y utilizo solo productos de alta calidad, aprobados por ANVISA (agencia reguladora de salud de Brasil). Todos los protocolos son personalizados y realizados con técnica precisa, priorizando siempre tu seguridad y resultados naturales." },
+        { "question": "¿Puedo hacerme procedimientos estéticos mientras hago dieta?", "answer": "Sí, y esa es justamente la ventaja de la integración! Cuando estás en un proceso de adelgazamiento o ganancia muscular orientado nutricionalmente, los procedimientos estéticos potencian los resultados. Por ejemplo: reducción de grasa localizada + nutrición estratégica = transformación más rápida y completa." },
+        { "question": "¿Cómo funciona el acompañamiento? ¿Tengo apoyo entre consultas?", "answer": "En los programas de acompañamiento (trimestral y semestral), tienes consultas mensuales para evaluación y ajustes, además de apoyo entre consultas por WhatsApp para dudas puntuales. El objetivo es que te sientas acompañada durante todo el proceso, no solo en los encuentros presenciales." },
+        { "question": "¿Aceptas seguro médico o solo pago particular?", "answer": "La atención es particular. Pero acepto varias formas de pago: Pix (con descuento) y tarjeta de crédito en cuotas. Ponte en contacto para conocer valores y condiciones personalizadas para tu caso." },
+        { "question": "¿Con qué rango de edad trabajas?", "answer": "Atiendo adolescentes (a partir de 16 años con autorización de los padres), adultos y personas mayores. Cada etapa de la vida tiene necesidades específicas, y la atención siempre es personalizada considerando edad, objetivos, rutina e historial de salud." },
+        { "question": "¿Puedo agendar una consulta solo para conocer el trabajo?", "answer": "¡Claro! La consulta inicial ya es una evaluación completa donde conversamos sobre tus objetivos, historial, rutina y armamos un plan personalizado. Es la oportunidad perfecta para conocerme, resolver dudas y entender cómo puedo ayudarte. Muchas pacientes comienzan así y deciden continuar el acompañamiento después." },
+        { "question": "¿Y si no logro seguir todo perfectamente?", "answer": "¡Eso es completamente normal y esperado! La vida real no es Instagram. Mi trabajo no es exigirte, sino entenderte y ajustar el plan según tu realidad. No todos los días será posible seguir el plan al 100%, y está bien. Lo importante es la constancia, no la perfección. Cuanto más lo sigas, mejores los resultados — pero lo hecho siempre es mejor que lo perfecto." }
+      ],
+      "ctaTitle": "¿No Encontraste Tu Duda?",
+      "ctaDescription": "Cada caso es único y merece atención personalizada. ¡Escríbeme por WhatsApp para conversar sobre tu objetivo específico!",
+      "ctaButton": "Resolver Mis Dudas por WhatsApp",
+      "trustBadge": "⚡ Respondo personalmente • Sin compromiso",
+      "whatsappMessage": "¡Hola! Tengo algunas dudas y me gustaría conversar sobre la atención."
+    },
+    "protocols": {
+      "badge": "Protocolos Integrados",
+      "title": "Protocolos <1>Combinados</1>",
+      "description": "Tratamientos integrados y estratégicos que combinan nutrición clínica, soporte metabólico y procedimientos estéticos para resultados completos y duraderos",
+      "items": [
+        {
+          "id": "reset-metabolico",
+          "name": "Reinicio Metabólico y Composición Corporal Estratégica",
+          "icon": "🔥",
+          "description": "Para quienes desean reducir grasa corporal, aumentar masa muscular y mejorar la definición con acompañamiento clínico integrado y planificación individualizada.",
+          "fullDescription": "La propuesta es reorganizar el metabolismo y optimizar la composición corporal mediante un enfoque estratégico que une nutrición, soporte metabólico y recursos dirigidos al contorno y rendimiento.",
+          "includes": [
+            "Nutrición clínica y deportiva individualizada",
+            "Recursos inyectables sistémicos para soporte metabólico y rendimiento",
+            "Enzimas para grasa localizada y contorno corporal",
+            "Estrategias metabólicas enfocadas en fuerza, recuperación y calidad muscular"
+          ],
+          "popular": true
+        },
+        {
+          "id": "reestruturacao-pos-emagrecimento",
+          "name": "Reestructuración Tisular Post-Adelgazamiento",
+          "icon": "✨",
+          "description": "Después de una reducción de peso significativa, es común que aparezcan signos de flacidez, pérdida de soporte y alteraciones en la calidad de la piel y los contornos faciales y corporales.",
+          "fullDescription": "Esta fase tiene como objetivo recuperar firmeza, estructura y proporción corporal mediante un enfoque estratégico e individualizado.",
+          "includes": [
+            "Bioestimuladores de colágeno facial y corporal",
+            "Puntos estratégicos con ácido hialurónico para soporte y proporción",
+            "Hilos de sostén cuando estén indicados",
+            "Planificación nutricional y metabólica de soporte tisular"
+          ],
+          "popular": false
+        },
+        {
+          "id": "reestruturacao-facial",
+          "name": "Reestructuración Facial y Soporte Tisular",
+          "icon": "💎",
+          "description": "Indicada para pacientes que presentan pérdida de volumen, flacidez y alteraciones en los contornos faciales — ya sea por el proceso natural de envejecimiento o después de un adelgazamiento significativo.",
+          "fullDescription": "El objetivo es restaurar el soporte, mejorar la calidad de la piel y redefinir proporciones faciales de forma natural y estratégica.",
+          "includes": [
+            "Bioestimuladores de colágeno",
+            "Hilos de sostén",
+            "Relleno con ácido hialurónico en puntos estratégicos",
+            "Toxina botulínica para equilibrio muscular y prevención de líneas"
+          ],
+          "popular": false
+        }
+      ],
+      "includesLabel": "El plan puede incluir:",
+      "investmentTitle": "Inversión Personalizada",
+      "investmentText": "Cada protocolo se arma a medida de tus necesidades. Ponte en contacto para conocer valores y condiciones especiales.",
+      "cardCta": "Quiero Saber Más",
+      "closingTitle": "Cada protocolo es personalizado según tus necesidades",
+      "closingText": "Escríbeme para conversar sobre cuál protocolo es el más adecuado para ti ✨",
+      "whatsappMessageProtocolo": "¡Hola! Me gustaría saber más sobre el protocolo: {{name}}",
+      "whatsappMessageGeneric": "¡Hola! Me gustaría saber más sobre los Protocolos Combinados."
+    }
+  },
+  "clinica": {
+    "seo": {
+      "title": "La Clínica - Armonización Facial y Estética Integrativa",
+      "description": "Conoce la Clínica Renata Bastos: referencia en armonización facial y estética integrativa en Tijuca, Río de Janeiro, con protocolos personalizados y acompañamiento nutricional especializado."
+    },
+    "breadcrumb": "La Clínica",
+    "title": "Clínica Renata Bastos",
+    "p1": "La Clínica Renata Bastos es referencia en armonización facial y estética integrativa, ofreciendo protocolos personalizados que tratan el envejecimiento de forma estratégica, natural e individualizada. Cada plan se desarrolla para restaurar el soporte de los tejidos, estimular la producción de colágeno y realzar la belleza de cada paciente, respetando su anatomía e identidad.",
+    "p2": "Con una visión global de la estética, la clínica asocia técnicas avanzadas de rejuvenecimiento facial y corporal con un acompañamiento nutricional especializado, potenciando los resultados de adentro hacia afuera. Esta integración favorece no solo la apariencia, sino también la salud de la piel, la composición corporal, el metabolismo y la calidad de vida.",
+    "p3": "Más que realizar procedimientos, creemos en un cuidado continuo y personalizado. Cada paciente es evaluado de forma individual para que el tratamiento se planifique según sus objetivos, estilo de vida y necesidades, proporcionando resultados naturales, duraderos y una experiencia basada en seguridad, acogida y excelencia.",
+    "p4": "En la Clínica Renata Bastos, la estética se entiende como parte del bienestar: un proceso que une ciencia, salud y autoestima para valorar la mejor versión de cada persona.",
+    "ctaEvaluation": "Agendar Mi Evaluación",
+    "videoTitle": "Conoce Nuestro Espacio",
+    "videoCaption1": "¡Conoce nuestro espacio! 🌿",
+    "videoCaption2": "Un ambiente pensado en cada detalle para que te sientas acogida, segura y cómoda desde el momento en que llegues.",
+    "galleryTitle": "Nuestro Espacio en Fotos",
+    "galleryNote": "Galería en actualización — nuevas fotos del espacio físico próximamente.",
+    "galleryPlaceholder": "Foto próximamente",
+    "whatsappMessage": "¡Hola! Quiero conocer la Clínica Renata Bastos y agendar una evaluación."
+  },
+  "draRenata": {
+    "seo": {
+      "title": "Dra. Renata Bastos - Biomédica Estética y Nutricionista",
+      "description": "Conoce a Renata Bastos, biomédica estética y nutricionista especialista en rejuvenecimiento facial y estética integrativa, con atención en Tijuca, Río de Janeiro."
+    },
+    "breadcrumb": "Dra. Renata",
+    "badge": "Biomédica Estética y Nutricionista",
+    "credentials": "CRN 4 15100141 | CRBM 60773",
+    "p1": "La Dra. Renata Bastos es biomédica estética y nutricionista, especialista en rejuvenecimiento facial y estética integrativa, con atención en Tijuca, Río de Janeiro.",
+    "p2": "Su enfoque va más allá de procedimientos aislados. Cada tratamiento se planifica de forma personalizada para restaurar el soporte de los tejidos, estimular la producción de colágeno y valorar la belleza natural, respetando siempre la anatomía y la individualidad de cada paciente.",
+    "p3": "Entre los principales procedimientos realizados están los bioestimuladores de colágeno, toxina botulínica, relleno con ácido hialurónico, hilos, skin booster, protocolos para flacidez facial y corporal, remodelación corporal y tratamientos personalizados de rejuvenecimiento.",
+    "p4": "Como diferencial, une la experiencia en estética avanzada con la nutrición funcional, deportiva y ortomolecular, brindando un cuidado completo de adentro hacia afuera. El acompañamiento nutricional ayuda a mejorar la composición corporal, la salud metabólica, el rendimiento, la calidad de la piel y potencia los resultados estéticos.",
+    "p5": "Realiza consultas y procedimientos presenciales en Tijuca, además de acompañamiento nutricional en línea, ofreciendo un plan de tratamiento individualizado para quienes buscan resultados naturales, duraderos y una mejora global de la autoestima y la calidad de vida.",
+    "yearsLabel": "Años",
+    "patientsLabel": "Pacientes",
+    "satisfactionLabel": "Satisfacción",
+    "proceduresTitle": "Principales Procedimientos",
+    "procedures": ["Bioestimuladores de colágeno", "Toxina botulínica", "Relleno con ácido hialurónico", "Hilos de sostén", "Skin booster", "Protocolos para flacidez facial y corporal", "Remodelación corporal"],
+    "locationTitle": "Atención",
+    "locationPresential": "Presencial:",
+    "locationPresentialValue": "Tijuca, Río de Janeiro",
+    "locationOnline": "En línea:",
+    "locationOnlineValue": "Acompañamiento nutricional para todo Brasil",
+    "diferenciais": [
+      { "title": "Estética Avanzada", "description": "Bioestimuladores, toxina botulínica, relleno, hilos, skin booster y protocolos personalizados de rejuvenecimiento." },
+      { "title": "Nutrición de Adentro hacia Afuera", "description": "Nutrición funcional, deportiva y ortomolecular para potenciar la composición corporal, la salud metabólica y los resultados estéticos." },
+      { "title": "Planificación Individualizada", "description": "Cada tratamiento está pensado para restaurar el soporte, estimular el colágeno y valorar la belleza natural, respetando tu anatomía." }
+    ],
+    "cta": "Agendar Consulta con la Dra. Renata"
+  },
+  "metodoRB": {
+    "seo": {
+      "title": "Métodos Exclusivos RB - Metodología de Rejuvenecimiento Facial",
+      "description": "Conoce los Métodos Exclusivos RB de la Dra. Renata Bastos: una metodología propia de rejuvenecimiento facial que combina ciencia, técnica y planificación individualizada."
+    },
+    "breadcrumb": "Método RB",
+    "badge": "Metodología Exclusiva",
+    "title": "Métodos Exclusivos RB",
+    "subtitle": "La metodología de rejuvenecimiento facial de la Dra. Renata Bastos.",
+    "intro1": "En la Clínica Renata Bastos, creemos que el rejuvenecimiento va mucho más allá de procedimientos aislados. Cada rostro envejece de forma única y, por eso, desarrollamos una metodología propia que combina ciencia, técnica y planificación para tratar las distintas causas del envejecimiento facial.",
+    "intro2": "Los Métodos Exclusivos RB asocian técnicas avanzadas de armonización facial para restaurar el soporte de los tejidos, estimular la producción natural de colágeno, mejorar la calidad de la piel y preservar la belleza natural de cada paciente.",
+    "intro3": "Más que armonizar, nuestro objetivo es proporcionar un rejuvenecimiento elegante, natural y duradero, respetando siempre tu anatomía, tus características y tu identidad.",
+    "metodos": [
+      {
+        "name": "RB Prime",
+        "tagline": "El inicio del rejuvenecimiento inteligente.",
+        "description": "Ideal para quienes desean prevenir los signos del envejecimiento o suavizar las primeras líneas de expresión, preservando la ligereza y naturalidad del rostro.",
+        "listLabel": "Indicado para",
+        "items": ["Primeras líneas de expresión", "Prevención del envejecimiento", "Aspecto más descansado e iluminado"]
+      },
+      {
+        "name": "RB Balance",
+        "tagline": "Armonía y equilibrio facial.",
+        "description": "Desarrollado para restaurar proporciones, reposicionar volúmenes estratégicos y valorar los contornos naturales del rostro, proporcionando un resultado sofisticado y discreto.",
+        "listLabel": "Indicado para",
+        "items": ["Pérdida de volumen facial", "Asimetrías leves", "Armonización facial natural"]
+      },
+      {
+        "name": "RB Contour",
+        "tagline": "Estructura, definición y elegancia.",
+        "description": "Un método creado para devolver el soporte y redefinir el contorno facial, valorando la anatomía sin exageraciones.",
+        "listLabel": "Indicado para",
+        "items": ["Definición mandibular", "Contorno facial", "Reestructuración de volúmenes"]
+      },
+      {
+        "name": "RB Glow",
+        "tagline": "Piel bonita es piel saludable.",
+        "description": "Un método dedicado exclusivamente a la calidad de la piel, promoviendo hidratación profunda, luminosidad, viveza y mejora de la textura para un aspecto naturalmente radiante.",
+        "listLabel": "Beneficios",
+        "items": ["Hidratación intensa", "Luminosidad natural", "Piel más uniforme", "Textura refinada"]
+      },
+      {
+        "name": "RB Collagen",
+        "tagline": "Firmeza construida de adentro hacia afuera.",
+        "description": "Con enfoque en la bioestimulación de colágeno, este método fortalece la piel progresivamente, mejora la firmeza y ayuda a prevenir la evolución de la flacidez.",
+        "listLabel": "Indicado para",
+        "items": ["Flacidez inicial", "Pérdida de firmeza", "Prevención del envejecimiento"]
+      },
+      {
+        "name": "RB Harmony",
+        "tagline": "El equilibrio perfecto entre estructura, calidad de la piel y naturalidad.",
+        "description": "Nuestro método premium combina diferentes estrategias de rejuvenecimiento para tratar líneas de expresión, pérdida de volumen, calidad de la piel y soporte facial en un único plan. Ideal para quienes buscan un rejuvenecimiento global, elegante y personalizado.",
+        "listLabel": "",
+        "items": []
+      },
+      {
+        "name": "RB Lift Sculpt",
+        "tagline": "El método más completo para el tratamiento de la flacidez facial.",
+        "description": "Desarrollado para restaurar el soporte de los tejidos, estimular intensamente la producción natural de colágeno y redefinir el contorno facial, promoviendo un efecto lifting progresivo y natural.",
+        "listLabel": "",
+        "items": [],
+        "submethods": [
+          { "name": "RB Lift Sculpt Essence", "description": "Indicado para pacientes con flacidez leve a moderada que desean recuperar firmeza y suavizar las principales líneas de expresión." },
+          { "name": "RB Lift Sculpt Premium", "description": "Planificación más completa para quienes buscan tratar la flacidez, recuperar el soporte facial, mejorar la calidad de la piel y promover un rejuvenecimiento global." }
+        ]
+      }
+    ],
+    "closingTitle": "Un método exclusivo para cada paciente",
+    "closingP1": "Ningún Método RB se realiza de forma estandarizada. Cada tratamiento comienza con una evaluación detallada, donde analizamos la estructura facial, la calidad de la piel, el grado de envejecimiento y los objetivos de cada paciente.",
+    "closingP2": "A partir de ese diagnóstico, desarrollamos una planificación individualizada, combinando las técnicas más indicadas para lograr resultados naturales, elegantes y duraderos.",
+    "closingP3": "Porque el verdadero rejuvenecimiento no es transformar el rostro. Es devolver el soporte, el equilibrio y hacer que te reconozcas en el espejo con aún más confianza.",
+    "crossCta": "Tu tratamiento puede ir más allá de la estética. En algunos casos, el acompañamiento nutricional es un gran aliado para potenciar la producción de colágeno, mejorar la calidad de la piel y favorecer resultados más duraderos.",
+    "crossCtaLink": "Conoce la Nutrición Estratégica",
+    "whatsappMessageGeneric": "¡Hola! Me gustaría saber qué Método RB es ideal para mí.",
+    "whatsappMessageMetodo": "¡Hola! Me gustaría saber más sobre el Método {{name}}."
+  },
+  "facial": {
+    "seo": {
+      "title": "Rejuvenecimiento Facial - Armonización y Bioestimulación de Colágeno",
+      "description": "Conoce los tratamientos de rejuvenecimiento facial de la Clínica Renata Bastos: bioestimuladores de colágeno, toxina botulínica, relleno, hilos y skin booster."
+    },
+    "breadcrumb": "Rejuvenecimiento Facial",
+    "badge": "Armonización Facial",
+    "title": "Rejuvenecimiento Facial",
+    "description": "Tratamientos personalizados para restaurar el soporte de los tejidos, estimular la producción de colágeno y valorar la belleza natural de tu rostro — respetando siempre tu anatomía e identidad.",
+    "outros": [
+      { "title": "Relleno con Ácido Hialurónico", "description": "Reposición de volúmenes estratégicos para restaurar proporciones y valorar los contornos naturales del rostro." },
+      { "title": "Hilos de Sostén", "description": "Indicados para reforzar el soporte de los tejidos y redefinir el contorno facial de forma progresiva." }
+    ],
+    "ctaEvaluation": "Agendar Mi Evaluación",
+    "crossCta": "¿Quieres saber qué estrategia de rejuvenecimiento es ideal para tu rostro? Conoce la metodología exclusiva que planifica cada tratamiento de forma individualizada.",
+    "crossCtaLink": "Conoce los Métodos Exclusivos RB",
+    "whatsappMessage": "¡Hola! Quiero conocer los tratamientos de Rejuvenecimiento Facial de la Clínica Renata Bastos."
+  },
+  "corporal": {
+    "seo": {
+      "title": "Estética Corporal - Armonización y Remodelación Corporal",
+      "description": "Conoce los tratamientos de estética corporal de la Clínica Renata Bastos: intradermoterapia, armonización glútea, bioestimuladores y remodelación corporal, integrados con acompañamiento nutricional."
+    },
+    "breadcrumb": "Estética Corporal",
+    "badge": "Estética Corporal",
+    "title": "La belleza comienza mucho antes del espejo",
+    "description": "Al igual que en el rostro, la calidad de la piel, la composición corporal y la firmeza de los tejidos están influenciadas por el metabolismo, la inflamación y el estilo de vida. Por eso, nuestros protocolos corporales se planifican de forma estratégica e individualizada, siempre que sea posible integrados al acompañamiento nutricional.",
+    "ctaEvaluation": "Agendar Mi Evaluación",
+    "crossCta": "Los resultados corporales duraderos también dependen de adentro hacia afuera. Conoce el acompañamiento nutricional que potencia la composición corporal y la calidad de la piel.",
+    "crossCtaLink": "Conoce la Nutrición Estratégica",
+    "whatsappMessage": "¡Hola! Quiero conocer los tratamientos de Estética Corporal de la Clínica Renata Bastos."
+  },
+  "nutrition": {
+    "seo": {
+      "title": "Nutrición Estratégica - Estética Integrativa",
+      "description": "La belleza comienza mucho antes del espejo. Conoce las estrategias nutricionales personalizadas de la Clínica Renata Bastos que potencian los resultados faciales y corporales."
+    },
+    "breadcrumb": "Nutrición Estratégica",
+    "badge": "Estética Integrativa",
+    "title": "La belleza comienza mucho antes del espejo",
+    "p1": "En la Clínica Renata Bastos, creemos que los resultados duraderos dependen de una mirada completa sobre el paciente.",
+    "p2": "La calidad de la piel, la producción de colágeno, la composición corporal, la energía e incluso la velocidad del envejecimiento están influenciadas por factores como la alimentación, el metabolismo, la inflamación, la masa muscular y el estilo de vida.",
+    "p3": "Por eso, además de los tratamientos estéticos, desarrollamos estrategias nutricionales personalizadas que potencian los resultados faciales y corporales.",
+    "benefitsTitle": "¿Cómo puede la nutrición potenciar tus resultados?",
+    "benefits": [
+      "Favorece la producción natural de colágeno",
+      "Mejora la calidad de la piel",
+      "Ayuda en la recuperación de los tejidos",
+      "Contribuye al control de la inflamación",
+      "Mejora la composición corporal",
+      "Aumenta la energía y disposición",
+      "Preserva la masa muscular",
+      "Potencia los resultados de los tratamientos estéticos"
+    ],
+    "trackingTitle": "Nuestros acompañamientos incluyen",
+    "tracking": ["Adelgazamiento estratégico", "Hipertrofia", "Rendimiento", "Salud metabólica", "Nutrición funcional", "Nutrición ortomolecular"],
+    "ctaConsultation": "Agendar Mi Consulta",
+    "crossCta": "La estética comienza en la salud. Además del acompañamiento nutricional, muchas pacientes potencian sus resultados con los Métodos Exclusivos RB de rejuvenecimiento facial y tratamientos corporales.",
+    "crossCtaLink": "Conoce los Métodos RB",
+    "whatsappMessage": "¡Hola! Quiero conocer el acompañamiento de Nutrición Estratégica de la Clínica Renata Bastos."
+  },
+  "beforeAfter": {
+    "seo": {
+      "title": "Antes y Después - Resultados Reales",
+      "description": "Mira los resultados reales de rejuvenecimiento facial y estética corporal de la Clínica Renata Bastos: transformaciones naturales y duraderas."
+    },
+    "breadcrumb": "Antes y Después",
+    "title": "Los resultados naturales son nuestra firma",
+    "description": "Cada transformación presentada refleja una planificación individualizada. Más que cambiar rasgos, nuestro objetivo es restaurar el soporte, el equilibrio y realzar la belleza natural de cada paciente.",
+    "galleryNote": "Galería en actualización — nuevas fotos de antes y después próximamente.",
+    "galleryPlaceholder": "Antes y Después — próximamente",
+    "cta": "Quiero Mi Transformación",
+    "whatsappMessage": "¡Hola! Vi las transformaciones en el sitio web y quiero agendar mi evaluación."
+  },
+  "stories": {
+    "seo": {
+      "title": "Historias de Transformación - Testimonios",
+      "description": "Mira las historias de transformación de quienes ya vivieron esta experiencia con la Dra. Renata Bastos. Resultados reales y cuidado individualizado."
+    },
+    "breadcrumb": "Historias de Transformación",
+    "title": "Historias de Transformación",
+    "intro": "Cada paciente tiene una historia, un objetivo y un motivo para buscar nuestro cuidado. Más que procedimientos estéticos, brindamos un acompañamiento individualizado, basado en ciencia, planificación y respeto por la belleza natural de cada persona. Nada traduce mejor esta experiencia que las palabras de quienes ya vivieron esta transformación.",
+    "videoCaption": "Video de transformación real de una paciente de la Clínica Renata Bastos.",
+    "testimonialsTitle": "🤍 Lo que dicen nuestras pacientes",
+    "testimonials": [
+      "Experiencia excelente desde el primer momento. Estaba frustrada con otros profesionales y llegué con miedo, pero la atención, el cuidado y la sensibilidad me hicieron sentir completamente segura. El resultado superó todas mis expectativas. Estoy encantada con el resultado y lo recomiendo con los ojos cerrados.",
+      "Soy paciente desde hace algunos años y amo los resultados. Además de ser una excelente profesional, la Dra. Renata es extremadamente atenta. Mi autoestima cambió por completo. La recomiendo para todos los que buscan una atención seria, segura y resultados naturales.",
+      "Siempre tuve miedo de hacerme una armonización facial, pero encontré exactamente lo que buscaba: naturalidad. La atención es impecable, la planificación es personalizada y el resultado quedó mucho mejor de lo que imaginaba.",
+      "Además de la estética, encontré una profesional que realmente se preocupa por mi salud. La combinación de los tratamientos estéticos con la orientación nutricional marcó toda la diferencia en mis resultados."
+    ],
+    "closingTitle": "Tu experiencia puede ser la próxima.",
+    "closingP1": "Cada resultado presentado aquí representa un tratamiento cuidadosamente planificado, respetando la individualidad y los objetivos de cada paciente.",
+    "closingP2": "Será un placer formar parte de tu transformación también. Agenda tu evaluación y descubre qué Método RB fue desarrollado para ti.",
+    "cta": "Agendar Mi Evaluación",
+    "whatsappMessage": "¡Hola! Vi las historias de transformación en el sitio web y quiero agendar mi evaluación."
+  },
+  "contact": {
+    "title": "Ponte en Contacto - Clínica Renata Bastos",
+    "subtitle": "¿Listo para transformar tu salud? Agenda tu consulta en Tijuca, Río de Janeiro, o resuelve tus dudas",
+    "form": {
+      "nameLabel": "Nombre Completo *",
+      "namePlaceholder": "Tu nombre completo",
+      "emailLabel": "Correo Electrónico *",
+      "emailPlaceholder": "tu@correo.com",
+      "phoneLabel": "Teléfono *",
+      "phonePlaceholder": "(00) 00000-0000",
+      "subjectLabel": "Asunto *",
+      "subjectPlaceholder": "Selecciona el asunto",
+      "subjectSchedule": "Agendar Consulta",
+      "subjectQuote": "Solicitar Presupuesto",
+      "subjectQuestions": "Resolver Dudas",
+      "subjectOther": "Otros",
+      "messageLabel": "Mensaje *",
+      "messagePlaceholder": "¿Cómo puedo ayudarte hoy?",
+      "charactersCount": "{{count}}/2000 caracteres",
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "errorsTitle": "Errores en el formulario:"
+    },
+    "messages": {
+      "fallbackSuccess": "¡Formulario enviado! Se abrió una nueva pestaña para confirmar el envío. Revisa también tu bandeja de entrada.",
+      "corsError": "Error de conexión. El servicio puede estar temporalmente no disponible. Por favor, intenta de nuevo o usa WhatsApp.",
+      "timeoutError": "Tiempo agotado: el servidor tardó demasiado en responder. Por favor, intenta de nuevo o usa WhatsApp.",
+      "unavailableError": "Servicio temporalmente no disponible. Por favor, intenta de nuevo en unos minutos o usa WhatsApp.",
+      "serverError": "Error en el servidor. Por favor, intenta de nuevo más tarde o usa WhatsApp.",
+      "genericError": "Error al enviar el mensaje. Intenta de nuevo o usa WhatsApp.",
+      "verifyWarning": "Revisa el correo renatabastosnutri@gmail.com para confirmar el FormSubmit (incluso SPAM).",
+      "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto pronto."
+    },
+    "info": {
+      "phoneTitle": "Teléfono",
+      "emailTitle": "Correo Electrónico",
+      "addressTitle": "Dirección",
+      "hoursTitle": "Horario"
+    },
+    "mapTitle": "Ubicación de la Clínica Renata Bastos - Ed Corporate, Tijuca"
+  }
+}

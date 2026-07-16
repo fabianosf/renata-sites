@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link } from "@/components/LocalizedLink";
 import Logo from "@/components/Logo";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import ThemeToggle from "@/components/ThemeToggle";
 import { siteConfig } from "@/config/site";
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,13 +22,16 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: "Início", to: "/inicio" },
-    { label: "Sobre", to: "/sobre" },
-    { label: "Serviços", to: "/servicos" },
-    { label: "Preços", to: "/precos" },
-    { label: "Depoimentos", to: "/depoimentos" },
-    { label: "Blog", to: "/blog" },
-    { label: "Contato", to: "/contato" },
+    { label: t("common.nav.home"), to: "/" },
+    { label: t("common.nav.clinica"), to: "/a-clinica" },
+    { label: t("common.nav.draRenata"), to: "/dra-renata" },
+    { label: t("common.nav.metodoRB"), to: "/metodo-rb" },
+    { label: t("common.nav.facial"), to: "/rejuvenescimento-facial" },
+    { label: t("common.nav.corporal"), to: "/estetica-corporal" },
+    { label: t("common.nav.nutrition"), to: "/nutricao-estrategica" },
+    { label: t("common.nav.beforeAfter"), to: "/antes-e-depois" },
+    { label: t("common.nav.stories"), to: "/historias-de-transformacao" },
+    { label: t("common.nav.contact"), to: "/contato" },
   ];
 
   return (
@@ -41,12 +48,12 @@ const Header = () => {
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.to}
-                className="text-foreground hover:text-primary transition-smooth font-medium cursor-pointer relative group"
+                className="text-foreground hover:text-primary transition-smooth font-medium cursor-pointer relative group whitespace-nowrap text-sm xl:text-base"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -54,30 +61,39 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <Button
-            className="hidden lg:flex shadow-glow hover:shadow-elevated hover:scale-105 transition-all duration-300"
-            size="lg"
-            onClick={() => {
-              const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
-              window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
-            }}
-          >
-            <Calendar className="mr-2 h-5 w-5" />
-            Agendar Consulta
-          </Button>
+          <div className="hidden lg:flex items-center gap-2">
+            <LanguageSwitcher />
+            <ThemeToggle />
+            {/* CTA Button */}
+            <Button
+              className="shadow-glow hover:shadow-elevated hover:scale-105 transition-all duration-300"
+              size="lg"
+              onClick={() => {
+                const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
+                window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
+              }}
+            >
+              <Calendar className="mr-2 h-5 w-5" />
+              {t("common.cta.scheduleConsultation")}
+            </Button>
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-foreground hover:text-primary transition-smooth"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          {/* Mobile: idioma, tema e menu */}
+          <div className="flex items-center gap-1 lg:hidden">
+            <LanguageSwitcher />
+            <ThemeToggle />
+            <button
+              className="text-foreground hover:text-primary transition-smooth p-2"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
@@ -94,8 +110,8 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <Button 
-                className="mt-4" 
+              <Button
+                className="mt-4"
                 size="lg"
                 onClick={() => {
                   const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
@@ -104,7 +120,7 @@ const Header = () => {
                 }}
               >
                 <Calendar className="mr-2 h-5 w-5" />
-                Agendar Consulta
+                {t("common.cta.scheduleConsultation")}
               </Button>
             </nav>
           </div>

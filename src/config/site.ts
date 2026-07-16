@@ -14,6 +14,7 @@ export const siteConfig = {
     name: "Renata Bastos",
     title: "Nutricionista Ortomolecular & Biomédica Esteta",
     crn: "CRN 4 15100141",
+    crbm: "CRBM 60773",
     experience: "14+", // Formada em 2010
     patients: "2000+",
     satisfaction: "98%",

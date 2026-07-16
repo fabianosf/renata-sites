@@ -1,5 +1,4 @@
 import { servicesData } from "@/data/servicesData";
-import { blogArticles } from "@/data/blogData";
 
 export const generateSitemap = () => {
   const baseUrl = "https://clinicarenatabastos.com.br";
@@ -7,11 +6,14 @@ export const generateSitemap = () => {
 
   const staticPages = [
     { url: "", priority: "1.0", changefreq: "weekly" },
-    { url: "/inicio", priority: "1.0", changefreq: "weekly" },
-    { url: "/sobre", priority: "0.9", changefreq: "monthly" },
-    { url: "/servicos", priority: "0.9", changefreq: "weekly" },
-    { url: "/depoimentos", priority: "0.8", changefreq: "monthly" },
-    { url: "/blog", priority: "0.9", changefreq: "weekly" },
+    { url: "/a-clinica", priority: "0.9", changefreq: "monthly" },
+    { url: "/dra-renata", priority: "0.9", changefreq: "monthly" },
+    { url: "/metodo-rb", priority: "0.9", changefreq: "monthly" },
+    { url: "/rejuvenescimento-facial", priority: "0.9", changefreq: "monthly" },
+    { url: "/estetica-corporal", priority: "0.9", changefreq: "monthly" },
+    { url: "/nutricao-estrategica", priority: "0.9", changefreq: "monthly" },
+    { url: "/antes-e-depois", priority: "0.8", changefreq: "monthly" },
+    { url: "/historias-de-transformacao", priority: "0.8", changefreq: "monthly" },
     { url: "/contato", priority: "0.8", changefreq: "monthly" },
   ];
 
@@ -21,13 +23,7 @@ export const generateSitemap = () => {
     changefreq: "monthly",
   }));
 
-  const blogPages = blogArticles.map((article) => ({
-    url: `/blog/${article.id}`,
-    priority: "0.7",
-    changefreq: "monthly",
-  }));
-
-  const allPages = [...staticPages, ...servicePages, ...blogPages];
+  const allPages = [...staticPages, ...servicePages];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -48,4 +44,3 @@ ${allPages
 
   return sitemap;
 };
-

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,6 +20,7 @@ const FORM_ACTION = "https://formsubmit.co/ajax/renatabastosnutri@gmail.com";
 const FORM_ACTION_FALLBACK = "https://formsubmit.co/renatabastosnutri@gmail.com";
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,7 +47,7 @@ const Contact: React.FC = () => {
     fallbackForm.method = "POST";
     fallbackForm.action = FORM_ACTION_FALLBACK;
     fallbackForm.target = "_blank";
-    
+
     // Adicionar todos os campos do FormData
     formData.forEach((value, key) => {
       if (value instanceof File) {
@@ -53,13 +55,13 @@ const Contact: React.FC = () => {
       }
       fallbackForm.appendChild(createHiddenInput(key, value.toString()));
     });
-    
+
     // Campos do FormSubmit
 
     fallbackForm.appendChild(createHiddenInput("_template", "table"));
     fallbackForm.appendChild(createHiddenInput("_captcha", "false"));
     fallbackForm.appendChild(createHiddenInput("_subject", `Novo Contato: ${subjectText} | Clínica Renata Bastos`));
-    
+
     document.body.appendChild(fallbackForm);
     fallbackForm.submit();
     setTimeout(() => {
@@ -86,7 +88,7 @@ const Contact: React.FC = () => {
     // 2. Sanitização
     const sanitized = sanitizeFormData(formData);
 
-    // 3. Assunto legível
+    // 3. Assunto legível (sempre em português - vai para o e-mail da clínica)
     const subjectMap: Record<string, string> = {
       consulta: "Agendar Consulta",
       orcamento: "Solicitar Orçamento",
@@ -113,7 +115,7 @@ const Contact: React.FC = () => {
 
     try {
       console.log("📤 Enviando para:", FORM_ACTION);
-      
+
       // Criar AbortController para timeout (aumentado para 40 segundos)
       const controller = new AbortController();
       const timeoutId = setTimeout(() => controller.abort(), 40000); // 40 segundos
@@ -129,15 +131,13 @@ const Contact: React.FC = () => {
         clearTimeout(timeoutId);
       } catch (fetchError: any) {
         clearTimeout(timeoutId);
-        
+
         // Verificar se foi abortado por timeout
         if (fetchError.name === "AbortError") {
           // Em caso de timeout, usar formulário HTML tradicional como fallback
           console.warn("⚠️ Timeout no AJAX, usando formulário HTML tradicional como fallback");
           submitFallbackForm(body, subjectText);
-          toast.success(
-            "Formulário enviado! Uma nova aba foi aberta para confirmar o envio. Verifique também sua caixa de entrada."
-          );
+          toast.success(t("contact.messages.fallbackSuccess"));
           // Limpar formulário
           setFormData({
             name: "",
@@ -150,14 +150,12 @@ const Contact: React.FC = () => {
           setIsSubmitting(false);
           return;
         }
-        
+
         // Verificar se foi erro de CORS
         if (fetchError.message?.includes("CORS") || fetchError.message?.includes("Failed to fetch")) {
-          throw new Error(
-            "Erro de conexão. O serviço pode estar temporariamente indisponível. Por favor, tente novamente ou use o WhatsApp."
-          );
+          throw new Error(t("contact.messages.corsError"));
         }
-        
+
         throw fetchError;
       }
 
@@ -166,25 +164,19 @@ const Contact: React.FC = () => {
       if (!response.ok) {
         const text = await response.text().catch(() => "");
         console.error("❌ Erro HTTP FormSubmit:", text);
-        
+
         // Mensagens específicas para erros comuns
         if (response.status === 524 || response.status === 504) {
-          throw new Error(
-            "Timeout: O servidor demorou muito para responder. Por favor, tente novamente ou use o WhatsApp."
-          );
+          throw new Error(t("contact.messages.timeoutError"));
         }
         if (response.status === 503 || response.status === 502) {
-          throw new Error(
-            "Serviço temporariamente indisponível. Por favor, tente novamente em alguns minutos ou use o WhatsApp."
-          );
+          throw new Error(t("contact.messages.unavailableError"));
         }
         if (response.status >= 500) {
-          throw new Error(
-            "Erro no servidor. Por favor, tente novamente mais tarde ou use o WhatsApp."
-          );
+          throw new Error(t("contact.messages.serverError"));
         }
-        
-        throw new Error("Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.");
+
+        throw new Error(t("contact.messages.genericError"));
       }
 
       let responseText = "";
@@ -202,9 +194,7 @@ const Contact: React.FC = () => {
         lower.includes("check your email") ||
         lower.includes("please verify")
       ) {
-        toast.warning(
-          "Verifique o e-mail renatabastosnutri@gmail.com para confirmar o FormSubmit (inclusive SPAM)."
-        );
+        toast.warning(t("contact.messages.verifyWarning"));
         // Limpar formulário mesmo quando precisa verificar
         setFormData({
           name: "",
@@ -221,7 +211,7 @@ const Contact: React.FC = () => {
         response.status === 200 ||
         response.status === 302
       ) {
-        toast.success("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+        toast.success(t("contact.messages.success"));
         setFormData({
           name: "",
           email: "",
@@ -232,7 +222,7 @@ const Contact: React.FC = () => {
         setErrors([]);
       } else {
         // Se não identificou claramente, mas não deu erro, considerar sucesso
-        toast.success("Mensagem enviada! Entraremos em contato em breve.");
+        toast.success(t("contact.messages.success"));
         setFormData({
           name: "",
           email: "",
@@ -244,8 +234,7 @@ const Contact: React.FC = () => {
       }
     } catch (error) {
       console.error("❌ Erro ao enviar formulário:", error);
-      let message =
-        "Erro ao enviar mensagem. Tente novamente ou use o WhatsApp.";
+      let message = t("contact.messages.genericError");
 
       if (error instanceof Error && error.message) {
         message = error.message;
@@ -262,25 +251,25 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: "Telefone",
+      title: t("contact.info.phoneTitle"),
       info: siteConfig.contact.phone,
       link: siteConfig.contact.phoneLink,
     },
     {
       icon: Mail,
-      title: "E-mail",
+      title: t("contact.info.emailTitle"),
       info: siteConfig.contact.email,
       link: siteConfig.contact.emailLink,
     },
     {
       icon: MapPin,
-      title: "Endereço",
+      title: t("contact.info.addressTitle"),
       info: `${siteConfig.contact.address}${siteConfig.contact.addressNote ? ` - ${siteConfig.contact.addressNote}` : ''} | ${siteConfig.contact.addressSecondary}`,
       link: siteConfig.contact.addressLink,
     },
     {
       icon: Clock,
-      title: "Horário",
+      title: t("contact.info.hoursTitle"),
       info: siteConfig.contact.hours,
       link: null,
     },
@@ -292,11 +281,10 @@ const Contact: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <h1 className="text-3xl lg:text-4xl font-bold mb-4">
-            Entre em Contato - Clínica Renata Bastos
+            {t("contact.title")}
           </h1>
           <p className="text-lg text-muted-foreground">
-            Pronto para transformar sua saúde? Agende sua consulta na Tijuca,
-            Rio de Janeiro ou tire suas dúvidas
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -310,7 +298,7 @@ const Contact: React.FC = () => {
                     <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
                     <div className="flex-1">
                       <p className="font-semibold text-destructive mb-2">
-                        Erros no formulário:
+                        {t("contact.form.errorsTitle")}
                       </p>
                       <ul className="list-disc list-inside space-y-1 text-sm text-destructive">
                         {errors.map((error, index) => (
@@ -323,10 +311,10 @@ const Contact: React.FC = () => {
               )}
 
               <div>
-                <Label htmlFor="name">Nome Completo *</Label>
+                <Label htmlFor="name">{t("contact.form.nameLabel")}</Label>
                 <Input
                   id="name"
-                  placeholder="Seu nome completo"
+                  placeholder={t("contact.form.namePlaceholder")}
                   value={formData.name}
                   onChange={(e) => {
                     setFormData({ ...formData, name: e.target.value });
@@ -339,11 +327,11 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <Label htmlFor="email">E-mail *</Label>
+                <Label htmlFor="email">{t("contact.form.emailLabel")}</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="seu@email.com"
+                  placeholder={t("contact.form.emailPlaceholder")}
                   value={formData.email}
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
@@ -356,11 +344,11 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <Label htmlFor="phone">Telefone *</Label>
+                <Label htmlFor="phone">{t("contact.form.phoneLabel")}</Label>
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="(00) 00000-0000"
+                  placeholder={t("contact.form.phonePlaceholder")}
                   value={formData.phone}
                   onChange={(e) => {
                     setFormData({ ...formData, phone: e.target.value });
@@ -373,7 +361,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <Label htmlFor="subject">Assunto *</Label>
+                <Label htmlFor="subject">{t("contact.form.subjectLabel")}</Label>
                 <Select
                   value={formData.subject}
                   onValueChange={(value) =>
@@ -381,24 +369,24 @@ const Contact: React.FC = () => {
                   }
                 >
                   <SelectTrigger className="mt-2">
-                    <SelectValue placeholder="Selecione o assunto" />
+                    <SelectValue placeholder={t("contact.form.subjectPlaceholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="consulta">Agendar Consulta</SelectItem>
+                    <SelectItem value="consulta">{t("contact.form.subjectSchedule")}</SelectItem>
                     <SelectItem value="orcamento">
-                      Solicitar Orçamento
+                      {t("contact.form.subjectQuote")}
                     </SelectItem>
-                    <SelectItem value="duvidas">Tirar Dúvidas</SelectItem>
-                    <SelectItem value="outros">Outros</SelectItem>
+                    <SelectItem value="duvidas">{t("contact.form.subjectQuestions")}</SelectItem>
+                    <SelectItem value="outros">{t("contact.form.subjectOther")}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
               <div>
-                <Label htmlFor="message">Mensagem *</Label>
+                <Label htmlFor="message">{t("contact.form.messageLabel")}</Label>
                 <Textarea
                   id="message"
-                  placeholder="Como posso ajudar você hoje?"
+                  placeholder={t("contact.form.messagePlaceholder")}
                   value={formData.message}
                   onChange={(e) => {
                     setFormData({ ...formData, message: e.target.value });
@@ -410,7 +398,7 @@ const Contact: React.FC = () => {
                   maxLength={2000}
                 />
                 <p className="text-xs text-muted-foreground mt-1">
-                  {formData.message.length}/2000 caracteres
+                  {t("contact.form.charactersCount", { count: formData.message.length })}
                 </p>
               </div>
 
@@ -421,7 +409,7 @@ const Contact: React.FC = () => {
                 disabled={isSubmitting}
               >
                 <Send className="mr-2 h-5 w-5" />
-                {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+                {isSubmitting ? t("contact.form.submitting") : t("contact.form.submit")}
               </Button>
             </form>
           </div>
@@ -474,7 +462,7 @@ const Contact: React.FC = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Localização da Clínica Renata Bastos - Ed Corporate, Tijuca"
+                title={t("contact.mapTitle")}
               ></iframe>
             </div>
           </div>

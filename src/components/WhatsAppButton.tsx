@@ -1,7 +1,9 @@
 import { MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { siteConfig } from "@/config/site";
 
 const WhatsAppButton = () => {
+  const { t } = useTranslation();
   const message = encodeURIComponent(siteConfig.whatsappMessages.default);
 
   return (
@@ -10,7 +12,7 @@ const WhatsAppButton = () => {
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#20BA5A] rounded-full flex items-center justify-center shadow-elevated hover:scale-110 transition-smooth animate-pulse-glow group"
-      aria-label="Fale conosco no WhatsApp"
+      aria-label={t("common.whatsapp.ariaLabel")}
     >
       <MessageCircle className="h-7 w-7 text-white group-hover:scale-110 transition-smooth" />
     </a>

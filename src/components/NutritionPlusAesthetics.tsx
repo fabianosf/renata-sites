@@ -1,3 +1,5 @@
+import { Trans, useTranslation } from "react-i18next";
+import { Link } from "@/components/LocalizedLink";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -12,15 +14,22 @@ import {
 import { siteConfig } from "@/config/site";
 
 const NutritionPlusAesthetics = () => {
+  const { t } = useTranslation();
+
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      "Olá! Quero conhecer o atendimento integrado de Nutrição + Estética. Gostaria de mais informações."
-    );
+    const message = encodeURIComponent(t("home.nutritionAesthetics.whatsappMessage"));
     window.open(
       `https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`,
       "_blank"
     );
   };
+
+  const nutritionItems = t("home.nutritionAesthetics.nutritionItems", { returnObjects: true }) as string[];
+  const aestheticsItems = t("home.nutritionAesthetics.aestheticsItems", { returnObjects: true }) as string[];
+  const integrationCards = t("home.nutritionAesthetics.integrationCards", { returnObjects: true }) as {
+    title: string;
+    description: string;
+  }[];
 
   return (
     <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 via-background to-accent/10 relative overflow-hidden">
@@ -36,19 +45,18 @@ const NutritionPlusAesthetics = () => {
           <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-4">
             <Star className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">
-              Diferencial Único
+              {t("home.nutritionAesthetics.badge")}
             </span>
           </div>
 
           <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
-            Nutrição <span className="text-primary">+</span> Estética
+            {t("home.nutritionAesthetics.titleLine1")}
             <br />
-            <span className="text-primary">Transformação Completa</span>
+            <span className="text-primary">{t("home.nutritionAesthetics.titleLine2")}</span>
           </h2>
 
           <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-            A integração de nutrição estratégica e estética avançada que cuida de você
-            de dentro para fora — saúde, equilíbrio e beleza em um só lugar.
+            {t("home.nutritionAesthetics.description")}
           </p>
         </div>
 
@@ -62,41 +70,34 @@ const NutritionPlusAesthetics = () => {
                   <Heart className="h-7 w-7 text-primary" />
                 </div>
                 <Badge className="bg-primary text-primary-foreground">
-                  Saúde de Dentro
+                  {t("home.nutritionAesthetics.nutritionBadge")}
                 </Badge>
               </div>
 
               <h3 className="text-2xl font-bold mb-4">
-                Nutrição Estratégica
+                {t("home.nutritionAesthetics.nutritionTitle")}
               </h3>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Nutrição ortomolecular, clínica e esportiva para equilibrar seu metabolismo,
-                otimizar energia e construir resultados sustentáveis.
+                {t("home.nutritionAesthetics.nutritionDescription")}
               </p>
 
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Emagrecimento saudável e duradouro</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Ganho de massa muscular e definição</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Melhora de disposição e energia</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Equilíbrio hormonal e metabólico</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Prevenção e controle de doenças</span>
-                </li>
+                {nutritionItems.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
               </ul>
+
+              <Link
+                to="/nutricao-estrategica"
+                className="inline-flex items-center gap-2 text-primary font-semibold text-sm mt-6 hover:underline"
+              >
+                {t("home.nutritionAesthetics.nutritionLink")}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </CardContent>
           </Card>
 
@@ -108,41 +109,34 @@ const NutritionPlusAesthetics = () => {
                   <Sparkles className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <Badge className="bg-accent text-accent-foreground">
-                  Beleza de Fora
+                  {t("home.nutritionAesthetics.aestheticsBadge")}
                 </Badge>
               </div>
 
               <h3 className="text-2xl font-bold mb-4">
-                Estética Integrativa
+                {t("home.nutritionAesthetics.aestheticsTitle")}
               </h3>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Harmonização facial e corporal com técnicas avançadas para resultados naturais,
-                seguros e alinhados com sua saúde.
+                {t("home.nutritionAesthetics.aestheticsDescription")}
               </p>
 
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Intradermoterapia (gordura localizada)</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Harmonização glútea e corporal</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Bioestimuladores de colágeno</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Toxina botulínica e skin booster</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Tratamento capilar avançado</span>
-                </li>
+                {aestheticsItems.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-accent-foreground mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{item}</span>
+                  </li>
+                ))}
               </ul>
+
+              <Link
+                to="/estetica-corporal"
+                className="inline-flex items-center gap-2 text-accent-foreground font-semibold text-sm mt-6 hover:underline"
+              >
+                {t("home.nutritionAesthetics.aestheticsLink")}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </CardContent>
           </Card>
         </div>
@@ -157,29 +151,24 @@ const NutritionPlusAesthetics = () => {
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-2xl lg:text-3xl font-bold">
-                    O Resultado da Integração
+                    {t("home.nutritionAesthetics.integrationTitle")}
                   </h3>
                 </div>
 
                 <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Quando nutrição e estética trabalham juntas, os resultados são
-                  <strong className="text-foreground"> mais rápidos, mais profundos e mais duradouros</strong>.
-                  Você cuida da saúde interna enquanto potencializa a beleza externa — com segurança, ciência e humanização.
+                  <Trans
+                    i18nKey="home.nutritionAesthetics.integrationText"
+                    components={{ strong: <strong className="text-foreground" /> }}
+                  />
                 </p>
 
                 <div className="grid md:grid-cols-3 gap-4 mb-8">
-                  <div className="p-4 bg-background/50 rounded-xl border border-border">
-                    <p className="font-bold text-primary text-lg mb-1">Resultados Reais</p>
-                    <p className="text-sm text-muted-foreground">Transformações visíveis e sustentáveis</p>
-                  </div>
-                  <div className="p-4 bg-background/50 rounded-xl border border-border">
-                    <p className="font-bold text-primary text-lg mb-1">Acompanhamento</p>
-                    <p className="text-sm text-muted-foreground">Suporte contínuo e personalizado</p>
-                  </div>
-                  <div className="p-4 bg-background/50 rounded-xl border border-border">
-                    <p className="font-bold text-primary text-lg mb-1">Humanização</p>
-                    <p className="text-sm text-muted-foreground">Cuidado individualizado e empático</p>
-                  </div>
+                  {integrationCards.map((card) => (
+                    <div key={card.title} className="p-4 bg-background/50 rounded-xl border border-border">
+                      <p className="font-bold text-primary text-lg mb-1">{card.title}</p>
+                      <p className="text-sm text-muted-foreground">{card.description}</p>
+                    </div>
+                  ))}
                 </div>
 
                 <Button
@@ -187,7 +176,7 @@ const NutritionPlusAesthetics = () => {
                   className="text-lg px-8 shadow-glow hover:shadow-elevated"
                   onClick={handleWhatsAppClick}
                 >
-                  Conhecer Atendimento Integrado
+                  {t("home.nutritionAesthetics.integrationCta")}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>

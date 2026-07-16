@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { Link } from "@/components/LocalizedLink";
 import { ChevronRight, Home } from "lucide-react";
 
 interface BreadcrumbItem {
@@ -11,6 +12,8 @@ interface BreadcrumbsProps {
 }
 
 const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
+  const { t } = useTranslation();
+
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
       <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
@@ -18,10 +21,10 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
           <Link
             to="/"
             className="flex items-center gap-1 hover:text-primary transition-smooth"
-            aria-label="Início"
+            aria-label={t("common.breadcrumbs.home")}
           >
             <Home className="h-4 w-4" />
-            <span className="sr-only">Início</span>
+            <span className="sr-only">{t("common.breadcrumbs.home")}</span>
           </Link>
         </li>
         {items.map((item, index) => (
@@ -45,4 +48,3 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
 };
 
 export default Breadcrumbs;
-
