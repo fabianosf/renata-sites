@@ -72,7 +72,7 @@ const ClinicaPage = () => {
                 <CardContent className="p-0">
                   <div className="relative aspect-video bg-black">
                     <video className="w-full h-full object-contain" controls preload="metadata">
-                      <source src="/video-remata.mp4" type="video/mp4" />
+                      <source src="/video1.mp4" type="video/mp4" />
                       Seu navegador não suporta a reprodução de vídeo.
                     </video>
                   </div>
