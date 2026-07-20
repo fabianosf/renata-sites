@@ -2,12 +2,15 @@
   "common": {
     "nav": {
       "home": "Inicio",
+      "about": "Acerca de",
       "clinica": "La Clínica",
       "draRenata": "Dra. Renata",
+      "treatments": "Tratamientos",
       "metodoRB": "Método RB",
       "facial": "Rejuvenecimiento Facial",
       "corporal": "Estética Corporal",
       "nutrition": "Nutrición Estratégica",
+      "results": "Resultados",
       "beforeAfter": "Antes y Después",
       "stories": "Historias de Transformación",
       "contact": "Contacto"
@@ -84,10 +87,22 @@
       "p2": "Reconocida por el acompañamiento nutricional individualizado y por los resultados sostenibles en adelgazamiento, hipertrofia y mejora de la energía, la clínica trabaja con planificación continua, respetando el metabolismo, la rutina y el comportamiento alimentario de cada paciente.",
       "p3": "Aquí, la estética no es superficial — es una extensión del cuidado del cuerpo, la salud y la confianza de cada persona. Todo se realiza de forma humanizada y personalizada, porque cada historia, objetivo y momento requiere un plan único.",
       "items": [
-        { "title": "Atención Presencial y en Línea", "description": "Flexibilidad total para consultas en el consultorio o desde la comodidad de tu casa" },
-        { "title": "Enfoque Ortomolecular", "description": "Nutrición basada en evidencia científica con enfoque en la optimización celular" },
-        { "title": "Integración Nutrición + Estética", "description": "Cuidado completo: salud interna y externa en un solo lugar" },
-        { "title": "{{count}} Pacientes Atendidos", "description": "Experiencia comprobada con resultados reales y transformaciones duraderas" }
+        {
+          "title": "Atención Presencial y en Línea",
+          "description": "Flexibilidad total para consultas en el consultorio o desde la comodidad de tu casa"
+        },
+        {
+          "title": "Enfoque Ortomolecular",
+          "description": "Nutrición basada en evidencia científica con enfoque en la optimización celular"
+        },
+        {
+          "title": "Integración Nutrición + Estética",
+          "description": "Cuidado completo: salud interna y externa en un solo lugar"
+        },
+        {
+          "title": "{{count}} Pacientes Atendidos",
+          "description": "Experiencia comprobada con resultados reales y transformaciones duraderas"
+        }
       ]
     },
     "video": {
@@ -139,9 +154,18 @@
       "integrationTitle": "El Resultado de la Integración",
       "integrationText": "Cuando la nutrición y la estética trabajan juntas, los resultados son <strong>más rápidos, más profundos y más duraderos</strong>. Cuidas tu salud interna mientras potencias tu belleza externa — con seguridad, ciencia y humanización.",
       "integrationCards": [
-        { "title": "Resultados Reales", "description": "Transformaciones visibles y sostenibles" },
-        { "title": "Acompañamiento", "description": "Apoyo continuo y personalizado" },
-        { "title": "Humanización", "description": "Cuidado individualizado y empático" }
+        {
+          "title": "Resultados Reales",
+          "description": "Transformaciones visibles y sostenibles"
+        },
+        {
+          "title": "Acompañamiento",
+          "description": "Apoyo continuo y personalizado"
+        },
+        {
+          "title": "Humanización",
+          "description": "Cuidado individualizado y empático"
+        }
       ],
       "integrationCta": "Conocer Atención Integrada",
       "whatsappMessage": "¡Hola! Quiero conocer la atención integrada de Nutrición + Estética. Me gustaría más información."
@@ -156,7 +180,11 @@
         "title": "Consulta Presencial",
         "subtitle": "Conexión completa y presencia humanizada",
         "description": "El encuentro presencial permite una evaluación más profunda, con atención cuidadosa a los detalles y la construcción de una relación de confianza desde el primer momento.",
-        "items": ["Evaluación corporal con bioimpedancia", "Análisis personalizado presencial", "Conexión humana y acogida"],
+        "items": [
+          "Evaluación corporal con bioimpedancia",
+          "Análisis personalizado presencial",
+          "Conexión humana y acogida"
+        ],
         "cta": "Agendar Consulta Presencial",
         "whatsappMessage": "¡Hola! Quiero agendar una Consulta Presencial de Nutrición. Me gustaría conocer valores y disponibilidad."
       },
@@ -165,7 +193,11 @@
         "title": "Consulta en Línea",
         "subtitle": "La misma calidad, desde donde estés",
         "description": "Atención por videollamada con la misma dedicación y cuidado que la consulta presencial. Ideal para quienes tienen una agenda intensa o viven lejos.",
-        "items": ["Horarios flexibles y accesibles", "Ahorra tiempo de traslado", "Atención desde cualquier lugar"],
+        "items": [
+          "Horarios flexibles y accesibles",
+          "Ahorra tiempo de traslado",
+          "Atención desde cualquier lugar"
+        ],
         "cta": "Agendar Consulta en Línea",
         "whatsappMessage": "¡Hola! Quiero agendar una Consulta en Línea de Nutrición. Me gustaría conocer valores y disponibilidad."
       },
@@ -183,7 +215,13 @@
           "name": "Consulta Inicial",
           "subtitle": "Tu Primer Paso",
           "description": "Ideal para conocer el trabajo e iniciar tu camino de transformación con una evaluación completa.",
-          "features": ["Consulta de 60 minutos", "Evaluación corporal completa", "Anamnesis detallada personalizada", "Plan alimentario individualizado", "Material de apoyo digital"],
+          "features": [
+            "Consulta de 60 minutos",
+            "Evaluación corporal completa",
+            "Anamnesis detallada personalizada",
+            "Plan alimentario individualizado",
+            "Material de apoyo digital"
+          ],
           "impact": "Comienza tu transformación"
         },
         {
@@ -191,7 +229,13 @@
           "name": "Consulta + Retorno",
           "subtitle": "Para Quien Quiere Resultados",
           "description": "Acompañamiento estratégico con ajustes para garantizar que vas por el camino correcto.",
-          "features": ["Consulta inicial + 1 retorno", "Evaluación de evolución", "Ajustes inteligentes del plan", "Acompañamiento cercano", "Apoyo entre consultas"],
+          "features": [
+            "Consulta inicial + 1 retorno",
+            "Evaluación de evolución",
+            "Ajustes inteligentes del plan",
+            "Acompañamiento cercano",
+            "Apoyo entre consultas"
+          ],
           "badge": "Popular",
           "impact": "Asegura tus resultados"
         },
@@ -200,7 +244,14 @@
           "name": "Programa Trimestral",
           "subtitle": "Transformación Sostenible",
           "description": "Acompañamiento mensual para observar tu respuesta, ajustar estrategias y cuidarte con ligereza y constancia.",
-          "features": ["3 meses de acompañamiento", "Consultas mensuales estratégicas", "Ajustes continuos personalizados", "Apoyo directo con Renata", "Resultados progresivos", "Cambios que duran"],
+          "features": [
+            "3 meses de acompañamiento",
+            "Consultas mensuales estratégicas",
+            "Ajustes continuos personalizados",
+            "Apoyo directo con Renata",
+            "Resultados progresivos",
+            "Cambios que duran"
+          ],
           "badge": "Más Elegido",
           "impact": "Transformación real y duradera"
         },
@@ -209,14 +260,25 @@
           "name": "Programa Semestral",
           "subtitle": "Resultado Definitivo",
           "description": "El camino completo hacia una transformación profunda: 6 meses de acompañamiento estratégico para resultados que perduran.",
-          "features": ["6 meses de transformación", "Acompañamiento mensual estratégico", "Ajustes frecuentes y precisos", "Apoyo continuo personalizado", "Construcción de hábitos sólidos", "Resultados profundos y duraderos", "Mejor inversión a largo plazo"],
+          "features": [
+            "6 meses de transformación",
+            "Acompañamiento mensual estratégico",
+            "Ajustes frecuentes y precisos",
+            "Apoyo continuo personalizado",
+            "Construcción de hábitos sólidos",
+            "Resultados profundos y duraderos",
+            "Mejor inversión a largo plazo"
+          ],
           "badge": "Mejor Inversión",
           "impact": "Tu mejor versión para siempre"
         }
       ],
       "planCta": "Consultar Valores y Agendar",
       "paymentTitle": "Formas de Pago",
-      "paymentMethods": ["Pix", "Tarjeta de crédito en cuotas"],
+      "paymentMethods": [
+        "Pix",
+        "Tarjeta de crédito en cuotas"
+      ],
       "limitedSlots": "💡 Cupos limitados por mes para atención personalizada",
       "footerText": "Escríbeme y elijamos juntas(o) el mejor plan para ti ✨",
       "whatsappMessagePlan": "¡Hola! Me gustaría saber más sobre el {{planName}} y agendar una consulta."
@@ -227,18 +289,54 @@
       "titleHighlight": "Estoy Aquí Para Ayudar",
       "description": "Reuní las preguntas más comunes que recibo. Si tu duda no está aquí, ¡escríbeme por WhatsApp y responderé con gusto!",
       "items": [
-        { "question": "¿Por qué integrar nutrición y estética?", "answer": "La transformación real ocurre de adentro hacia afuera. Cuando equilibras tu salud metabólica a través de la nutrición y potencias los resultados con procedimientos estéticos, las ganancias son más rápidas, más profundas y mucho más duraderas. Es la ciencia trabajando a tu favor de forma completa." },
-        { "question": "¿Cuánto tiempo lleva ver resultados?", "answer": "Esto varía según tu objetivo y compromiso. En general, los cambios de energía y disposición aparecen en las primeras 2-3 semanas. Los resultados visuales de adelgazamiento comienzan en 4-6 semanas. Para transformaciones profundas y duraderas, recomendamos programas de 3 a 6 meses, donde acompañamos tu evolución de cerca y ajustamos estrategias según sea necesario." },
-        { "question": "¿Necesito seguir una dieta muy restrictiva?", "answer": "¡No! Mi enfoque es justamente lo opuesto a las dietas de moda. Trabajo con reeducación alimentaria y autonomía — aprendes a tomar decisiones inteligentes sin sufrir ni pasar hambre. El objetivo es que tengas una relación saludable con la comida, no una restricción extrema. Lo hecho es mejor que lo perfecto." },
-        { "question": "¿Atiendes en línea o solo presencialmente?", "answer": "¡Atiendo en ambas modalidades! Presencial en Tijuca y Barra da Tijuca (Río de Janeiro), y en línea para cualquier lugar de Brasil y del exterior. Ambas tienen la misma calidad, dedicación y resultados. La consulta en línea es por videollamada y recibes todo el material digitalizado." },
-        { "question": "¿Cuál es la diferencia entre la nutrición común y la ortomolecular?", "answer": "La nutrición ortomolecular va más allá de la alimentación básica — trabaja a nivel celular, identificando deficiencias de nutrientes y corrigiéndolas mediante alimentos y/o activos formulados. El enfoque es equilibrar tu metabolismo, optimizar la energía, mejorar la digestión y tratar la causa raíz de los síntomas, no solo enmascarar los problemas." },
-        { "question": "¿Los procedimientos estéticos son seguros?", "answer": "Absolutamente. Como biomédica estética, tengo formación específica en procedimientos estéticos y utilizo solo productos de alta calidad, aprobados por ANVISA (agencia reguladora de salud de Brasil). Todos los protocolos son personalizados y realizados con técnica precisa, priorizando siempre tu seguridad y resultados naturales." },
-        { "question": "¿Puedo hacerme procedimientos estéticos mientras hago dieta?", "answer": "Sí, y esa es justamente la ventaja de la integración! Cuando estás en un proceso de adelgazamiento o ganancia muscular orientado nutricionalmente, los procedimientos estéticos potencian los resultados. Por ejemplo: reducción de grasa localizada + nutrición estratégica = transformación más rápida y completa." },
-        { "question": "¿Cómo funciona el acompañamiento? ¿Tengo apoyo entre consultas?", "answer": "En los programas de acompañamiento (trimestral y semestral), tienes consultas mensuales para evaluación y ajustes, además de apoyo entre consultas por WhatsApp para dudas puntuales. El objetivo es que te sientas acompañada durante todo el proceso, no solo en los encuentros presenciales." },
-        { "question": "¿Aceptas seguro médico o solo pago particular?", "answer": "La atención es particular. Pero acepto varias formas de pago: Pix (con descuento) y tarjeta de crédito en cuotas. Ponte en contacto para conocer valores y condiciones personalizadas para tu caso." },
-        { "question": "¿Con qué rango de edad trabajas?", "answer": "Atiendo adolescentes (a partir de 16 años con autorización de los padres), adultos y personas mayores. Cada etapa de la vida tiene necesidades específicas, y la atención siempre es personalizada considerando edad, objetivos, rutina e historial de salud." },
-        { "question": "¿Puedo agendar una consulta solo para conocer el trabajo?", "answer": "¡Claro! La consulta inicial ya es una evaluación completa donde conversamos sobre tus objetivos, historial, rutina y armamos un plan personalizado. Es la oportunidad perfecta para conocerme, resolver dudas y entender cómo puedo ayudarte. Muchas pacientes comienzan así y deciden continuar el acompañamiento después." },
-        { "question": "¿Y si no logro seguir todo perfectamente?", "answer": "¡Eso es completamente normal y esperado! La vida real no es Instagram. Mi trabajo no es exigirte, sino entenderte y ajustar el plan según tu realidad. No todos los días será posible seguir el plan al 100%, y está bien. Lo importante es la constancia, no la perfección. Cuanto más lo sigas, mejores los resultados — pero lo hecho siempre es mejor que lo perfecto." }
+        {
+          "question": "¿Por qué integrar nutrición y estética?",
+          "answer": "La transformación real ocurre de adentro hacia afuera. Cuando equilibras tu salud metabólica a través de la nutrición y potencias los resultados con procedimientos estéticos, las ganancias son más rápidas, más profundas y mucho más duraderas. Es la ciencia trabajando a tu favor de forma completa."
+        },
+        {
+          "question": "¿Cuánto tiempo lleva ver resultados?",
+          "answer": "Esto varía según tu objetivo y compromiso. En general, los cambios de energía y disposición aparecen en las primeras 2-3 semanas. Los resultados visuales de adelgazamiento comienzan en 4-6 semanas. Para transformaciones profundas y duraderas, recomendamos programas de 3 a 6 meses, donde acompañamos tu evolución de cerca y ajustamos estrategias según sea necesario."
+        },
+        {
+          "question": "¿Necesito seguir una dieta muy restrictiva?",
+          "answer": "¡No! Mi enfoque es justamente lo opuesto a las dietas de moda. Trabajo con reeducación alimentaria y autonomía — aprendes a tomar decisiones inteligentes sin sufrir ni pasar hambre. El objetivo es que tengas una relación saludable con la comida, no una restricción extrema. Lo hecho es mejor que lo perfecto."
+        },
+        {
+          "question": "¿Atiendes en línea o solo presencialmente?",
+          "answer": "¡Atiendo en ambas modalidades! Presencial en Tijuca y Barra da Tijuca (Río de Janeiro), y en línea para cualquier lugar de Brasil y del exterior. Ambas tienen la misma calidad, dedicación y resultados. La consulta en línea es por videollamada y recibes todo el material digitalizado."
+        },
+        {
+          "question": "¿Cuál es la diferencia entre la nutrición común y la ortomolecular?",
+          "answer": "La nutrición ortomolecular va más allá de la alimentación básica — trabaja a nivel celular, identificando deficiencias de nutrientes y corrigiéndolas mediante alimentos y/o activos formulados. El enfoque es equilibrar tu metabolismo, optimizar la energía, mejorar la digestión y tratar la causa raíz de los síntomas, no solo enmascarar los problemas."
+        },
+        {
+          "question": "¿Los procedimientos estéticos son seguros?",
+          "answer": "Absolutamente. Como biomédica estética, tengo formación específica en procedimientos estéticos y utilizo solo productos de alta calidad, aprobados por ANVISA (agencia reguladora de salud de Brasil). Todos los protocolos son personalizados y realizados con técnica precisa, priorizando siempre tu seguridad y resultados naturales."
+        },
+        {
+          "question": "¿Puedo hacerme procedimientos estéticos mientras hago dieta?",
+          "answer": "Sí, y esa es justamente la ventaja de la integración! Cuando estás en un proceso de adelgazamiento o ganancia muscular orientado nutricionalmente, los procedimientos estéticos potencian los resultados. Por ejemplo: reducción de grasa localizada + nutrición estratégica = transformación más rápida y completa."
+        },
+        {
+          "question": "¿Cómo funciona el acompañamiento? ¿Tengo apoyo entre consultas?",
+          "answer": "En los programas de acompañamiento (trimestral y semestral), tienes consultas mensuales para evaluación y ajustes, además de apoyo entre consultas por WhatsApp para dudas puntuales. El objetivo es que te sientas acompañada durante todo el proceso, no solo en los encuentros presenciales."
+        },
+        {
+          "question": "¿Aceptas seguro médico o solo pago particular?",
+          "answer": "La atención es particular. Pero acepto varias formas de pago: Pix (con descuento) y tarjeta de crédito en cuotas. Ponte en contacto para conocer valores y condiciones personalizadas para tu caso."
+        },
+        {
+          "question": "¿Con qué rango de edad trabajas?",
+          "answer": "Atiendo adolescentes (a partir de 16 años con autorización de los padres), adultos y personas mayores. Cada etapa de la vida tiene necesidades específicas, y la atención siempre es personalizada considerando edad, objetivos, rutina e historial de salud."
+        },
+        {
+          "question": "¿Puedo agendar una consulta solo para conocer el trabajo?",
+          "answer": "¡Claro! La consulta inicial ya es una evaluación completa donde conversamos sobre tus objetivos, historial, rutina y armamos un plan personalizado. Es la oportunidad perfecta para conocerme, resolver dudas y entender cómo puedo ayudarte. Muchas pacientes comienzan así y deciden continuar el acompañamiento después."
+        },
+        {
+          "question": "¿Y si no logro seguir todo perfectamente?",
+          "answer": "¡Eso es completamente normal y esperado! La vida real no es Instagram. Mi trabajo no es exigirte, sino entenderte y ajustar el plan según tu realidad. No todos los días será posible seguir el plan al 100%, y está bien. Lo importante es la constancia, no la perfección. Cuanto más lo sigas, mejores los resultados — pero lo hecho siempre es mejor que lo perfecto."
+        }
       ],
       "ctaTitle": "¿No Encontraste Tu Duda?",
       "ctaDescription": "Cada caso es único y merece atención personalizada. ¡Escríbeme por WhatsApp para conversar sobre tu objetivo específico!",
@@ -341,16 +439,33 @@
     "patientsLabel": "Pacientes",
     "satisfactionLabel": "Satisfacción",
     "proceduresTitle": "Principales Procedimientos",
-    "procedures": ["Bioestimuladores de colágeno", "Toxina botulínica", "Relleno con ácido hialurónico", "Hilos de sostén", "Skin booster", "Protocolos para flacidez facial y corporal", "Remodelación corporal"],
+    "procedures": [
+      "Bioestimuladores de colágeno",
+      "Toxina botulínica",
+      "Relleno con ácido hialurónico",
+      "Hilos de sostén",
+      "Skin booster",
+      "Protocolos para flacidez facial y corporal",
+      "Remodelación corporal"
+    ],
     "locationTitle": "Atención",
     "locationPresential": "Presencial:",
     "locationPresentialValue": "Tijuca, Río de Janeiro",
     "locationOnline": "En línea:",
     "locationOnlineValue": "Acompañamiento nutricional para todo Brasil",
     "diferenciais": [
-      { "title": "Estética Avanzada", "description": "Bioestimuladores, toxina botulínica, relleno, hilos, skin booster y protocolos personalizados de rejuvenecimiento." },
-      { "title": "Nutrición de Adentro hacia Afuera", "description": "Nutrición funcional, deportiva y ortomolecular para potenciar la composición corporal, la salud metabólica y los resultados estéticos." },
-      { "title": "Planificación Individualizada", "description": "Cada tratamiento está pensado para restaurar el soporte, estimular el colágeno y valorar la belleza natural, respetando tu anatomía." }
+      {
+        "title": "Estética Avanzada",
+        "description": "Bioestimuladores, toxina botulínica, relleno, hilos, skin booster y protocolos personalizados de rejuvenecimiento."
+      },
+      {
+        "title": "Nutrición de Adentro hacia Afuera",
+        "description": "Nutrición funcional, deportiva y ortomolecular para potenciar la composición corporal, la salud metabólica y los resultados estéticos."
+      },
+      {
+        "title": "Planificación Individualizada",
+        "description": "Cada tratamiento está pensado para restaurar el soporte, estimular el colágeno y valorar la belleza natural, respetando tu anatomía."
+      }
     ],
     "cta": "Agendar Consulta con la Dra. Renata"
   },
@@ -372,35 +487,56 @@
         "tagline": "El inicio del rejuvenecimiento inteligente.",
         "description": "Ideal para quienes desean prevenir los signos del envejecimiento o suavizar las primeras líneas de expresión, preservando la ligereza y naturalidad del rostro.",
         "listLabel": "Indicado para",
-        "items": ["Primeras líneas de expresión", "Prevención del envejecimiento", "Aspecto más descansado e iluminado"]
+        "items": [
+          "Primeras líneas de expresión",
+          "Prevención del envejecimiento",
+          "Aspecto más descansado e iluminado"
+        ]
       },
       {
         "name": "RB Balance",
         "tagline": "Armonía y equilibrio facial.",
         "description": "Desarrollado para restaurar proporciones, reposicionar volúmenes estratégicos y valorar los contornos naturales del rostro, proporcionando un resultado sofisticado y discreto.",
         "listLabel": "Indicado para",
-        "items": ["Pérdida de volumen facial", "Asimetrías leves", "Armonización facial natural"]
+        "items": [
+          "Pérdida de volumen facial",
+          "Asimetrías leves",
+          "Armonización facial natural"
+        ]
       },
       {
         "name": "RB Contour",
         "tagline": "Estructura, definición y elegancia.",
         "description": "Un método creado para devolver el soporte y redefinir el contorno facial, valorando la anatomía sin exageraciones.",
         "listLabel": "Indicado para",
-        "items": ["Definición mandibular", "Contorno facial", "Reestructuración de volúmenes"]
+        "items": [
+          "Definición mandibular",
+          "Contorno facial",
+          "Reestructuración de volúmenes"
+        ]
       },
       {
         "name": "RB Glow",
         "tagline": "Piel bonita es piel saludable.",
         "description": "Un método dedicado exclusivamente a la calidad de la piel, promoviendo hidratación profunda, luminosidad, viveza y mejora de la textura para un aspecto naturalmente radiante.",
         "listLabel": "Beneficios",
-        "items": ["Hidratación intensa", "Luminosidad natural", "Piel más uniforme", "Textura refinada"]
+        "items": [
+          "Hidratación intensa",
+          "Luminosidad natural",
+          "Piel más uniforme",
+          "Textura refinada"
+        ]
       },
       {
         "name": "RB Collagen",
         "tagline": "Firmeza construida de adentro hacia afuera.",
         "description": "Con enfoque en la bioestimulación de colágeno, este método fortalece la piel progresivamente, mejora la firmeza y ayuda a prevenir la evolución de la flacidez.",
         "listLabel": "Indicado para",
-        "items": ["Flacidez inicial", "Pérdida de firmeza", "Prevención del envejecimiento"]
+        "items": [
+          "Flacidez inicial",
+          "Pérdida de firmeza",
+          "Prevención del envejecimiento"
+        ]
       },
       {
         "name": "RB Harmony",
@@ -416,8 +552,14 @@
         "listLabel": "",
         "items": [],
         "submethods": [
-          { "name": "RB Lift Sculpt Essence", "description": "Indicado para pacientes con flacidez leve a moderada que desean recuperar firmeza y suavizar las principales líneas de expresión." },
-          { "name": "RB Lift Sculpt Premium", "description": "Planificación más completa para quienes buscan tratar la flacidez, recuperar el soporte facial, mejorar la calidad de la piel y promover un rejuvenecimiento global." }
+          {
+            "name": "RB Lift Sculpt Essence",
+            "description": "Indicado para pacientes con flacidez leve a moderada que desean recuperar firmeza y suavizar las principales líneas de expresión."
+          },
+          {
+            "name": "RB Lift Sculpt Premium",
+            "description": "Planificación más completa para quienes buscan tratar la flacidez, recuperar el soporte facial, mejorar la calidad de la piel y promover un rejuvenecimiento global."
+          }
         ]
       }
     ],
@@ -440,8 +582,14 @@
     "title": "Rejuvenecimiento Facial",
     "description": "Tratamientos personalizados para restaurar el soporte de los tejidos, estimular la producción de colágeno y valorar la belleza natural de tu rostro — respetando siempre tu anatomía e identidad.",
     "outros": [
-      { "title": "Relleno con Ácido Hialurónico", "description": "Reposición de volúmenes estratégicos para restaurar proporciones y valorar los contornos naturales del rostro." },
-      { "title": "Hilos de Sostén", "description": "Indicados para reforzar el soporte de los tejidos y redefinir el contorno facial de forma progresiva." }
+      {
+        "title": "Relleno con Ácido Hialurónico",
+        "description": "Reposición de volúmenes estratégicos para restaurar proporciones y valorar los contornos naturales del rostro."
+      },
+      {
+        "title": "Hilos de Sostén",
+        "description": "Indicados para reforzar el soporte de los tejidos y redefinir el contorno facial de forma progresiva."
+      }
     ],
     "ctaEvaluation": "Agendar Mi Evaluación",
     "crossCta": "¿Quieres saber qué estrategia de rejuvenecimiento es ideal para tu rostro? Conoce la metodología exclusiva que planifica cada tratamiento de forma individualizada.",
@@ -485,7 +633,14 @@
       "Potencia los resultados de los tratamientos estéticos"
     ],
     "trackingTitle": "Nuestros acompañamientos incluyen",
-    "tracking": ["Adelgazamiento estratégico", "Hipertrofia", "Rendimiento", "Salud metabólica", "Nutrición funcional", "Nutrición ortomolecular"],
+    "tracking": [
+      "Adelgazamiento estratégico",
+      "Hipertrofia",
+      "Rendimiento",
+      "Salud metabólica",
+      "Nutrición funcional",
+      "Nutrición ortomolecular"
+    ],
     "ctaConsultation": "Agendar Mi Consulta",
     "crossCta": "La estética comienza en la salud. Además del acompañamiento nutricional, muchas pacientes potencian sus resultados con los Métodos Exclusivos RB de rejuvenecimiento facial y tratamientos corporales.",
     "crossCtaLink": "Conoce los Métodos RB",

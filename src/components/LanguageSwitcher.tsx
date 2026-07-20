@@ -43,12 +43,14 @@ const LanguageSwitcher = ({ className = "" }: { className?: string }) => {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          size="sm"
-          className={`text-foreground hover:text-primary gap-1.5 ${className}`}
+          size="icon"
+          className={`text-foreground hover:text-primary relative ${className}`}
           aria-label="Selecionar idioma / Select language / Seleccionar idioma"
         >
-          <Globe className="h-4 w-4" />
-          {LABELS[current]}
+          <Globe className="h-5 w-5" strokeWidth={1.5} />
+          <span className="absolute -bottom-0.5 -right-0.5 text-[9px] font-semibold leading-none bg-background rounded-full px-1 border border-border">
+            {LABELS[current]}
+          </span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

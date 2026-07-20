@@ -29,7 +29,7 @@ const VideoSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Vídeo + Legenda */}
           <div className="animate-fade-in flex flex-col gap-6">
-            <Card className="overflow-hidden shadow-elevated border-2 border-primary/20">
+            <Card className="overflow-hidden shadow-elevated border border-primary/20">
               <CardContent className="p-0">
                 <div className="relative aspect-video bg-black">
                   <video
@@ -45,7 +45,7 @@ const VideoSection = () => {
             </Card>
 
             {/* Legenda do vídeo */}
-            <div className="bg-background rounded-2xl p-6 border border-primary/15 shadow-subtle space-y-3">
+            <div className="bg-background rounded-lg p-6 border border-primary/15 shadow-subtle space-y-3">
               <p className="text-base text-foreground font-medium leading-relaxed">
                 {t("home.video.caption1")}
               </p>
@@ -72,7 +72,7 @@ const VideoSection = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+            <h2 className="text-3xl lg:text-4xl font-medium mb-6">
               <Trans i18nKey="home.video.title" components={{ 1: <span className="text-primary" /> }} />
             </h2>
 

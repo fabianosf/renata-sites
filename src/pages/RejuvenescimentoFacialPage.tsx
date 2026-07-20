@@ -47,7 +47,7 @@ const RejuvenescimentoFacialPage = () => {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">{t("facial.badge")}</span>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">{t("facial.title")}</h1>
+              <h1 className="text-3xl lg:text-4xl font-medium mb-4">{t("facial.title")}</h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {t("facial.description")}
               </p>
@@ -61,10 +61,10 @@ const RejuvenescimentoFacialPage = () => {
               {facialServices.map((service) => (
                 <Card
                   key={service.id}
-                  className="border-2 border-border hover:border-primary/40 transition-smooth hover:scale-[1.02] shadow-subtle hover:shadow-elevated"
+                  className="border border-border hover:border-primary/40 transition-smooth hover:scale-[1.01] shadow-subtle hover:shadow-elevated"
                 >
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-bold mb-3">{service.title}</h2>
+                    <h2 className="text-xl font-medium mb-3">{service.title}</h2>
                     <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
@@ -82,10 +82,10 @@ const RejuvenescimentoFacialPage = () => {
               {outrosProcedimentos.map((proc) => (
                 <Card
                   key={proc.title}
-                  className="border-2 border-border hover:border-primary/40 transition-smooth hover:scale-[1.02] shadow-subtle hover:shadow-elevated"
+                  className="border border-border hover:border-primary/40 transition-smooth hover:scale-[1.01] shadow-subtle hover:shadow-elevated"
                 >
                   <CardContent className="p-6">
-                    <h2 className="text-xl font-bold mb-3">{proc.title}</h2>
+                    <h2 className="text-xl font-medium mb-3">{proc.title}</h2>
                     <p className="text-muted-foreground text-sm leading-relaxed">
                       {proc.description}
                     </p>
@@ -110,7 +110,7 @@ const RejuvenescimentoFacialPage = () => {
         {/* CTA cruzado */}
         <section className="py-16 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <Card className="max-w-4xl mx-auto border-2 border-primary/30 bg-primary/5">
+            <Card className="max-w-4xl mx-auto border border-primary/30 bg-primary/5">
               <CardContent className="p-8 text-center">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
                   {t("facial.crossCta")}

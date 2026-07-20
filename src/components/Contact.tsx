@@ -280,7 +280,7 @@ const Contact: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+          <h1 className="text-3xl lg:text-4xl font-medium mb-4">
             {t("contact.title")}
           </h1>
           <p className="text-lg text-muted-foreground">
@@ -419,7 +419,7 @@ const Contact: React.FC = () => {
             {contactInfo.map((item) => (
               <div
                 key={item.title}
-                className="bg-background p-6 rounded-2xl shadow-subtle hover:shadow-elevated transition-smooth"
+                className="bg-background p-6 rounded-lg shadow-subtle hover:shadow-elevated transition-smooth"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -453,7 +453,7 @@ const Contact: React.FC = () => {
             ))}
 
             {/* Mapa */}
-            <div className="rounded-2xl overflow-hidden shadow-elevated h-64">
+            <div className="rounded-lg overflow-hidden shadow-elevated h-64">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1234567890!2d-43.2345678!3d-22.9123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997e5bfcef45a7%3A0x1234567890abcdef!2sEd%20Corporate%20-%20Eng%20Ednaldo%20Cravo%20Peixoto%2C%20105%2C%20Tijuca%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1234567890"
                 width="100%"

@@ -9,6 +9,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ImageIcon, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import ScrollReveal from "@/components/ScrollReveal";
+import clinicaImage from "@/assets/renata1.jpeg";
 
 const ClinicaPage = () => {
   const { t } = useTranslation();
@@ -31,12 +33,12 @@ const ClinicaPage = () => {
       <StructuredData type="home" />
       <Header />
       <main>
-        <section className="pt-32 pb-20 bg-gradient-to-b from-primary/5 to-background">
+        <section className="pt-32 pb-24 lg:pb-32 bg-gradient-to-b from-primary/5 to-background">
           <div className="container mx-auto px-4 lg:px-8">
             <Breadcrumbs items={[{ label: t("clinica.breadcrumb") }]} />
 
-            <div className="max-w-4xl mx-auto animate-fade-in">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
+            <ScrollReveal as="div" className="max-w-4xl mx-auto">
+              <h1 className="text-3xl lg:text-4xl mb-6 text-center">
                 {t("clinica.title")}
               </h1>
 
@@ -45,6 +47,27 @@ const ClinicaPage = () => {
                 <p>{t("clinica.p2")}</p>
                 <p>{t("clinica.p3")}</p>
                 <p className="font-medium text-foreground">{t("clinica.p4")}</p>
+              </div>
+
+              {/* Imagem do espaço/ambiente da clínica - com vinheta sutil para
+                  uniformizar o tom da foto com a paleta marfim/dourado do site */}
+              <div className="relative mt-10 rounded-lg overflow-hidden shadow-subtle border border-primary/15">
+                <img
+                  src={clinicaImage}
+                  alt="Espaço da Clínica Renata Bastos - Tijuca RJ"
+                  className="w-full aspect-[3/4] sm:aspect-[4/5] lg:aspect-[4/3] object-cover object-top"
+                  style={{ filter: "saturate(0.92) sepia(0.06)" }}
+                  loading="lazy"
+                  width={1080}
+                  height={1440}
+                />
+                <div
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    background:
+                      "linear-gradient(to top, hsl(var(--foreground) / 0.16), transparent 45%), radial-gradient(120% 100% at 50% 100%, transparent 55%, hsl(var(--background) / 0.25))",
+                  }}
+                />
               </div>
 
               <div className="flex justify-center mt-10">
@@ -57,18 +80,20 @@ const ClinicaPage = () => {
                   {t("clinica.ctaEvaluation")}
                 </Button>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
+        <div className="divider-line max-w-5xl mx-auto" />
+
         {/* Vídeo do espaço */}
-        <section className="py-16 lg:py-20 bg-muted/30">
+        <section className="py-20 lg:py-28 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-center">
+            <ScrollReveal as="div" className="max-w-3xl mx-auto">
+              <h2 className="text-2xl lg:text-3xl mb-8 text-center">
                 {t("clinica.videoTitle")}
               </h2>
-              <Card className="overflow-hidden shadow-elevated border-2 border-primary/20">
+              <Card className="overflow-hidden shadow-subtle border border-primary/15 rounded-lg">
                 <CardContent className="p-0">
                   <div className="relative aspect-video bg-black">
                     <video className="w-full h-full object-contain" controls preload="metadata">
@@ -78,7 +103,7 @@ const ClinicaPage = () => {
                   </div>
                 </CardContent>
               </Card>
-              <div className="mt-6 bg-background rounded-2xl p-6 border border-primary/15 shadow-subtle space-y-3">
+              <div className="mt-6 bg-card rounded-lg p-6 border border-primary/15 shadow-subtle space-y-3">
                 <p className="text-base text-foreground font-medium leading-relaxed">
                   {t("clinica.videoCaption1")}
                 </p>
@@ -86,15 +111,17 @@ const ClinicaPage = () => {
                   {t("clinica.videoCaption2")}
                 </p>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
 
+        <div className="divider-line max-w-5xl mx-auto" />
+
         {/* Galeria de fotos do espaço - placeholder */}
-        <section className="py-16 lg:py-20">
+        <section className="py-20 lg:py-28">
           <div className="container mx-auto px-4 lg:px-8">
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-center">
+            <ScrollReveal as="div" className="max-w-5xl mx-auto">
+              <h2 className="text-2xl lg:text-3xl mb-4 text-center">
                 {t("clinica.galleryTitle")}
               </h2>
               <p className="text-center text-muted-foreground mb-10">
@@ -104,14 +131,14 @@ const ClinicaPage = () => {
                 {galleryPlaceholders.map((_, index) => (
                   <div
                     key={index}
-                    className="aspect-square rounded-2xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-2 text-muted-foreground"
+                    className="aspect-square rounded-lg border border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-2 text-muted-foreground"
                   >
-                    <ImageIcon className="h-8 w-8" />
+                    <ImageIcon className="h-6 w-6" strokeWidth={1.5} />
                     <span className="text-xs">{t("clinica.galleryPlaceholder")}</span>
                   </div>
                 ))}
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>

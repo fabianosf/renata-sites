@@ -34,7 +34,7 @@ const FAQ = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-display font-bold mb-6">
+          <h2 className="text-3xl lg:text-5xl font-display font-medium mb-6">
             {t("home.faq.titlePrefix")} <span className="text-primary">{t("home.faq.titleHighlight")}</span>
           </h2>
 
@@ -50,7 +50,7 @@ const FAQ = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-background rounded-2xl px-6 border border-border shadow-subtle hover:shadow-elevated hover:border-primary/50 transition-all duration-300"
+                className="bg-background rounded-lg px-6 border border-border shadow-subtle hover:shadow-elevated hover:border-primary/50 transition-all duration-300"
               >
                 <AccordionTrigger className="text-left font-semibold hover:text-primary py-6">
                   {faq.question}
@@ -65,9 +65,9 @@ const FAQ = () => {
 
         {/* CTA Card */}
         <div className="max-w-3xl mx-auto">
-          <Card className="bg-gradient-to-br from-primary/10 via-background to-primary/5 border-2 border-primary/30 shadow-elevated">
+          <Card className="bg-gradient-to-br from-primary/10 via-background to-primary/5 border border-primary/30 shadow-elevated">
             <CardContent className="p-8 lg:p-12 text-center">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+              <h3 className="text-2xl lg:text-3xl font-medium mb-4">
                 {t("home.faq.ctaTitle")}
               </h3>
 
@@ -77,7 +77,7 @@ const FAQ = () => {
 
               <Button
                 size="lg"
-                className="text-lg px-8 shadow-glow hover:shadow-premium hover:scale-105 transition-all duration-300"
+                className="text-lg px-8 shadow-glow hover:shadow-premium hover:scale-[1.015] transition-all duration-300"
                 onClick={handleWhatsAppClick}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />

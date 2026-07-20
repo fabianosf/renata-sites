@@ -2,12 +2,15 @@
   "common": {
     "nav": {
       "home": "Home",
+      "about": "About",
       "clinica": "The Clinic",
       "draRenata": "Dr. Renata",
+      "treatments": "Treatments",
       "metodoRB": "RB Method",
       "facial": "Facial Rejuvenation",
       "corporal": "Body Aesthetics",
       "nutrition": "Strategic Nutrition",
+      "results": "Results",
       "beforeAfter": "Before & After",
       "stories": "Transformation Stories",
       "contact": "Contact"
@@ -84,10 +87,22 @@
       "p2": "Recognized for individualized nutritional guidance and sustainable results in weight loss, muscle gain and improved energy, the clinic works with continuous planning, respecting each patient's metabolism, routine and eating behavior.",
       "p3": "Here, aesthetics isn't superficial — it's an extension of caring for the body, health and confidence of each person. Everything is done in a humanized and personalized way — because every story, goal and moment calls for a unique plan.",
       "items": [
-        { "title": "In-Person and Online Care", "description": "Total flexibility for consultations at the office or from the comfort of your home" },
-        { "title": "Orthomolecular Approach", "description": "Nutrition based on scientific evidence with a focus on cellular optimization" },
-        { "title": "Nutrition + Aesthetics Integration", "description": "Complete care: internal and external health in one place" },
-        { "title": "{{count}} Patients Treated", "description": "Proven experience with real results and lasting transformations" }
+        {
+          "title": "In-Person and Online Care",
+          "description": "Total flexibility for consultations at the office or from the comfort of your home"
+        },
+        {
+          "title": "Orthomolecular Approach",
+          "description": "Nutrition based on scientific evidence with a focus on cellular optimization"
+        },
+        {
+          "title": "Nutrition + Aesthetics Integration",
+          "description": "Complete care: internal and external health in one place"
+        },
+        {
+          "title": "{{count}} Patients Treated",
+          "description": "Proven experience with real results and lasting transformations"
+        }
       ]
     },
     "video": {
@@ -139,9 +154,18 @@
       "integrationTitle": "The Result of Integration",
       "integrationText": "When nutrition and aesthetics work together, results are <strong>faster, deeper and longer-lasting</strong>. You take care of your internal health while enhancing your external beauty — with safety, science and humanized care.",
       "integrationCards": [
-        { "title": "Real Results", "description": "Visible and sustainable transformations" },
-        { "title": "Follow-up Care", "description": "Continuous, personalized support" },
-        { "title": "Humanized Care", "description": "Individualized and empathetic attention" }
+        {
+          "title": "Real Results",
+          "description": "Visible and sustainable transformations"
+        },
+        {
+          "title": "Follow-up Care",
+          "description": "Continuous, personalized support"
+        },
+        {
+          "title": "Humanized Care",
+          "description": "Individualized and empathetic attention"
+        }
       ],
       "integrationCta": "Discover Integrated Care",
       "whatsappMessage": "Hello! I want to learn about the integrated Nutrition + Aesthetics care. I'd like more information."
@@ -156,7 +180,11 @@
         "title": "In-Person Consultation",
         "subtitle": "Complete connection and humanized presence",
         "description": "The in-person meeting allows for a deeper assessment, with close attention to detail and building a relationship of trust from the very first moment.",
-        "items": ["Body assessment with bioimpedance", "Personalized in-person analysis", "Human connection and care"],
+        "items": [
+          "Body assessment with bioimpedance",
+          "Personalized in-person analysis",
+          "Human connection and care"
+        ],
         "cta": "Schedule In-Person Consultation",
         "whatsappMessage": "Hello! I'd like to schedule an In-Person Nutrition Consultation. I'd like to know prices and availability."
       },
@@ -165,7 +193,11 @@
         "title": "Online Consultation",
         "subtitle": "Same quality, wherever you are",
         "description": "Video call consultations with the same dedication and care as an in-person visit. Ideal for those with a busy schedule or who live far away.",
-        "items": ["Flexible and accessible scheduling", "Save on travel time", "Care from anywhere"],
+        "items": [
+          "Flexible and accessible scheduling",
+          "Save on travel time",
+          "Care from anywhere"
+        ],
         "cta": "Schedule Online Consultation",
         "whatsappMessage": "Hello! I'd like to schedule an Online Nutrition Consultation. I'd like to know prices and availability."
       },
@@ -183,7 +215,13 @@
           "name": "Initial Consultation",
           "subtitle": "Your First Step",
           "description": "Ideal for getting to know the work and starting your transformation journey with a complete assessment.",
-          "features": ["60-minute consultation", "Complete body assessment", "Detailed personalized anamnesis", "Individualized meal plan", "Digital support material"],
+          "features": [
+            "60-minute consultation",
+            "Complete body assessment",
+            "Detailed personalized anamnesis",
+            "Individualized meal plan",
+            "Digital support material"
+          ],
           "impact": "Start your transformation"
         },
         {
@@ -191,7 +229,13 @@
           "name": "Consultation + Follow-up",
           "subtitle": "For Those Who Want Results",
           "description": "Strategic follow-up with adjustments to make sure you're on the right track.",
-          "features": ["Initial consultation + 1 follow-up", "Progress assessment", "Smart plan adjustments", "Close follow-up", "Support between consultations"],
+          "features": [
+            "Initial consultation + 1 follow-up",
+            "Progress assessment",
+            "Smart plan adjustments",
+            "Close follow-up",
+            "Support between consultations"
+          ],
           "badge": "Popular",
           "impact": "Secure your results"
         },
@@ -200,7 +244,14 @@
           "name": "Quarterly Program",
           "subtitle": "Sustainable Transformation",
           "description": "Monthly follow-up to observe your response, adjust strategies and take care of you with ease and consistency.",
-          "features": ["3 months of follow-up", "Strategic monthly consultations", "Continuous personalized adjustments", "Direct support from Renata", "Progressive results", "Changes that last"],
+          "features": [
+            "3 months of follow-up",
+            "Strategic monthly consultations",
+            "Continuous personalized adjustments",
+            "Direct support from Renata",
+            "Progressive results",
+            "Changes that last"
+          ],
           "badge": "Most Chosen",
           "impact": "Real, lasting transformation"
         },
@@ -209,14 +260,25 @@
           "name": "Semiannual Program",
           "subtitle": "Definitive Results",
           "description": "The complete path to deep transformation: 6 months of strategic follow-up for results that stay.",
-          "features": ["6 months of transformation", "Strategic monthly follow-up", "Frequent, precise adjustments", "Continuous personalized support", "Building solid habits", "Deep, lasting results", "Best long-term investment"],
+          "features": [
+            "6 months of transformation",
+            "Strategic monthly follow-up",
+            "Frequent, precise adjustments",
+            "Continuous personalized support",
+            "Building solid habits",
+            "Deep, lasting results",
+            "Best long-term investment"
+          ],
           "badge": "Best Investment",
           "impact": "Your best self, forever"
         }
       ],
       "planCta": "Ask About Prices & Schedule",
       "paymentTitle": "Payment Methods",
-      "paymentMethods": ["Pix", "Credit card in installments"],
+      "paymentMethods": [
+        "Pix",
+        "Credit card in installments"
+      ],
       "limitedSlots": "💡 Limited monthly slots for personalized care",
       "footerText": "Reach out and let's choose the best plan for you together ✨",
       "whatsappMessagePlan": "Hello! I'd like to know more about the {{planName}} and schedule a consultation."
@@ -227,18 +289,54 @@
       "titleHighlight": "I'm Here to Help",
       "description": "I've gathered the most common questions I receive. If your question isn't here, message me on WhatsApp and I'll be happy to answer!",
       "items": [
-        { "question": "Why combine nutrition and aesthetics?", "answer": "Real transformation happens from the inside out. When you balance your metabolic health through nutrition and enhance results with aesthetic procedures, the gains are faster, deeper and much longer-lasting. It's science working fully in your favor." },
-        { "question": "How long does it take to see results?", "answer": "This varies according to your goal and commitment. In general, changes in energy and disposition appear within the first 2-3 weeks. Visible weight-loss results begin in 4-6 weeks. For deep, lasting transformations, we recommend 3-6 month programs, where we closely monitor your progress and adjust strategies as needed." },
-        { "question": "Do I need to follow a very restrictive diet?", "answer": "No! My approach is exactly the opposite of fad diets. I work on dietary re-education and autonomy — you learn to make smart choices without suffering or going hungry. The goal is a healthy relationship with food, not extreme restriction. Done is better than perfect." },
-        { "question": "Do you see patients online or only in person?", "answer": "I offer both! In-person in Tijuca and Barra da Tijuca (Rio de Janeiro), and online anywhere in Brazil and abroad. Both have the same quality, dedication and results. The online consultation is via video call and you receive all material digitally." },
-        { "question": "What's the difference between regular and orthomolecular nutrition?", "answer": "Orthomolecular nutrition goes beyond basic diet — it works at the cellular level, identifying nutrient deficiencies and correcting them through food and/or compounded supplements. The focus is balancing your metabolism, optimizing energy, improving digestion and treating the root cause of symptoms — not just masking problems." },
-        { "question": "Are the aesthetic procedures safe?", "answer": "Absolutely. As an aesthetic biomedical professional, I have specific training in aesthetic procedures and use only high-quality products approved by ANVISA (Brazil's health regulatory agency). All protocols are personalized and performed with refined technique, always prioritizing your safety and natural results." },
-        { "question": "Can I do aesthetic procedures while dieting?", "answer": "Yes, and that's exactly the advantage of integration! When you're in a nutritionally guided weight-loss or muscle-gain process, aesthetic procedures enhance the results. For example: localized fat reduction + strategic nutrition = a faster, more complete transformation." },
-        { "question": "How does follow-up work? Do I have support between consultations?", "answer": "In the follow-up programs (quarterly and semiannual), you have monthly consultations for assessment and adjustments, plus support between consultations via WhatsApp for specific questions. The goal is for you to feel supported throughout the whole journey, not just during in-person visits." },
-        { "question": "Do you accept insurance or only private payment?", "answer": "Care is private-pay only. But I accept several payment methods: Pix (with a discount) and credit card in installments. Get in touch to learn about prices and personalized conditions for your case." },
-        { "question": "What age groups do you work with?", "answer": "I see teenagers (from age 16 with parental authorization), adults and seniors. Every stage of life has specific needs, and care is always personalized considering age, goals, routine and health history." },
-        { "question": "Can I book a consultation just to get to know the work?", "answer": "Of course! The initial consultation is already a complete assessment where we discuss your goals, history, routine and put together a personalized plan. It's the perfect opportunity for you to get to know me, ask questions and understand how I can help you. Many patients start this way and decide to continue with follow-up afterward." },
-        { "question": "What if I can't follow everything perfectly?", "answer": "That's completely normal and expected! Real life isn't Instagram. My job isn't to pressure you, but to understand you and adjust the plan to your reality. It won't be possible to follow it 100% every day, and that's okay. What matters is consistency, not perfection. The more you follow it, the better the results — but done is always better than perfect." }
+        {
+          "question": "Why combine nutrition and aesthetics?",
+          "answer": "Real transformation happens from the inside out. When you balance your metabolic health through nutrition and enhance results with aesthetic procedures, the gains are faster, deeper and much longer-lasting. It's science working fully in your favor."
+        },
+        {
+          "question": "How long does it take to see results?",
+          "answer": "This varies according to your goal and commitment. In general, changes in energy and disposition appear within the first 2-3 weeks. Visible weight-loss results begin in 4-6 weeks. For deep, lasting transformations, we recommend 3-6 month programs, where we closely monitor your progress and adjust strategies as needed."
+        },
+        {
+          "question": "Do I need to follow a very restrictive diet?",
+          "answer": "No! My approach is exactly the opposite of fad diets. I work on dietary re-education and autonomy — you learn to make smart choices without suffering or going hungry. The goal is a healthy relationship with food, not extreme restriction. Done is better than perfect."
+        },
+        {
+          "question": "Do you see patients online or only in person?",
+          "answer": "I offer both! In-person in Tijuca and Barra da Tijuca (Rio de Janeiro), and online anywhere in Brazil and abroad. Both have the same quality, dedication and results. The online consultation is via video call and you receive all material digitally."
+        },
+        {
+          "question": "What's the difference between regular and orthomolecular nutrition?",
+          "answer": "Orthomolecular nutrition goes beyond basic diet — it works at the cellular level, identifying nutrient deficiencies and correcting them through food and/or compounded supplements. The focus is balancing your metabolism, optimizing energy, improving digestion and treating the root cause of symptoms — not just masking problems."
+        },
+        {
+          "question": "Are the aesthetic procedures safe?",
+          "answer": "Absolutely. As an aesthetic biomedical professional, I have specific training in aesthetic procedures and use only high-quality products approved by ANVISA (Brazil's health regulatory agency). All protocols are personalized and performed with refined technique, always prioritizing your safety and natural results."
+        },
+        {
+          "question": "Can I do aesthetic procedures while dieting?",
+          "answer": "Yes, and that's exactly the advantage of integration! When you're in a nutritionally guided weight-loss or muscle-gain process, aesthetic procedures enhance the results. For example: localized fat reduction + strategic nutrition = a faster, more complete transformation."
+        },
+        {
+          "question": "How does follow-up work? Do I have support between consultations?",
+          "answer": "In the follow-up programs (quarterly and semiannual), you have monthly consultations for assessment and adjustments, plus support between consultations via WhatsApp for specific questions. The goal is for you to feel supported throughout the whole journey, not just during in-person visits."
+        },
+        {
+          "question": "Do you accept insurance or only private payment?",
+          "answer": "Care is private-pay only. But I accept several payment methods: Pix (with a discount) and credit card in installments. Get in touch to learn about prices and personalized conditions for your case."
+        },
+        {
+          "question": "What age groups do you work with?",
+          "answer": "I see teenagers (from age 16 with parental authorization), adults and seniors. Every stage of life has specific needs, and care is always personalized considering age, goals, routine and health history."
+        },
+        {
+          "question": "Can I book a consultation just to get to know the work?",
+          "answer": "Of course! The initial consultation is already a complete assessment where we discuss your goals, history, routine and put together a personalized plan. It's the perfect opportunity for you to get to know me, ask questions and understand how I can help you. Many patients start this way and decide to continue with follow-up afterward."
+        },
+        {
+          "question": "What if I can't follow everything perfectly?",
+          "answer": "That's completely normal and expected! Real life isn't Instagram. My job isn't to pressure you, but to understand you and adjust the plan to your reality. It won't be possible to follow it 100% every day, and that's okay. What matters is consistency, not perfection. The more you follow it, the better the results — but done is always better than perfect."
+        }
       ],
       "ctaTitle": "Didn't Find Your Question?",
       "ctaDescription": "Every case is unique and deserves personalized attention. Message me on WhatsApp so we can talk about your specific goal!",
@@ -341,16 +439,33 @@
     "patientsLabel": "Patients",
     "satisfactionLabel": "Satisfaction",
     "proceduresTitle": "Main Procedures",
-    "procedures": ["Collagen biostimulators", "Botulinum toxin", "Hyaluronic acid filler", "Support threads", "Skin booster", "Protocols for facial and body sagging", "Body remodeling"],
+    "procedures": [
+      "Collagen biostimulators",
+      "Botulinum toxin",
+      "Hyaluronic acid filler",
+      "Support threads",
+      "Skin booster",
+      "Protocols for facial and body sagging",
+      "Body remodeling"
+    ],
     "locationTitle": "Care",
     "locationPresential": "In-person:",
     "locationPresentialValue": "Tijuca, Rio de Janeiro",
     "locationOnline": "Online:",
     "locationOnlineValue": "Nutritional follow-up available throughout Brazil",
     "diferenciais": [
-      { "title": "Advanced Aesthetics", "description": "Biostimulators, botulinum toxin, filler, threads, skin booster and personalized rejuvenation protocols." },
-      { "title": "Nutrition from the Inside Out", "description": "Functional, sports and orthomolecular nutrition to enhance body composition, metabolic health and aesthetic results." },
-      { "title": "Individualized Planning", "description": "Every treatment is designed to restore support, stimulate collagen and enhance natural beauty, respecting your anatomy." }
+      {
+        "title": "Advanced Aesthetics",
+        "description": "Biostimulators, botulinum toxin, filler, threads, skin booster and personalized rejuvenation protocols."
+      },
+      {
+        "title": "Nutrition from the Inside Out",
+        "description": "Functional, sports and orthomolecular nutrition to enhance body composition, metabolic health and aesthetic results."
+      },
+      {
+        "title": "Individualized Planning",
+        "description": "Every treatment is designed to restore support, stimulate collagen and enhance natural beauty, respecting your anatomy."
+      }
     ],
     "cta": "Schedule a Consultation with Dr. Renata"
   },
@@ -372,35 +487,56 @@
         "tagline": "The start of smart rejuvenation.",
         "description": "Ideal for those who want to prevent signs of aging or soften the first expression lines, preserving the lightness and naturalness of the face.",
         "listLabel": "Recommended for",
-        "items": ["First expression lines", "Aging prevention", "A more rested, radiant look"]
+        "items": [
+          "First expression lines",
+          "Aging prevention",
+          "A more rested, radiant look"
+        ]
       },
       {
         "name": "RB Balance",
         "tagline": "Facial harmony and balance.",
         "description": "Developed to restore proportions, reposition strategic volumes and enhance the face's natural contours, delivering a sophisticated, discreet result.",
         "listLabel": "Recommended for",
-        "items": ["Facial volume loss", "Mild asymmetries", "Natural facial harmonization"]
+        "items": [
+          "Facial volume loss",
+          "Mild asymmetries",
+          "Natural facial harmonization"
+        ]
       },
       {
         "name": "RB Contour",
         "tagline": "Structure, definition and elegance.",
         "description": "A method created to restore support and redefine facial contour, enhancing anatomy without exaggeration.",
         "listLabel": "Recommended for",
-        "items": ["Jawline definition", "Facial contour", "Volume restructuring"]
+        "items": [
+          "Jawline definition",
+          "Facial contour",
+          "Volume restructuring"
+        ]
       },
       {
         "name": "RB Glow",
         "tagline": "Beautiful skin is healthy skin.",
         "description": "A method dedicated exclusively to skin quality, promoting deep hydration, radiance, glow and improved texture for a naturally luminous look.",
         "listLabel": "Benefits",
-        "items": ["Intense hydration", "Natural radiance", "More even skin", "Refined texture"]
+        "items": [
+          "Intense hydration",
+          "Natural radiance",
+          "More even skin",
+          "Refined texture"
+        ]
       },
       {
         "name": "RB Collagen",
         "tagline": "Firmness built from the inside out.",
         "description": "Focused on collagen biostimulation, this method progressively strengthens the skin, improves firmness and helps prevent sagging from progressing.",
         "listLabel": "Recommended for",
-        "items": ["Early sagging", "Loss of firmness", "Aging prevention"]
+        "items": [
+          "Early sagging",
+          "Loss of firmness",
+          "Aging prevention"
+        ]
       },
       {
         "name": "RB Harmony",
@@ -416,8 +552,14 @@
         "listLabel": "",
         "items": [],
         "submethods": [
-          { "name": "RB Lift Sculpt Essence", "description": "Recommended for patients with mild to moderate sagging who want to regain firmness and soften the main expression lines." },
-          { "name": "RB Lift Sculpt Premium", "description": "A more complete plan for those seeking to treat sagging, regain facial support, improve skin quality and promote overall rejuvenation." }
+          {
+            "name": "RB Lift Sculpt Essence",
+            "description": "Recommended for patients with mild to moderate sagging who want to regain firmness and soften the main expression lines."
+          },
+          {
+            "name": "RB Lift Sculpt Premium",
+            "description": "A more complete plan for those seeking to treat sagging, regain facial support, improve skin quality and promote overall rejuvenation."
+          }
         ]
       }
     ],
@@ -440,8 +582,14 @@
     "title": "Facial Rejuvenation",
     "description": "Personalized treatments to restore tissue support, stimulate collagen production and enhance the natural beauty of your face — always respecting your anatomy and identity.",
     "outros": [
-      { "title": "Hyaluronic Acid Filler", "description": "Strategic volume replacement to restore proportions and enhance the face's natural contours." },
-      { "title": "Support Threads", "description": "Recommended to reinforce tissue support and progressively redefine facial contour." }
+      {
+        "title": "Hyaluronic Acid Filler",
+        "description": "Strategic volume replacement to restore proportions and enhance the face's natural contours."
+      },
+      {
+        "title": "Support Threads",
+        "description": "Recommended to reinforce tissue support and progressively redefine facial contour."
+      }
     ],
     "ctaEvaluation": "Schedule My Evaluation",
     "crossCta": "Want to know which rejuvenation strategy is ideal for your face? Discover the exclusive methodology that plans every treatment individually.",
@@ -485,7 +633,14 @@
       "Enhances the results of aesthetic treatments"
     ],
     "trackingTitle": "Our follow-up programs include",
-    "tracking": ["Strategic weight loss", "Hypertrophy", "Performance", "Metabolic health", "Functional nutrition", "Orthomolecular nutrition"],
+    "tracking": [
+      "Strategic weight loss",
+      "Hypertrophy",
+      "Performance",
+      "Metabolic health",
+      "Functional nutrition",
+      "Orthomolecular nutrition"
+    ],
     "ctaConsultation": "Schedule My Consultation",
     "crossCta": "Aesthetics begins with health. In addition to nutritional follow-up, many patients enhance their results with the Exclusive RB Methods for facial rejuvenation and body treatments.",
     "crossCtaLink": "Discover the RB Methods",

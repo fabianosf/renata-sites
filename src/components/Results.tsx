@@ -97,7 +97,7 @@ const Results = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-medium mb-6 leading-tight">
             Números Que{" "}
             <span className="text-primary">Falam Por Si</span>
           </h2>
@@ -113,13 +113,13 @@ const Results = () => {
           {results.map((result, index) => (
             <Card
               key={result.title}
-              className="border-2 border-border hover:border-primary/40 transition-smooth hover:scale-[1.02] animate-fade-in shadow-subtle hover:shadow-elevated"
+              className="border border-border hover:border-primary/40 transition-smooth hover:scale-[1.01] animate-fade-in shadow-subtle hover:shadow-elevated"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 lg:p-8">
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className={`w-14 h-14 bg-${result.color}/10 rounded-2xl flex items-center justify-center`}>
+                  <div className={`w-14 h-14 bg-${result.color}/10 rounded-lg flex items-center justify-center`}>
                     <result.icon className={`h-7 w-7 text-${result.color}`} />
                   </div>
                   <Badge className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
@@ -128,7 +128,7 @@ const Results = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-4">{result.title}</h3>
+                <h3 className="text-2xl font-medium mb-4">{result.title}</h3>
 
                 {/* Metric */}
                 <div className="mb-4 p-4 bg-gradient-to-br from-primary/10 to-primary/5 rounded-xl border border-primary/20">
@@ -161,7 +161,7 @@ const Results = () => {
 
         {/* CTA Section */}
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 shadow-elevated">
+          <Card className="bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-primary/30 shadow-elevated">
             <CardContent className="p-8 lg:p-12 text-center">
               <div className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
                 <Sparkles className="h-5 w-5 text-primary" />
@@ -170,7 +170,7 @@ const Results = () => {
                 </span>
               </div>
 
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+              <h3 className="text-2xl lg:text-3xl font-medium mb-4">
                 Pronto Para Ser o Próximo Resultado de Sucesso?
               </h3>
 

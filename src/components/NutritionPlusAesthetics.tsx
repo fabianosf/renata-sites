@@ -49,7 +49,7 @@ const NutritionPlusAesthetics = () => {
             </span>
           </div>
 
-          <h2 className="text-3xl lg:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-3xl lg:text-5xl font-medium mb-6 leading-tight">
             {t("home.nutritionAesthetics.titleLine1")}
             <br />
             <span className="text-primary">{t("home.nutritionAesthetics.titleLine2")}</span>
@@ -63,10 +63,10 @@ const NutritionPlusAesthetics = () => {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
           {/* Nutrição Card */}
-          <Card className="border-2 border-primary/20 hover:border-primary/40 transition-smooth hover:scale-[1.02] animate-fade-in shadow-elevated">
+          <Card className="border border-primary/20 hover:border-primary/40 transition-smooth hover:scale-[1.01] animate-fade-in shadow-elevated">
             <CardContent className="p-8">
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center">
                   <Heart className="h-7 w-7 text-primary" />
                 </div>
                 <Badge className="bg-primary text-primary-foreground">
@@ -74,7 +74,7 @@ const NutritionPlusAesthetics = () => {
                 </Badge>
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-medium mb-4">
                 {t("home.nutritionAesthetics.nutritionTitle")}
               </h3>
 
@@ -102,10 +102,10 @@ const NutritionPlusAesthetics = () => {
           </Card>
 
           {/* Estética Card */}
-          <Card className="border-2 border-accent/20 hover:border-accent/40 transition-smooth hover:scale-[1.02] animate-fade-in shadow-elevated">
+          <Card className="border border-accent/20 hover:border-accent/40 transition-smooth hover:scale-[1.01] animate-fade-in shadow-elevated">
             <CardContent className="p-8">
               <div className="flex items-start justify-between mb-6">
-                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center">
                   <Sparkles className="h-7 w-7 text-accent-foreground" />
                 </div>
                 <Badge className="bg-accent text-accent-foreground">
@@ -113,7 +113,7 @@ const NutritionPlusAesthetics = () => {
                 </Badge>
               </div>
 
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-medium mb-4">
                 {t("home.nutritionAesthetics.aestheticsTitle")}
               </h3>
 
@@ -143,14 +143,14 @@ const NutritionPlusAesthetics = () => {
 
         {/* Integration Highlight */}
         <div className="max-w-4xl mx-auto">
-          <Card className="bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 shadow-elevated">
+          <Card className="bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-primary/30 shadow-elevated">
             <CardContent className="p-8 lg:p-12">
               <div className="text-center mb-8">
                 <div className="inline-flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center">
                     <Zap className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold">
+                  <h3 className="text-2xl lg:text-3xl font-medium">
                     {t("home.nutritionAesthetics.integrationTitle")}
                   </h3>
                 </div>

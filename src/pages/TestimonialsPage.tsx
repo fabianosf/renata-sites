@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, Quote, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import renataPoster from "@/assets/nutritionist-profile1.jpg";
+import renataPoster from "@/assets/renata2.jpeg";
 
 const TestimonialsPage = () => {
   const { t } = useTranslation();
@@ -40,7 +40,7 @@ const TestimonialsPage = () => {
             <Breadcrumbs items={[{ label: t("stories.breadcrumb") }]} />
 
             <div className="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h1 className="text-3xl lg:text-4xl font-medium mb-4">
                 {t("stories.title")}
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -50,7 +50,7 @@ const TestimonialsPage = () => {
 
             {/* Vídeo de transformação real */}
             <div className="max-w-3xl mx-auto mb-16">
-              <Card className="overflow-hidden shadow-elevated border-2 border-primary/20">
+              <Card className="overflow-hidden shadow-elevated border border-primary/20">
                 <CardContent className="p-0">
                   <div className="relative w-full aspect-video bg-black">
                     <video
@@ -97,9 +97,9 @@ const TestimonialsPage = () => {
             </div>
 
             {/* Fechamento */}
-            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 shadow-elevated">
+            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-primary/30 shadow-elevated">
               <CardContent className="p-8 lg:p-12 text-center">
-                <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                <h2 className="text-2xl lg:text-3xl font-medium mb-4">
                   {t("stories.closingTitle")}
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-2 max-w-2xl mx-auto">

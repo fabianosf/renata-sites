@@ -270,7 +270,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className={`group bg-card p-6 rounded-2xl shadow-subtle hover:shadow-elevated transition-smooth hover:scale-[1.02] animate-fade-in ${
+              className={`group bg-card p-6 rounded-lg shadow-subtle hover:shadow-elevated transition-smooth hover:scale-[1.01] animate-fade-in ${
                 service.featured ? "border-2 border-primary/20" : ""
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}

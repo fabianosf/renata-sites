@@ -23,9 +23,9 @@ const ThemeToggle = ({ className = "" }: { className?: string }) => {
       className={`text-foreground hover:text-primary ${className}`}
     >
       {mounted && resolvedTheme === "dark" ? (
-        <Sun className="h-5 w-5" />
+        <Sun className="h-5 w-5" strokeWidth={1.5} />
       ) : (
-        <Moon className="h-5 w-5" />
+        <Moon className="h-5 w-5" strokeWidth={1.5} />
       )}
     </Button>
   );

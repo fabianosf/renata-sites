@@ -40,7 +40,7 @@ const NutricaoEstrategicaPage = () => {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">{t("nutrition.badge")}</span>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">{t("nutrition.title")}</h1>
+              <h1 className="text-3xl lg:text-4xl font-medium mb-4">{t("nutrition.title")}</h1>
             </div>
 
             <div className="max-w-3xl mx-auto text-muted-foreground leading-relaxed space-y-4 mt-4">
@@ -54,9 +54,9 @@ const NutricaoEstrategicaPage = () => {
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              <Card className="border-2 border-primary/20 shadow-elevated">
+              <Card className="border border-primary/20 shadow-elevated">
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">{t("nutrition.benefitsTitle")}</h2>
+                  <h2 className="text-2xl font-medium mb-6">{t("nutrition.benefitsTitle")}</h2>
                   <ul className="space-y-3">
                     {beneficios.map((item) => (
                       <li key={item} className="flex items-start gap-3">
@@ -68,9 +68,9 @@ const NutricaoEstrategicaPage = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-accent/20 shadow-elevated">
+              <Card className="border border-accent/20 shadow-elevated">
                 <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">{t("nutrition.trackingTitle")}</h2>
+                  <h2 className="text-2xl font-medium mb-6">{t("nutrition.trackingTitle")}</h2>
                   <ul className="space-y-3">
                     {acompanhamentos.map((item) => (
                       <li key={item} className="flex items-start gap-3">
@@ -99,7 +99,7 @@ const NutricaoEstrategicaPage = () => {
         {/* CTA cruzado */}
         <section className="py-16 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <Card className="max-w-4xl mx-auto border-2 border-primary/30 bg-primary/5">
+            <Card className="max-w-4xl mx-auto border border-primary/30 bg-primary/5">
               <CardContent className="p-8 text-center">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
                   {t("nutrition.crossCta")}

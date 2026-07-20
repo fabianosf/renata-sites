@@ -30,8 +30,8 @@ const NotFound = () => {
       <main className="flex-1 flex items-center justify-center bg-muted p-4">
         <div className="max-w-2xl w-full text-center">
           <div className="mb-8">
-            <h1 className="text-8xl font-bold text-primary mb-4">404</h1>
-            <h2 className="text-3xl font-bold mb-4">{t("common.notFound.title")}</h2>
+            <h1 className="text-8xl font-medium text-primary mb-4">404</h1>
+            <h2 className="text-3xl font-medium mb-4">{t("common.notFound.title")}</h2>
             <p className="text-lg text-muted-foreground mb-2">
               {t("common.notFound.description")}
             </p>

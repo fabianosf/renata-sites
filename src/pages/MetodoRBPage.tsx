@@ -55,7 +55,7 @@ const MetodoRBPage = () => {
                 <Sparkles className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium text-primary">{t("metodoRB.badge")}</span>
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">{t("metodoRB.title")}</h1>
+              <h1 className="text-3xl lg:text-4xl font-medium mb-4">{t("metodoRB.title")}</h1>
               <p className="text-lg text-muted-foreground">{t("metodoRB.subtitle")}</p>
             </div>
 
@@ -74,10 +74,10 @@ const MetodoRBPage = () => {
               {metodos.map((metodo) => (
                 <Card
                   key={metodo.name}
-                  className="border-2 border-border hover:border-primary/40 transition-smooth hover:scale-[1.01] shadow-subtle hover:shadow-elevated"
+                  className="border border-border hover:border-primary/40 transition-smooth hover:scale-[1.01] shadow-subtle hover:shadow-elevated"
                 >
                   <CardContent className="p-6 lg:p-8">
-                    <h2 className="text-xl lg:text-2xl font-bold mb-1">
+                    <h2 className="text-xl lg:text-2xl font-medium mb-1">
                       ✨ {metodo.name}
                     </h2>
                     <p className="text-primary font-medium italic mb-4">"{metodo.tagline}"</p>
@@ -135,9 +135,9 @@ const MetodoRBPage = () => {
         {/* Fechamento */}
         <section className="py-16 lg:py-20 bg-muted/30">
           <div className="container mx-auto px-4 lg:px-8">
-            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 via-background to-accent/10 border-2 border-primary/30 shadow-elevated">
+            <Card className="max-w-4xl mx-auto bg-gradient-to-br from-primary/10 via-background to-accent/10 border border-primary/30 shadow-elevated">
               <CardContent className="p-8 lg:p-12 text-center">
-                <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                <h2 className="text-2xl lg:text-3xl font-medium mb-6">
                   {t("metodoRB.closingTitle")}
                 </h2>
                 <div className="text-muted-foreground leading-relaxed space-y-4 text-left max-w-2xl mx-auto">
@@ -161,7 +161,7 @@ const MetodoRBPage = () => {
         {/* CTA cruzado */}
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8">
-            <Card className="max-w-4xl mx-auto border-2 border-accent/30 bg-accent/5">
+            <Card className="max-w-4xl mx-auto border border-accent/30 bg-accent/5">
               <CardContent className="p-8 text-center">
                 <p className="text-lg text-foreground leading-relaxed mb-4">
                   {t("metodoRB.crossCta")}

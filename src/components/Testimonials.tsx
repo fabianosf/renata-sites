@@ -148,7 +148,7 @@ const Testimonials = () => {
 
         {/* Testimonial Carousel */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-background p-8 lg:p-12 rounded-3xl shadow-elevated relative animate-scale-in">
+          <div className="bg-background p-8 lg:p-12 rounded-lg shadow-elevated relative animate-scale-in">
             <Quote className="h-12 w-12 text-primary/20 absolute top-8 left-8" />
 
             <div className="relative z-10">
@@ -220,21 +220,21 @@ const Testimonials = () => {
 
         {/* Stats */}
         <div className="grid md:grid-cols-3 gap-6 mt-16 max-w-5xl mx-auto">
-          <div className="bg-background p-6 rounded-2xl shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
+          <div className="bg-background p-6 rounded-lg shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Heart className="h-6 w-6 text-primary" />
             </div>
             <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">2000+</p>
             <p className="text-muted-foreground font-medium">Pacientes Transformados</p>
           </div>
-          <div className="bg-background p-6 rounded-2xl shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
+          <div className="bg-background p-6 rounded-lg shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <Award className="h-6 w-6 text-primary" />
             </div>
             <p className="text-4xl lg:text-5xl font-bold text-primary mb-2">98%</p>
             <p className="text-muted-foreground font-medium">Taxa de Satisfação</p>
           </div>
-          <div className="bg-background p-6 rounded-2xl shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
+          <div className="bg-background p-6 rounded-lg shadow-subtle border border-border hover:shadow-elevated transition-smooth text-center">
             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="h-6 w-6 text-primary" />
             </div>

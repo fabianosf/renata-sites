@@ -63,14 +63,14 @@ class ErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen flex items-center justify-center bg-muted p-4">
-          <div className="max-w-2xl w-full bg-background rounded-2xl shadow-elevated p-8 text-center">
+          <div className="max-w-2xl w-full bg-background rounded-lg shadow-elevated p-8 text-center">
             <div className="mb-6 flex justify-center">
               <div className="w-20 h-20 bg-destructive/10 rounded-full flex items-center justify-center">
                 <AlertTriangle className="h-10 w-10 text-destructive" />
               </div>
             </div>
 
-            <h1 className="text-3xl font-bold mb-4">Ops! Algo deu errado</h1>
+            <h1 className="text-3xl font-medium mb-4">Ops! Algo deu errado</h1>
             <p className="text-muted-foreground mb-6">
               Ocorreu um erro inesperado. Por favor, tente novamente ou retorne à página inicial.
             </p>

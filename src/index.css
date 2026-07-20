@@ -2,122 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================================
+   DESIGN TOKENS — "Minimalismo Clínico Sofisticado"
+   Paleta única e quente (marfim + grafite + dourado envelhecido),
+   sem gradientes multicoloridos, sombras leves, cantos suaves.
+   Todas as cores em HSL para uso com Tailwind (hsl(var(--token))).
+   ============================================================ */
 
 @layer base {
   :root {
-    /* Premium Palette: Gold (Estética) + Green (Nutrição) + Sophisticated Neutrals */
-    --background: 0 0% 100%;
-    --foreground: 35 30% 15%;
+    /* Creme suave (#FAF3EA) — fundo principal de todo o site */
+    --background: 34 62% 95%;
+    --foreground: 29 17% 25%; /* marrom acinzentado escuro (#4A3F35), nunca preto puro */
 
-    --card: 0 0% 100%;
-    --card-foreground: 35 30% 15%;
+    /* Branco levemente amarelado (#FDFBF7) — cards, para profundidade sutil sobre o creme */
+    --card: 40 60% 98%;
+    --card-foreground: 29 17% 25%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 35 30% 15%;
+    --popover: 40 60% 98%;
+    --popover-foreground: 29 17% 25%;
 
-    /* Gold primary - Elegância estética */
-    --primary: 43 74% 49%;
+    /* Dourado #DAA520 ("goldenrod") — nova cor de destaque oficial única,
+       solicitada pelo cliente. Como o mesmo token alimenta bg-primary em ~50
+       botões E text-primary em ~160 textos/ícones/badges/bordas do site, o
+       hex literal (#DAA520, L49%) só passa em contraste (AA) como FUNDO de
+       botão — e mesmo assim só com texto ESCURO (6.4:1 com #2A2A2A); com
+       texto branco ele falha (2.24:1). Como TEXTO sobre o creme ele cai pra
+       2.04:1 (ilegível mesmo pra texto grande). Por isso --primary carrega a
+       versão escurecida da MESMA cor (mesmo matiz 43°/saturação 74%, #8A6815,
+       4.69:1 no creme) para texto/ícone/borda/link — nessa versão, texto
+       BRANCO nos botões passa com folga (5.15:1), então é o que fica. O tom
+       literal #DAA520 aparece puro no --shadow-glow (decorativo, sem
+       requisito de contraste). */
+    --primary: 43 74% 31%;
     --primary-foreground: 0 0% 100%;
+    --primary-dark: 43 78% 22%;
+    --primary-light: 43 74% 88%;
 
-    /* Darker gold for hover states */
-    --primary-dark: 38 92% 35%;
+    --secondary: 34 30% 93%;
+    --secondary-foreground: 29 17% 25%;
 
-    /* Light gold for backgrounds */
-    --primary-light: 48 90% 85%;
+    --muted: 34 30% 93%;
+    --muted-foreground: 29 12% 42%;
 
-    --secondary: 45 20% 96%;
-    --secondary-foreground: 35 30% 15%;
+    /* Nude claro — mesma família do dourado, para pequenas diferenciações de
+       fundo (badges, cards alternados). Nunca mais de 2 cores de destaque por seção. */
+    --accent: 34 35% 92%;
+    --accent-foreground: 43 74% 28%;
+    --accent-light: 34 35% 95%;
 
-    --muted: 45 20% 96%;
-    --muted-foreground: 35 15% 45%;
-
-    /* Green accent - Nutrição natural */
-    --accent: 142 76% 36%;
-    --accent-foreground: 0 0% 100%;
-    --accent-light: 142 76% 95%;
-
-    /* Nature gradient */
-    --nature: 142 71% 45%;
+    --nature: 43 74% 31%;
     --nature-foreground: 0 0% 100%;
-    --nature-light: 142 76% 95%;
+    --nature-light: 34 35% 95%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 20% 88%;
-    --input: 45 20% 88%;
-    --ring: 43 74% 49%;
+    --border: 34 20% 87%;
+    --input: 34 20% 87%;
+    --ring: 43 74% 31%;
 
-    --radius: 0.75rem;
+    /* Cantos suavemente arredondados (8-12px): rounded-lg = 10px,
+       rounded-md = 8px, rounded-sm = 6px */
+    --radius: 0.625rem;
 
-    /* Premium design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(38 92% 35%) 100%);
-    --gradient-nature: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 76% 36%) 100%);
-    --gradient-sunset: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(142 71% 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(43 74% 49% / 0.05) 0%, hsl(142 71% 45% / 0.05) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(43 74% 31%) 0%, hsl(43 78% 22%) 100%);
+    --gradient-nature: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 31%) 100%);
+    --gradient-sunset: linear-gradient(135deg, hsl(43 74% 45%) 0%, hsl(43 78% 25%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(43 74% 31% / 0.05) 0%, hsl(43 74% 31% / 0.01) 100%);
 
-    --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-elevated: 0 10px 40px rgba(0, 0, 0, 0.12);
-    --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.15);
-    --shadow-glow: 0 0 40px rgba(218, 165, 32, 0.25);
-    --shadow-glow-green: 0 0 40px rgba(76, 175, 80, 0.25);
+    /* Sombras muito sutis e difusas (nunca pesadas, sem bordas duras).
+       O glow usa o #DAA520 literal (rgb 218,165,32) — é decorativo/blur,
+       não precisa passar em contraste de texto. */
+    --shadow-subtle: 0 2px 14px rgba(74, 63, 53, 0.05);
+    --shadow-elevated: 0 8px 28px rgba(74, 63, 53, 0.08);
+    --shadow-premium: 0 14px 40px rgba(74, 63, 53, 0.10);
+    --shadow-glow: 0 0 30px rgba(218, 165, 32, 0.25);
+    --shadow-glow-green: 0 0 30px rgba(218, 165, 32, 0.25);
 
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-bounce: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 35 30% 15%;
-    --sidebar-primary: 43 74% 49%;
+    --sidebar-background: 40 60% 98%;
+    --sidebar-foreground: 29 17% 25%;
+    --sidebar-primary: 43 74% 31%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 45 20% 96%;
-    --sidebar-accent-foreground: 35 30% 15%;
-    --sidebar-border: 45 20% 88%;
-    --sidebar-ring: 43 74% 49%;
+    --sidebar-accent: 34 30% 93%;
+    --sidebar-accent-foreground: 29 17% 25%;
+    --sidebar-border: 34 20% 87%;
+    --sidebar-ring: 43 74% 31%;
   }
 
   .dark {
-    --background: 217 33% 11%;
-    --foreground: 0 0% 100%;
+    /* Modo escuro com tratamento próprio e premium — não é uma simples
+       inversão do modo claro: grafite quente (mesma família de matiz do
+       modo claro) com o dourado #DAA520 clareado (L60%). Aqui não há o
+       conflito do modo claro: o mesmo tom funciona tanto como texto sobre o
+       fundo escuro (9.25:1) quanto como fundo de botão com texto escuro em
+       cima (9.25:1) — texto claro/branco também passa com folga. */
+    --background: 25 12% 11%;
+    --foreground: 34 20% 92%;
 
-    --card: 217 33% 11%;
-    --card-foreground: 0 0% 100%;
+    --card: 25 12% 14%;
+    --card-foreground: 34 20% 92%;
 
-    --popover: 217 33% 11%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 25 12% 14%;
+    --popover-foreground: 34 20% 92%;
 
-    --primary: 158 82% 39%;
-    --primary-foreground: 0 0% 100%;
-    
-    --primary-dark: 158 94% 30%;
-    --primary-light: 156 73% 91%;
+    --primary: 43 74% 60%;
+    --primary-foreground: 25 12% 11%;
+    --primary-dark: 43 78% 48%;
+    --primary-light: 43 74% 26%;
 
-    --secondary: 217 32% 17%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 25 12% 18%;
+    --secondary-foreground: 34 20% 92%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 25 12% 18%;
+    --muted-foreground: 30 10% 65%;
 
-    --accent: 217 32% 17%;
-    --accent-foreground: 158 82% 39%;
+    --accent: 25 14% 20%;
+    --accent-foreground: 43 74% 60%;
 
-    --destructive: 0 62% 30%;
+    --destructive: 0 62% 35%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
-    --ring: 158 82% 39%;
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 158 82% 39%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 158 82% 39%;
+    --border: 25 12% 20%;
+    --input: 25 12% 20%;
+    --ring: 43 74% 60%;
+
+    --sidebar-background: 25 12% 10%;
+    --sidebar-foreground: 34 20% 92%;
+    --sidebar-primary: 43 74% 60%;
+    --sidebar-primary-foreground: 25 12% 11%;
+    --sidebar-accent: 25 14% 18%;
+    --sidebar-accent-foreground: 43 74% 60%;
+    --sidebar-border: 25 12% 20%;
+    --sidebar-ring: 43 74% 60%;
   }
 }
 
@@ -129,7 +149,10 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+    font-weight: 300; /* Montserrat Light como padrão do corpo do texto */
+    font-size: 1rem;
+    line-height: 1.75; /* respiro generoso entre linhas */
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -139,7 +162,13 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
+  /* Tipografia editorial: títulos sempre na serifada Playfair Display,
+     com letter-spacing levemente aumentado e peso mais leve — nunca
+     caixa alta agressiva. */
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    letter-spacing: 0.015em;
     font-feature-settings: 'ss01', 'cv02';
   }
 
@@ -147,43 +176,59 @@ All colors MUST be HSL.
     font-family: 'Playfair Display', Georgia, serif;
     font-feature-settings: 'ss01';
   }
+
+  /* Linha fina decorativa - substitui divisórias grossas */
+  .divider-line {
+    height: 1px;
+    background: hsl(var(--border));
+  }
+
+  /* Remove o marcador nativo do <summary> (menu off-canvas mobile) em todos
+     os navegadores, para usar só o Chevron custom */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::marker {
+    content: "";
+  }
 }
 
 @layer utilities {
   .gradient-primary {
-    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(38 92% 35%) 100%);
+    background: linear-gradient(135deg, hsl(43 74% 31%) 0%, hsl(43 78% 22%) 100%);
   }
 
   .gradient-nature {
-    background: linear-gradient(135deg, hsl(142 71% 45%) 0%, hsl(142 76% 36%) 100%);
+    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(43 74% 31%) 100%);
   }
 
   .gradient-sunset {
-    background: linear-gradient(135deg, hsl(43 74% 49%) 0%, hsl(142 71% 45%) 100%);
+    background: linear-gradient(135deg, hsl(43 74% 45%) 0%, hsl(43 78% 25%) 100%);
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(43 74% 49% / 0.05) 0%, hsl(142 71% 45% / 0.05) 100%);
+    background: linear-gradient(135deg, hsl(43 74% 31% / 0.05) 0%, hsl(43 74% 31% / 0.01) 100%);
   }
 
   .shadow-subtle {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 14px rgba(74, 63, 53, 0.05);
   }
 
   .shadow-elevated {
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 28px rgba(74, 63, 53, 0.08);
   }
 
   .shadow-premium {
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 14px 40px rgba(74, 63, 53, 0.10);
   }
 
   .shadow-glow {
-    box-shadow: 0 0 40px rgba(218, 165, 32, 0.25);
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.25);
   }
 
   .shadow-glow-green {
-    box-shadow: 0 0 40px rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 30px rgba(218, 165, 32, 0.25);
   }
 
   .transition-smooth {
@@ -191,16 +236,16 @@ All colors MUST be HSL.
   }
 
   .transition-bounce {
-    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Hover lift effect */
+  /* Hover discreto — leve elevação, sem "saltos" bruscos */
   .hover-lift {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .hover-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
 
   /* Shimmer effect for premium elements */
@@ -243,5 +288,46 @@ All colors MUST be HSL.
     75% {
       border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
     }
+  }
+
+  /* ------------------------------------------------------------
+     Scroll reveal — fade-in sutil ao rolar a página, com stagger
+     opcional via --reveal-delay (ver componente ScrollReveal.tsx).
+     ------------------------------------------------------------ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* ------------------------------------------------------------
+     Transição suave entre páginas (ver LanguageLayout.tsx, que
+     remonta o Outlet a cada troca de rota com esta animação).
+     ------------------------------------------------------------ */
+  @keyframes page-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .page-transition {
+    animation: page-fade-in 0.35s ease;
   }
 }

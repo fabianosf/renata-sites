@@ -35,7 +35,7 @@ const AntesDepoisPage = () => {
             <Breadcrumbs items={[{ label: t("beforeAfter.breadcrumb") }]} />
 
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h1 className="text-3xl lg:text-4xl font-medium mb-4">
                 {t("beforeAfter.title")}
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -55,7 +55,7 @@ const AntesDepoisPage = () => {
                 {placeholders.map((_, index) => (
                   <div
                     key={index}
-                    className="aspect-square rounded-2xl border-2 border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-2 text-muted-foreground"
+                    className="aspect-square rounded-lg border border-dashed border-border bg-muted/40 flex flex-col items-center justify-center gap-2 text-muted-foreground"
                   >
                     <ImageIcon className="h-8 w-8" />
                     <span className="text-xs">{t("beforeAfter.galleryPlaceholder")}</span>

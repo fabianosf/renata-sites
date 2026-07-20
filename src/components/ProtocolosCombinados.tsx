@@ -32,7 +32,7 @@ const ProtocolosCombinados = () => {
   };
 
   return (
-    <section id="protocolos-combinados" className="py-12 lg:py-16 bg-gradient-to-b from-muted/30 to-background">
+    <section id="protocolos-combinados" className="py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8 animate-fade-in">
@@ -42,7 +42,7 @@ const ProtocolosCombinados = () => {
               {t("home.protocols.badge")}
             </span>
           </div>
-          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-display font-bold mb-4">
+          <h2 className="text-3xl lg:text-4xl xl:text-5xl font-display font-medium mb-4">
             <Trans i18nKey="home.protocols.title" components={{ 1: <span className="text-primary" /> }} />
           </h2>
           <p className="text-lg text-muted-foreground">
@@ -57,7 +57,7 @@ const ProtocolosCombinados = () => {
               key={protocolo.id}
               className={`relative overflow-hidden transition-all duration-500 hover-lift hover:shadow-premium animate-fade-in group ${
                 protocolo.popular
-                  ? "border-2 border-primary shadow-elevated"
+                  ? "border border-primary shadow-elevated"
                   : "border border-border hover:border-primary/50"
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -72,10 +72,10 @@ const ProtocolosCombinados = () => {
 
               <CardContent className="p-6 lg:p-8">
                 <div className="mb-6">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl mb-4 group-hover:scale-[1.03] transition-transform duration-300">
                     {protocolo.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors">
                     {protocolo.name}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">
@@ -109,7 +109,7 @@ const ProtocolosCombinados = () => {
                 </div>
 
                 <Button
-                  className="w-full group-hover:scale-105 transition-transform duration-300"
+                  className="w-full group-hover:scale-[1.015] transition-transform duration-300"
                   variant={protocolo.popular ? "default" : "outline"}
                   onClick={() => handleWhatsAppClick(protocolo.name)}
                 >
@@ -125,7 +125,7 @@ const ProtocolosCombinados = () => {
         <div className="max-w-4xl mx-auto">
           <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
             <CardContent className="p-6 lg:p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">
+              <h3 className="text-2xl font-medium mb-4">
                 {t("home.protocols.closingTitle")}
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
@@ -133,7 +133,7 @@ const ProtocolosCombinados = () => {
               </p>
               <Button
                 size="lg"
-                className="text-lg px-8 shadow-glow hover:shadow-premium hover:scale-105 transition-all duration-300"
+                className="text-lg px-8 shadow-glow hover:shadow-premium hover:scale-[1.015] transition-all duration-300"
                 onClick={() => handleWhatsAppClick()}
               >
                 <MessageCircle className="mr-2 h-5 w-5" />

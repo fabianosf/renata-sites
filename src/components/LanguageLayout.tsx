@@ -93,7 +93,13 @@ const LanguageLayout = () => {
     return null;
   }
 
-  return <Outlet />;
+  // key={pathname} remonta o conteúdo a cada troca de rota, disparando a
+  // animação .page-transition (fade suave, ~350ms) definida em index.css.
+  return (
+    <div key={location.pathname} className="page-transition">
+      <Outlet />
+    </div>
+  );
 };
 
 export default LanguageLayout;

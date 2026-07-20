@@ -30,7 +30,7 @@ const ServiceDetail = () => {
         <Header />
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold mb-4">Serviço não encontrado</h1>
+            <h1 className="text-4xl font-medium mb-4">Serviço não encontrado</h1>
             <Button onClick={() => navigate("/")}>Voltar para Home</Button>
           </div>
         </div>
@@ -71,7 +71,7 @@ const ServiceDetail = () => {
           />
 
           <div className="max-w-4xl">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
+            <h1 className="text-4xl lg:text-5xl font-medium mb-6 animate-fade-in">
               {service.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8 animate-fade-in">
@@ -119,7 +119,7 @@ const ServiceDetail = () => {
           <div className="max-w-4xl mx-auto">
             {/* Full Description */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-6">Sobre {service.title}</h2>
+              <h2 className="text-3xl font-medium mb-6">Sobre {service.title}</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 {service.fullDescription}
               </p>
@@ -127,17 +127,17 @@ const ServiceDetail = () => {
 
             {/* Detailed Benefits */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">O Que Você Vai Receber</h2>
+              <h2 className="text-3xl font-medium mb-8">O Que Você Vai Receber</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {service.detailedBenefits.map((benefit, index) => (
                   <Card
                     key={index}
-                    className="hover:shadow-elevated transition-smooth hover:scale-[1.02]"
+                    className="hover:shadow-elevated transition-smooth hover:scale-[1.01]"
                   >
                     <CardContent className="p-6">
                       <div className="flex items-start gap-3 mb-3">
                         <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
-                        <h3 className="font-bold text-lg">{benefit.title}</h3>
+                        <h3 className="font-medium text-lg">{benefit.title}</h3>
                       </div>
                       <p className="text-muted-foreground ml-9">
                         {benefit.description}
@@ -150,7 +150,7 @@ const ServiceDetail = () => {
 
             {/* Process */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8">Como Funciona</h2>
+              <h2 className="text-3xl font-medium mb-8">Como Funciona</h2>
               <div className="space-y-6">
                 {service.process.map((step, index) => (
                   <div
@@ -164,7 +164,7 @@ const ServiceDetail = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-xl mb-2">{step.title}</h3>
+                      <h3 className="font-medium text-xl mb-2">{step.title}</h3>
                       <p className="text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
@@ -175,7 +175,7 @@ const ServiceDetail = () => {
             {/* CTA Section */}
             <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
               <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold mb-4">
+                <h2 className="text-2xl font-medium mb-4">
                   Pronto Para Começar Sua Transformação?
                 </h2>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
@@ -206,7 +206,7 @@ const ServiceDetail = () => {
 
             {/* Related Services */}
             <div className="mt-16">
-              <h2 className="text-3xl font-bold mb-8">Outros Serviços</h2>
+              <h2 className="text-3xl font-medium mb-8">Outros Serviços</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {servicesData
                   .filter((s) => s.id !== id)
@@ -216,9 +216,9 @@ const ServiceDetail = () => {
                       key={relatedService.id}
                       to={`/servico/${relatedService.id}`}
                     >
-                      <Card className="h-full hover:shadow-elevated transition-smooth hover:scale-[1.02]">
+                      <Card className="h-full hover:shadow-elevated transition-smooth hover:scale-[1.01]">
                         <CardContent className="p-6">
-                          <h3 className="font-bold text-lg mb-3 hover:text-primary transition-smooth">
+                          <h3 className="font-medium text-lg mb-3 hover:text-primary transition-smooth">
                             {relatedService.title}
                           </h3>
                           <p className="text-sm text-muted-foreground mb-4">

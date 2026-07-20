@@ -1,7 +1,21 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Calendar } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu, Calendar, ChevronDown } from "lucide-react";
 import { Link } from "@/components/LocalizedLink";
 import Logo from "@/components/Logo";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -21,18 +35,39 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navItems = [
-    { label: t("common.nav.home"), to: "/" },
-    { label: t("common.nav.clinica"), to: "/a-clinica" },
-    { label: t("common.nav.draRenata"), to: "/dra-renata" },
-    { label: t("common.nav.metodoRB"), to: "/metodo-rb" },
-    { label: t("common.nav.facial"), to: "/rejuvenescimento-facial" },
-    { label: t("common.nav.corporal"), to: "/estetica-corporal" },
-    { label: t("common.nav.nutrition"), to: "/nutricao-estrategica" },
-    { label: t("common.nav.beforeAfter"), to: "/antes-e-depois" },
-    { label: t("common.nav.stories"), to: "/historias-de-transformacao" },
-    { label: t("common.nav.contact"), to: "/contato" },
+  // Grupos de navegação: "Sobre", "Tratamentos" e "Resultados" viram dropdowns
+  // no desktop para não sobrecarregar a barra horizontal (10 páginas -> 5
+  // pontos de entrada + idioma + tema + CTA).
+  const navGroups = [
+    {
+      label: t("common.nav.about"),
+      items: [
+        { label: t("common.nav.clinica"), to: "/a-clinica" },
+        { label: t("common.nav.draRenata"), to: "/dra-renata" },
+      ],
+    },
+    {
+      label: t("common.nav.treatments"),
+      items: [
+        { label: t("common.nav.metodoRB"), to: "/metodo-rb" },
+        { label: t("common.nav.facial"), to: "/rejuvenescimento-facial" },
+        { label: t("common.nav.corporal"), to: "/estetica-corporal" },
+        { label: t("common.nav.nutrition"), to: "/nutricao-estrategica" },
+      ],
+    },
+    {
+      label: t("common.nav.results"),
+      items: [
+        { label: t("common.nav.beforeAfter"), to: "/antes-e-depois" },
+        { label: t("common.nav.stories"), to: "/historias-de-transformacao" },
+      ],
+    },
   ];
+
+  const handleScheduleClick = () => {
+    const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
+    window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
+  };
 
   return (
     <header
@@ -47,84 +82,145 @@ const Header = () => {
           {/* Logo */}
           <Logo />
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.label}
-                to={item.to}
-                className="text-foreground hover:text-primary transition-smooth font-medium cursor-pointer relative group whitespace-nowrap text-sm xl:text-base"
-              >
-                {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ))}
-          </nav>
+          {/* Desktop Navigation — só a partir de 1280px (xl), antes disso vira hambúrguer */}
+          <NavigationMenu className="hidden xl:flex" delayDuration={80}>
+            <NavigationMenuList className="gap-1">
+              <NavigationMenuItem>
+                <Link
+                  to="/"
+                  className="inline-flex items-center px-3 py-2 text-[13px] tracking-wide text-foreground hover:text-primary transition-smooth font-medium whitespace-nowrap"
+                >
+                  {t("common.nav.home")}
+                </Link>
+              </NavigationMenuItem>
 
-          <div className="hidden lg:flex items-center gap-2">
+              {navGroups.map((group) => (
+                <NavigationMenuItem key={group.label}>
+                  <NavigationMenuTrigger className="h-auto bg-transparent px-3 py-2 text-[13px] tracking-wide font-medium text-foreground hover:bg-transparent hover:text-primary focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary">
+                    {group.label}
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="min-w-[220px] p-2">
+                      {group.items.map((item) => (
+                        <li key={item.to}>
+                          <Link
+                            to={item.to}
+                            className="block rounded-md px-3 py-2.5 text-sm text-foreground hover:bg-accent hover:text-primary transition-colors whitespace-nowrap"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              ))}
+
+              <NavigationMenuItem>
+                <Link
+                  to="/contato"
+                  className="inline-flex items-center px-3 py-2 text-[13px] tracking-wide text-foreground hover:text-primary transition-smooth font-medium whitespace-nowrap"
+                >
+                  {t("common.nav.contact")}
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {/* Idioma, tema e CTA — sempre visíveis, compactos (ícones) */}
+          <div className="hidden xl:flex items-center gap-1">
             <LanguageSwitcher />
             <ThemeToggle />
-            {/* CTA Button */}
             <Button
-              className="shadow-glow hover:shadow-elevated hover:scale-105 transition-all duration-300"
-              size="lg"
-              onClick={() => {
-                const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
-                window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
-              }}
+              className="ml-1 shadow-glow hover:shadow-elevated hover:scale-[1.015] transition-all duration-300"
+              size="sm"
+              onClick={handleScheduleClick}
             >
-              <Calendar className="mr-2 h-5 w-5" />
+              <Calendar className="mr-2 h-4 w-4" />
               {t("common.cta.scheduleConsultation")}
             </Button>
           </div>
 
-          {/* Mobile: idioma, tema e menu */}
-          <div className="flex items-center gap-1 lg:hidden">
+          {/* Abaixo de 1280px: idioma + tema compactos e menu off-canvas */}
+          <div className="flex items-center gap-1 xl:hidden">
             <LanguageSwitcher />
             <ThemeToggle />
-            <button
-              className="text-foreground hover:text-primary transition-smooth p-2"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <button
+                  className="text-foreground hover:text-primary transition-smooth p-2"
+                  aria-label="Menu"
+                >
+                  <Menu className="h-6 w-6" />
+                </button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[85vw] sm:w-[380px] flex flex-col gap-0 p-0">
+                <SheetHeader className="p-6 pb-2 text-left">
+                  <SheetTitle className="font-display text-xl">
+                    <Logo />
+                  </SheetTitle>
+                </SheetHeader>
+
+                <nav className="flex-1 overflow-y-auto px-6 py-4 flex flex-col gap-1">
+                  <Link
+                    to="/"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-3 text-base font-medium text-foreground hover:text-primary transition-smooth"
+                  >
+                    {t("common.nav.home")}
+                  </Link>
+
+                  <div className="divider-line my-2" />
+
+                  {navGroups.map((group) => (
+                    <details key={group.label} className="group/details">
+                      <summary className="flex items-center justify-between py-3 text-base font-medium text-foreground cursor-pointer list-none">
+                        {group.label}
+                        <ChevronDown className="h-4 w-4 text-muted-foreground transition-transform group-open/details:rotate-180" />
+                      </summary>
+                      <div className="flex flex-col gap-1 pb-2 pl-3">
+                        {group.items.map((item) => (
+                          <Link
+                            key={item.to}
+                            to={item.to}
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="py-2 text-sm text-muted-foreground hover:text-primary transition-smooth"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </details>
+                  ))}
+
+                  <div className="divider-line my-2" />
+
+                  <Link
+                    to="/contato"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="py-3 text-base font-medium text-foreground hover:text-primary transition-smooth"
+                  >
+                    {t("common.nav.contact")}
+                  </Link>
+                </nav>
+
+                <div className="p-6 pt-2 border-t border-border">
+                  <Button
+                    className="w-full"
+                    size="lg"
+                    onClick={() => {
+                      handleScheduleClick();
+                      setIsMobileMenuOpen(false);
+                    }}
+                  >
+                    <Calendar className="mr-2 h-5 w-5" />
+                    {t("common.cta.scheduleConsultation")}
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 animate-fade-in border-t border-border">
-            <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  to={item.to}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground hover:text-primary transition-smooth font-medium py-2 cursor-pointer"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <Button
-                className="mt-4"
-                size="lg"
-                onClick={() => {
-                  const message = encodeURIComponent(siteConfig.whatsappMessages.appointment);
-                  window.open(`https://wa.me/${siteConfig.contact.whatsapp}?text=${message}`, "_blank");
-                  setIsMobileMenuOpen(false);
-                }}
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                {t("common.cta.scheduleConsultation")}
-              </Button>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
