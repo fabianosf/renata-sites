@@ -1,4 +1,4 @@
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Sparkles, HeartPulse, MessageCircle, MapPin } from "lucide-react";
@@ -105,8 +105,12 @@ const About = () => {
 
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">{t("draRenata.p1")}</p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">{t("draRenata.p2")}</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">{t("draRenata.p3")}</p>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">{t("draRenata.p4")}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <Trans i18nKey="draRenata.p3" components={{ strong: <strong className="text-foreground font-semibold" /> }} />
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+              <Trans i18nKey="draRenata.p4" components={{ strong: <strong className="text-foreground font-semibold" /> }} />
+            </p>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">{t("draRenata.p5")}</p>
 
             {/* Location */}
