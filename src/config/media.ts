@@ -4,6 +4,7 @@
 
 export const mediaImages = {
   draRenataHero: "/images/profissional/dra-renata-hero.jpeg",
+  draRenataConsulta: "/images/profissional/dra-renata-consulta.jpeg",
   procedimentoFacial1: "/images/procedimentos/procedimento-facial-1.jpeg",
   procedimentoFacial2: "/images/procedimentos/procedimento-facial-2.jpeg",
   procedimentoMasculino: "/images/procedimentos/procedimento-masculino.jpeg",
@@ -25,7 +26,7 @@ export const mediaVideos: MediaVideo[] = [
   {
     id: "apresentacao-clinica",
     src: "/videos/apresentacao-clinica.mp4",
-    poster: mediaImages.draRenataHero,
+    poster: mediaImages.draRenataConsulta,
     title: "Conheça a Clínica Renata Bastos",
   },
   {
@@ -92,7 +93,6 @@ export const metodoVideos = [videosById["avaliacao-espelho"]].filter(Boolean);
 export const facialVideos = [
   videosById["procedimento-facial-1"],
   videosById["procedimento-facial-2"],
-  videosById["procedimento-facial-3"],
 ].filter(Boolean);
 
 export const corporalVideos = [

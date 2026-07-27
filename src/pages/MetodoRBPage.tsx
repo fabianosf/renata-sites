@@ -82,7 +82,7 @@ const MetodoRBPage = () => {
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl lg:text-3xl mb-8 text-center">Avaliação e planejamento em vídeo</h2>
-              <VideoGallery videos={metodoVideos} columns={2} />
+              <VideoGallery videos={metodoVideos} columns={1} />
             </div>
           </div>
         </section>

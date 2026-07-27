@@ -7,7 +7,6 @@ import VideoSection from "@/components/VideoSection";
 import NutritionPlusAesthetics from "@/components/NutritionPlusAesthetics";
 import ConsultationTypes from "@/components/ConsultationTypes";
 import Pricing from "@/components/Pricing";
-import ProtocolosCombinados from "@/components/ProtocolosCombinados";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -54,7 +53,6 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
         <NutritionPlusAesthetics />
         <ConsultationTypes />
         <Pricing />
-        <ProtocolosCombinados />
         <FAQ />
         <Contact />
       </main>

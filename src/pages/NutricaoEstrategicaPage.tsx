@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
 import StructuredData from "@/components/StructuredData";
+import Pricing from "@/components/Pricing";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle, CheckCircle2, Sparkles } from "lucide-react";
@@ -105,6 +106,9 @@ const NutricaoEstrategicaPage = () => {
             </div>
           </div>
         </section>
+
+        {/* Protocolos de Acompanhamento Nutricional */}
+        <Pricing />
 
         {/* CTA cruzado */}
         <section className="py-16 lg:py-20 bg-muted/30">
