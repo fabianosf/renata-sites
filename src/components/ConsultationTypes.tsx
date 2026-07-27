@@ -94,9 +94,6 @@ const ConsultationTypes = () => {
                 <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
                   <Video className="h-8 w-8 text-primary-foreground" />
                 </div>
-                <Badge className="bg-amber-500 text-white text-sm px-4 py-1">
-                  {t("home.consultationTypes.online.badge")}
-                </Badge>
               </div>
 
               <h3 className="text-2xl font-medium mb-2">
