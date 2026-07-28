@@ -1,5 +1,5 @@
 import { QRCodeSVG } from "qrcode.react";
-import { Star, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const GoogleReviewQR = () => {
@@ -14,19 +14,14 @@ const GoogleReviewQR = () => {
 
               {/* Texto */}
               <div className="p-8 lg:p-12 flex flex-col justify-center">
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-
                 <h2 className="text-2xl lg:text-3xl font-display mb-3">
-                  Gostou do atendimento?
+                  Veja o que nossos pacientes dizem no Google ⭐
                 </h2>
+                <p className="text-foreground font-medium leading-relaxed mb-3">
+                  A confiança dos nossos pacientes é o nosso maior reconhecimento.
+                </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Sua avaliação no Google nos ajuda a alcançar mais pessoas que precisam de cuidado.
-                  Leva menos de 1 minuto e faz toda a diferença para nós! 🤍
+                  Leia as avaliações de quem já viveu essa experiência e, se você ficou satisfeita com o seu atendimento, compartilhe também a sua opinião.
                 </p>
 
                 <a
@@ -36,7 +31,7 @@ const GoogleReviewQR = () => {
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium shadow-glow hover:shadow-elevated hover:scale-[1.015] transition-all duration-300 w-fit"
                 >
                   <ExternalLink className="h-4 w-4" />
-                  Avaliar no Google
+                  Clique aqui e veja nossas avaliações
                 </a>
               </div>
 
@@ -53,7 +48,7 @@ const GoogleReviewQR = () => {
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">
-                  Aponte a câmera do celular<br />para avaliar
+                  📱 Escaneie o QR Code para ver as avaliações<br />e deixar a sua.
                 </p>
               </div>
 
