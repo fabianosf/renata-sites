@@ -1,6 +1,6 @@
 import { Trans, useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight, Users } from "lucide-react";
+import { MessageCircle, ArrowRight, Users, Star } from "lucide-react";
 import { mediaImages } from "@/config/media";
 import { siteConfig } from "@/config/site";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -21,11 +21,20 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <ScrollReveal>
-            <div className="inline-flex items-center gap-2 bg-accent px-4 py-2 rounded-full mb-6">
-              <Users className="h-4 w-4 text-accent-foreground" />
-              <span className="text-sm font-medium text-accent-foreground">
-                {t("home.hero.badge", { count: siteConfig.professional.patients })}
-              </span>
+            {/* Prova social — âncora de autoridade */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <div className="inline-flex items-center gap-2 bg-accent px-4 py-2 rounded-full">
+                <Users className="h-4 w-4 text-accent-foreground" />
+                <span className="text-sm font-medium text-accent-foreground">
+                  {t("home.hero.badge", { count: siteConfig.professional.patients })}
+                </span>
+              </div>
+              <div className="inline-flex items-center gap-1 bg-yellow-50 border border-yellow-200 px-3 py-1.5 rounded-full">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
+                ))}
+                <span className="text-xs font-semibold text-yellow-700 ml-1">5,0</span>
+              </div>
             </div>
 
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-medium leading-tight mb-6">
@@ -40,6 +49,7 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
+              {/* CTA principal — agendamento direto */}
               <Button
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 shadow-glow hover:shadow-premium hover:scale-[1.015] transition-all duration-300 whitespace-normal h-auto py-4"
@@ -49,10 +59,11 @@ const Hero = () => {
                 }}
               >
                 <span className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 flex-shrink-0" />
+                  <MessageCircle className="h-5 w-5 flex-shrink-0" />
                   {t("home.hero.ctaAesthetics")}
                 </span>
               </Button>
+              {/* CTA secundário — nutrição */}
               <Button
                 size="lg"
                 variant="outline"
@@ -64,10 +75,15 @@ const Hero = () => {
               >
                 <span className="flex items-center gap-2">
                   {t("home.hero.ctaNutrition")}
-                  <ArrowRight className="h-5 w-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-5 w-5 flex-shrink-0" />
                 </span>
               </Button>
             </div>
+
+            {/* Micro-copy de urgência */}
+            <p className="text-xs text-muted-foreground mt-4">
+              ⚡ Agenda com vagas limitadas — atendimento personalizado
+            </p>
           </ScrollReveal>
 
           {/* Hero Image */}

@@ -41,8 +41,7 @@ const Header = () => {
     {
       label: t("common.nav.about"),
       items: [
-        { label: t("common.nav.clinica"), to: "/a-clinica" },
-        { label: t("common.nav.draRenata"), to: "/dra-renata" },
+        { label: t("common.nav.clinica"), to: "/clinica" },
       ],
     },
     {

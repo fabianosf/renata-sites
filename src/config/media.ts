@@ -3,7 +3,7 @@
  */
 
 export const mediaImages = {
-  draRenataHero: "/images/profissional/dra-renata-hero.jpeg",
+  draRenataHero: "/images/profissional/dra-renata-nova.png",
   draRenataConsulta: "/images/profissional/dra-renata-consulta.jpeg",
   procedimentoFacial1: "/images/procedimentos/procedimento-facial-1.jpeg",
   procedimentoFacial2: "/images/procedimentos/procedimento-facial-2.jpeg",
@@ -20,6 +20,7 @@ export interface MediaVideo {
   src: string;
   poster: string;
   title: string;
+  muted?: boolean;
 }
 
 export const mediaVideos: MediaVideo[] = [
@@ -46,6 +47,7 @@ export const mediaVideos: MediaVideo[] = [
     src: "/videos/procedimento-facial-2.mp4",
     poster: mediaImages.procedimentoFacial2,
     title: "Precisão técnica em rejuvenescimento",
+    muted: true,
   },
   {
     id: "procedimento-facial-3",
@@ -71,10 +73,13 @@ const videosById = Object.fromEntries(mediaVideos.map((video) => [video.id, vide
 
 export const clinicaGallery = [
   { src: mediaImages.recepcaoCafe, alt: "Recepção acolhedora da clínica" },
+  { src: mediaImages.draRenataConsulta, alt: "Dra. Renata Bastos em atendimento" },
   { src: mediaImages.consultaAvaliacao, alt: "Consulta e avaliação personalizada" },
   { src: mediaImages.avaliacaoEspelho, alt: "Avaliação facial com espelho" },
   { src: mediaImages.estanteProdutos, alt: "Produtos e materiais de alta qualidade" },
   { src: mediaImages.procedimentoFacial1, alt: "Procedimento facial" },
+  { src: mediaImages.procedimentoFacial2, alt: "Harmonização facial — precisão técnica" },
+  { src: mediaImages.procedimentoMasculino, alt: "Procedimento estético masculino" },
 ];
 
 export const resultadosGallery = [

@@ -55,11 +55,11 @@ export const siteConfig = {
       label: "Facebook",
     },
     linkedin: {
-      url: "#", // LinkedIn da Renata (se tiver)
+      url: "", // Não utilizado
       label: "LinkedIn",
     },
     youtube: {
-      url: "#", // YouTube da Renata (se tiver)
+      url: "", // Não utilizado
       label: "YouTube",
     },
   },

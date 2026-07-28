@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import About from "@/components/About";
 import Differentiators from "@/components/Differentiators";
 import VideoSection from "@/components/VideoSection";
 import NutritionPlusAesthetics from "@/components/NutritionPlusAesthetics";
@@ -47,7 +47,7 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
       <FAQSchema />
       <Header />
       <main>
-        <Hero />
+        <About asHero />
         <Differentiators />
         <VideoSection />
         <NutritionPlusAesthetics />

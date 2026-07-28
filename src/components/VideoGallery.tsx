@@ -43,6 +43,7 @@ const VideoGallery = ({
                 preload="metadata"
                 poster={video.poster}
                 aria-label={video.title}
+                muted={video.muted ?? false}
               >
                 <source src={video.src} type="video/mp4" />
                 Seu navegador não suporta a reprodução de vídeo.

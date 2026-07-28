@@ -47,6 +47,7 @@ const App = () => (
               <Route path="/:lang?" element={<LanguageLayout />}>
                 <Route index element={<Index />} />
                 <Route path="inicio" element={<Index scrollTo="inicio" />} />
+                <Route path="clinica" element={<ClinicaPage />} />
                 <Route path="a-clinica" element={<ClinicaPage />} />
                 <Route path="dra-renata" element={<AboutPage />} />
                 <Route path="metodo-rb" element={<MetodoRBPage />} />

@@ -13,7 +13,7 @@ const splitStat = (raw: string) => {
   return match ? { value: Number(match[1]), suffix: match[2] } : { value: 0, suffix: "" };
 };
 
-const About = () => {
+const About = ({ asHero = false }: { asHero?: boolean }) => {
   const { t } = useTranslation();
 
   const procedimentos = t("draRenata.procedures", { returnObjects: true }) as string[];
@@ -33,21 +33,20 @@ const About = () => {
   const satisfaction = splitStat(siteConfig.professional.satisfaction);
 
   return (
-    <section id="sobre" className="py-20 lg:py-32 bg-muted/30">
+    <section id="sobre" className={`${asHero ? "pt-32 lg:pt-40" : "pt-20 lg:pt-32"} pb-20 lg:pb-32 bg-muted/30`}>
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Foto */}
           <ScrollReveal className="-mt-8 lg:-mt-12">
             <div className="relative rounded-lg overflow-hidden shadow-subtle group border border-primary/15">
-              <div className="relative aspect-[4/5] lg:aspect-[3/4]">
+              <div className="relative aspect-[3/4]">
                 <img
                   src={mediaImages.draRenataHero}
                   alt="Dra. Renata Bastos - Biomédica esteta e nutricionista"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.01]"
-                  style={{ filter: "saturate(0.92) sepia(0.06)" }}
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.01]"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/10 via-transparent to-transparent pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/8 via-transparent to-transparent pointer-events-none"></div>
               </div>
             </div>
 
@@ -85,6 +84,19 @@ const About = () => {
                   </Badge>
                 ))}
               </div>
+            </div>
+
+            {/* Vídeo de apresentação */}
+            <div className="mt-8 rounded-xl overflow-hidden shadow-elevated border border-primary/15 aspect-video">
+              <video
+                className="w-full h-full object-cover block"
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Vídeo de apresentação — Dra. Renata Bastos"
+              >
+                <source src="/video1.mp4" type="video/mp4" />
+              </video>
             </div>
           </ScrollReveal>
 

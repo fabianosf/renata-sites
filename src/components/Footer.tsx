@@ -9,8 +9,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { label: t("common.nav.clinica"), to: "/a-clinica" },
-    { label: t("common.nav.draRenata"), to: "/dra-renata" },
+    { label: t("common.nav.clinica"), to: "/clinica" },
     { label: t("common.nav.metodoRB"), to: "/metodo-rb" },
     { label: t("common.nav.facial"), to: "/rejuvenescimento-facial" },
     { label: t("common.nav.corporal"), to: "/estetica-corporal" },

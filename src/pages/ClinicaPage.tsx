@@ -25,7 +25,7 @@ const ClinicaPage = () => {
       <SEO
         title={t("clinica.seo.title")}
         description={t("clinica.seo.description")}
-        path="/a-clinica"
+        path="/clinica"
       />
       <StructuredData type="home" />
       <Header />

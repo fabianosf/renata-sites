@@ -6,7 +6,7 @@ export const generateSitemap = () => {
 
   const staticPages = [
     { url: "", priority: "1.0", changefreq: "weekly" },
-    { url: "/a-clinica", priority: "0.9", changefreq: "monthly" },
+    { url: "/clinica", priority: "0.9", changefreq: "monthly" },
     { url: "/dra-renata", priority: "0.9", changefreq: "monthly" },
     { url: "/metodo-rb", priority: "0.9", changefreq: "monthly" },
     { url: "/rejuvenescimento-facial", priority: "0.9", changefreq: "monthly" },

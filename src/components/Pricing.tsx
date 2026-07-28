@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Sparkles, MessageCircle, ArrowRight } from "lucide-react";
+// Badge mantido para os métodos de pagamento abaixo
 import { siteConfig } from "@/config/site";
 
 interface Plan {
@@ -61,20 +62,9 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <Card
               key={plan.id}
-              className={`relative overflow-hidden transition-all duration-500 hover-lift hover:shadow-premium animate-fade-in group ${
-                plan.badge === "Popular"
-                  ? "border border-primary shadow-elevated scale-105 lg:scale-110"
-                  : "border border-border hover:border-primary/50"
-              }`}
+              className="relative overflow-hidden transition-all duration-500 hover-lift hover:shadow-premium animate-fade-in group border border-border hover:border-primary/50"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {plan.badge && (
-                <div className="absolute top-4 right-4 z-10">
-                  <Badge className="bg-primary text-primary-foreground shadow-lg">
-                    {plan.badge}
-                  </Badge>
-                </div>
-              )}
 
               <CardContent className="p-6 lg:p-8">
                 <div className="mb-6">
@@ -108,7 +98,7 @@ const Pricing = () => {
 
                 <Button
                   className="w-full whitespace-normal h-auto py-3 text-center leading-snug group-hover:scale-[1.015] transition-all duration-300"
-                  variant={plan.badge === "Popular" ? "default" : "outline"}
+                  variant="outline"
                   onClick={() => handleWhatsAppClick(plan.name)}
                 >
                   <MessageCircle className="mr-2 h-4 w-4 flex-shrink-0" />

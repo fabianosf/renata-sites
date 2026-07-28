@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,7 @@ import { featuredVideo } from "@/config/media";
 
 const VideoSection = () => {
   const { t } = useTranslation();
+  const [videoStarted, setVideoStarted] = useState(false);
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(t("home.video.whatsappMessage"));
@@ -33,17 +35,44 @@ const VideoSection = () => {
             <Card className="overflow-hidden shadow-elevated border border-primary/20">
               <CardContent className="p-0">
                 <div className="relative aspect-video bg-black">
-                  <video
-                    className="w-full h-full object-contain"
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster={featuredVideo.poster}
-                    aria-label={featuredVideo.title}
-                  >
-                    <source src={featuredVideo.src} type="video/mp4" />
-                    Seu navegador não suporta o elemento de vídeo.
-                  </video>
+                  {!videoStarted ? (
+                    /* Thumbnail com play manual — evita carregar 13MB sem intenção */
+                    <button
+                      className="relative w-full h-full group focus:outline-none"
+                      onClick={() => setVideoStarted(true)}
+                      aria-label="Reproduzir vídeo de apresentação"
+                    >
+                      <img
+                        src={featuredVideo.poster}
+                        alt={featuredVideo.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                        <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
+                          <Play className="h-7 w-7 text-primary-foreground ml-1" fill="currentColor" />
+                        </div>
+                      </div>
+                      <div className="absolute bottom-3 left-3 right-3 text-left">
+                        <span className="inline-block bg-black/60 text-white text-xs px-2 py-1 rounded">
+                          {featuredVideo.title}
+                        </span>
+                      </div>
+                    </button>
+                  ) : (
+                    <video
+                      className="w-full h-full object-contain"
+                      controls
+                      autoPlay
+                      playsInline
+                      preload="auto"
+                      poster={featuredVideo.poster}
+                      aria-label={featuredVideo.title}
+                    >
+                      <source src={featuredVideo.src} type="video/mp4" />
+                      Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                  )}
                 </div>
               </CardContent>
             </Card>

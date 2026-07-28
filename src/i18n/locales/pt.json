@@ -74,12 +74,12 @@
       "titleLine2": "estética integrativa para você",
       "description": "<strong>Harmonização facial e corporal + Nutrição estratégica</strong> em um só lugar. Cuidado completo para quem busca resultados naturais, sustentáveis e duradouros — de dentro para fora.",
       "ctaNutrition": "Agendar Consulta de Nutrição",
-      "ctaAesthetics": "Conhecer Métodos Exclusivos RB",
+      "ctaAesthetics": "Agendar Minha Avaliação",
       "badgeResults": "Resultados Comprovados",
       "badgeResultsSub": "Baseado em evidências",
       "imageAlt": "Harmonização Facial e Estética Integrativa na Tijuca, Rio de Janeiro - Consultas com Renata Bastos",
       "whatsappMessageNutrition": "Olá! Quero transformar minha saúde e alimentação com acompanhamento personalizado.",
-      "whatsappMessageAesthetics": "Olá! Quero conhecer os Métodos Exclusivos RB e os tratamentos estéticos da Clínica Renata Bastos."
+      "whatsappMessageAesthetics": "Olá! Gostaria de agendar minha avaliação na Clínica Renata Bastos."
     },
     "differentiators": {
       "title": "A Clínica Renata Bastos",
@@ -673,10 +673,26 @@
     "videosTitle": "Transformações em vídeo",
     "testimonialsTitle": "🤍 O que nossas pacientes dizem",
     "testimonials": [
-      "Experiência excelente desde o primeiro momento. Eu estava frustrada com outros profissionais e cheguei com medo, mas a atenção, o cuidado e a sensibilidade me deixaram completamente segura. O resultado superou todas as minhas expectativas. Estou apaixonada pelo resultado e indico de olhos fechados.",
-      "Sou paciente há alguns anos e amo os resultados. Além de uma excelente profissional, a Dra. Renata é extremamente atenciosa. Minha autoestima mudou completamente. Recomendo para todos que buscam um atendimento sério, seguro e resultados naturais.",
-      "Sempre tive receio de fazer harmonização facial, mas encontrei exatamente o que procurava: naturalidade. O atendimento é impecável, o planejamento é personalizado e o resultado ficou muito melhor do que eu imaginava.",
-      "Além da estética, encontrei uma profissional que realmente se preocupa com minha saúde. A combinação dos tratamentos estéticos com a orientação nutricional fez toda a diferença nos meus resultados."
+      {
+        "text": "Experiência excelente desde o primeiro momento. Eu estava frustrada com outros profissionais e cheguei com medo, mas a atenção, o cuidado e a sensibilidade me deixaram completamente segura. O resultado superou todas as minhas expectativas. Estou apaixonada pelo resultado e indico de olhos fechados.",
+        "name": "Ana C.",
+        "procedure": "Harmonização Facial"
+      },
+      {
+        "text": "Sou paciente há alguns anos e amo os resultados. Além de uma excelente profissional, a Dra. Renata é extremamente atenciosa. Minha autoestima mudou completamente. Recomendo para todos que buscam um atendimento sério, seguro e resultados naturais.",
+        "name": "Mariana L.",
+        "procedure": "Bioestimulador de Colágeno"
+      },
+      {
+        "text": "Sempre tive receio de fazer harmonização facial, mas encontrei exatamente o que procurava: naturalidade. O atendimento é impecável, o planejamento é personalizado e o resultado ficou muito melhor do que eu imaginava.",
+        "name": "Fernanda R.",
+        "procedure": "Toxina Botulínica + Preenchimento"
+      },
+      {
+        "text": "Além da estética, encontrei uma profissional que realmente se preocupa com minha saúde. A combinação dos tratamentos estéticos com a orientação nutricional fez toda a diferença nos meus resultados.",
+        "name": "Juliana M.",
+        "procedure": "Estética + Nutrição Estratégica"
+      }
     ],
     "closingTitle": "Sua experiência pode ser a próxima.",
     "closingP1": "Cada resultado apresentado aqui representa um tratamento cuidadosamente planejado, respeitando a individualidade e os objetivos de cada paciente.",

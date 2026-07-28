@@ -52,11 +52,23 @@ const NutricaoEstrategicaPage = () => {
               <p>{t("nutrition.p3")}</p>
             </div>
 
-            <div className="max-w-4xl mx-auto mt-10">
+            <div className="max-w-5xl mx-auto mt-10 grid grid-cols-2 gap-4">
+              <div className="col-span-2">
+                <MediaImage
+                  src={mediaImages.draRenataConsulta}
+                  alt="Dra. Renata Bastos em consulta nutricional — acompanhamento personalizado"
+                  aspectClass="aspect-[16/9]"
+                />
+              </div>
               <MediaImage
                 src={mediaImages.estanteProdutos}
-                alt="Produtos e materiais de nutrição ortomolecular e estética avançada"
-                aspectClass="aspect-[4/3] lg:aspect-[16/9]"
+                alt="Produtos premium de nutrição ortomolecular utilizados na clínica"
+                aspectClass="aspect-square"
+              />
+              <MediaImage
+                src={mediaImages.consultaAvaliacao}
+                alt="Avaliação e planejamento nutricional individualizado"
+                aspectClass="aspect-square"
               />
             </div>
           </div>
