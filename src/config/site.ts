@@ -71,6 +71,9 @@ export const siteConfig = {
     appointment: "Olá! Gostaria de agendar uma consulta com a Renata Bastos.",
   },
 
+  // Google Review — troque PLACE_ID pelo ID real obtido no Google Meu Negócio
+  googleReviewUrl: "https://search.google.com/local/writereview?placeid=PLACE_ID",
+
   // SEO
   seo: {
     title: "Harmonização Facial & Estética Integrativa - Dra. Renata Bastos | Tijuca, Rio de Janeiro",

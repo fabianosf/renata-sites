@@ -9,6 +9,7 @@ import ConsultationTypes from "@/components/ConsultationTypes";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import GoogleReviewQR from "@/components/GoogleReviewQR";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import SEO from "@/components/SEO";
@@ -54,6 +55,7 @@ const Index = ({ scrollTo }: IndexProps = {}) => {
         <ConsultationTypes />
         <Pricing />
         <FAQ />
+        <GoogleReviewQR />
         <Contact />
       </main>
       <Footer />
