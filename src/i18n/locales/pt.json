@@ -116,7 +116,7 @@
         "Veja depoimentos de pacientes reais",
         "Descubra se o método é para você"
       ],
-      "cta": "Quero Agendar Minha Consulta",
+      "cta": "Agendar Consulta",
       "limitedAgenda": "⚡ <strong>Agenda limitada</strong> — Atendimento personalizado com vagas mensais",
       "caption1": "Seja muito bem-vinda! 🤍",
       "caption2": "Aqui você encontra cuidado personalizado para transformar sua saúde — de dentro para fora.",
@@ -468,7 +468,7 @@
         "description": "Cada tratamento é pensado para restaurar sustentação, estimular colágeno e valorizar a beleza natural, respeitando sua anatomia."
       }
     ],
-    "cta": "Agendar Consulta com a Dra. Renata"
+    "cta": "Agendar Consulta"
   },
   "metodoRB": {
     "seo": {
