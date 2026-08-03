@@ -570,7 +570,8 @@
     "crossCta": "Tu tratamiento puede ir más allá de la estética. En algunos casos, el acompañamiento nutricional es un gran aliado para potenciar la producción de colágeno, mejorar la calidad de la piel y favorecer resultados más duraderos.",
     "crossCtaLink": "Conoce la Nutrición Estratégica",
     "whatsappMessageGeneric": "¡Hola! Me gustaría saber qué Método RB es ideal para mí.",
-    "whatsappMessageMetodo": "¡Hola! Me gustaría saber más sobre el Método {{name}}."
+    "whatsappMessageMetodo": "¡Hola! Me gustaría saber más sobre el Método {{name}}.",
+    "cardCta": "Consultar Valores y Agendar"
   },
   "facial": {
     "seo": {

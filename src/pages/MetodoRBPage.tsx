@@ -143,7 +143,7 @@ const MetodoRBPage = () => {
                       onClick={() => handleWhatsAppClick(metodo.name)}
                     >
                       <MessageCircle className="mr-2 h-4 w-4" />
-                      {t("common.cta.iWantToKnowMore")}
+                      {t("metodoRB.cardCta")}
                     </Button>
                   </CardContent>
                 </Card>

@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { servicesData } from "@/data/servicesData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,9 +19,16 @@ import {
   MessageCircle,
 } from "lucide-react";
 
+const SCHEDULE_CONSULTATION_SERVICE_IDS = [
+  "toxina-botulinica",
+  "skin-booster",
+  "bioestimulador-colageno",
+];
+
 const ServiceDetail = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const service = servicesData.find((s) => s.id === id);
 
@@ -189,7 +197,9 @@ const ServiceDetail = () => {
                     className="gap-2"
                   >
                     <MessageCircle className="h-5 w-5" />
-                    Agendar pelo WhatsApp
+                    {id && SCHEDULE_CONSULTATION_SERVICE_IDS.includes(id)
+                      ? t("common.cta.scheduleConsultation")
+                      : "Agendar pelo WhatsApp"}
                   </Button>
                   <Button
                     size="lg"

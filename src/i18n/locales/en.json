@@ -570,7 +570,8 @@
     "crossCta": "Your treatment can go beyond aesthetics. In some cases, nutritional follow-up is a great ally in boosting collagen production, improving skin quality and supporting longer-lasting results.",
     "crossCtaLink": "Discover Strategic Nutrition",
     "whatsappMessageGeneric": "Hello! I'd like to know which RB Method is ideal for me.",
-    "whatsappMessageMetodo": "Hello! I'd like to know more about the {{name}} Method."
+    "whatsappMessageMetodo": "Hello! I'd like to know more about the {{name}} Method.",
+    "cardCta": "Check Prices and Schedule"
   },
   "facial": {
     "seo": {
